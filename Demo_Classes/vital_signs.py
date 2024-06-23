@@ -3,6 +3,7 @@
 # Local Imports
 # Logger
 from Demo_Classes.people_tracking import PeopleTracking
+import csv
 
 from gui_common import median
 from demo_defines import DEVICE_DEMO_DICT
@@ -29,6 +30,19 @@ class VitalSigns(PeopleTracking):
         self.vitalsPatientData = []
         self.xWRLx432 = False
         self.vitals = []
+    
+        self.csv_file = 'vital_signs_data.csv'
+        self.init_csv()
+    
+    def init_csv(self):
+        with open(self.csv_file, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin'])
+
+    def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin):
+        with open(self.csv_file, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([patient_id, breath_rate, heart_rate, patient_status, range_bin])
 
     def setupGUI(self, gridLayout, demoTabs, device):
         PeopleTracking.setupGUI(self, gridLayout, demoTabs, device)
@@ -130,93 +144,78 @@ class VitalSigns(PeopleTracking):
     def updateGraph(self, outputDict):
         PeopleTracking.updateGraph(self, outputDict)
 
-        # Vital Signs Info
-        if ('vitals' in outputDict):
+        if 'vitals' in outputDict:
             self.vitalsDict = outputDict['vitals']
 
-                # Number of Tracks
-        if ('numDetectedTracks' in outputDict):
+        if 'numDetectedTracks' in outputDict:
             self.numTracks = outputDict['numDetectedTracks']
 
-        # Vital Signs info
-        if (self.vitalsDict is not None and self.numTracks is not None):
-            # Update info for each patient
+        if self.vitalsDict is not None and self.numTracks is not None:
             patientId = self.vitalsDict['id']
-            # Check that patient id is valid
-            if (patientId < self.maxTracks):
+            if patientId < self.maxTracks:
                 self.vitalsPatientData[patientId]['rangeBin'] = self.vitalsDict['rangeBin']
                 self.vitalsPatientData[patientId]['breathDeviation'] = self.vitalsDict['breathDeviation']
                 self.vitalsPatientData[patientId]['breathRate'] = self.vitalsDict['breathRate']
 
-                # Take the median of the last n heartrates to prevent it from being sporadic
                 self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
-                while (len(self.vitalsPatientData[patientId]['heartRate']) > NUM_HEART_RATES_FOR_MEDIAN):
+                while len(self.vitalsPatientData[patientId]['heartRate']) > NUM_HEART_RATES_FOR_MEDIAN:
                     self.vitalsPatientData[patientId]['heartRate'].pop(0)
                 medianHeartRate = median(self.vitalsPatientData[patientId]['heartRate'])
-                
-                # Check if the patient is holding their breath, and if there is a patient  detected at all
-                # TODO ensure vitals output is 0 
-                if(float(self.vitalsDict['breathDeviation']) == 0 or self.numTracks == 0):
+
+                if float(self.vitalsDict['breathDeviation']) == 0 or self.numTracks == 0:
                     patientStatus = 'No Patient Detected'
                     breathRateText = "N/A"
                     heartRateText = "N/A"
-                    # Workaround to ensure waveform is flat when no track is present
                     for i in range(NUM_FRAMES_PER_VITALS_PACKET):
                         self.vitalsDict['heartWaveform'][i] = 0
                         self.vitalsDict['breathWaveform'][i] = 0
                 else:
-                    if (medianHeartRate == 0):
+                    if medianHeartRate == 0:
                         heartRateText = "Updating"
                     else:
                         heartRateText = str(round(self.vitalsDict['heartWaveform'][0], 1))
-                    # Patient breathing normally
-                    if (float(self.vitalsDict['breathDeviation']) >= 0.02):
+                    if float(self.vitalsDict['breathDeviation']) >= 0.02:
                         patientStatus = 'Presence'
-                        if(self.vitalsPatientData[patientId]['breathRate'] == 0):
+                        if self.vitalsPatientData[patientId]['breathRate'] == 0:
                             breathRateText = "Updating"
                         else:
-                            # Round the floats to 1 decimal place and format them for display
                             breathRateText = str(round(self.vitalsPatientData[patientId]['breathRate'], 1))
-                     # Patient holding breath
                     else:
                         patientStatus = 'Holding Breath'
                         breathRateText = "N/A"
-                 
-                if(self.xWRLx432 == 1):                
+
+                if self.xWRLx432 == 1:
                     self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
-                    while (len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432):
+                    while len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432:
                         self.vitalsPatientData[patientId]['heartWaveform'].pop(0)
 
-                    # Add breathing rate waveform data for this packet to the graph
                     self.vitalsPatientData[patientId]['breathWaveform'].extend(self.vitalsDict['breathWaveform'])
-                    while (len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432):
+                    while len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432:
                         self.vitalsPatientData[patientId]['breathWaveform'].pop(0)
-                else: 
-                    # Add heart rate waveform data for this packet to the graph
+                else:
                     self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
-                    while (len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT):
+                    while len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT:
                         self.vitalsPatientData[patientId]['heartWaveform'].pop(0)
 
-                    # Add breathing rate waveform data for this packet to the graph
                     self.vitalsPatientData[patientId]['breathWaveform'].extend(self.vitalsDict['breathWaveform'])
-                    while (len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT):
+                    while len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT:
                         self.vitalsPatientData[patientId]['breathWaveform'].pop(0)
 
-                # Copy waveforms so that we can reverse their orientation
                 heartWaveform = self.vitalsPatientData[patientId]['heartWaveform'].copy()
                 heartWaveform.reverse()
 
-                # Copy waveforms so that we can reverse their orientation
                 breathWaveform = self.vitalsPatientData[patientId]['breathWaveform'].copy()
                 breathWaveform.reverse()
 
-                # Update relevant info in GUI
                 self.vitals[patientId]['heartGraph'].setData(heartWaveform)
-                self.vitals[patientId]['breathGraph'].setData( breathWaveform)
+                self.vitals[patientId]['breathGraph'].setData(breathWaveform)
                 self.vitals[patientId]['heartRate'].setText(heartRateText)
                 self.vitals[patientId]['breathRate'].setText(breathRateText)
                 self.vitals[patientId]['status'].setText(patientStatus)
                 self.vitals[patientId]['rangeBin'].setText(str(self.vitalsPatientData[patientId]['rangeBin']))
+
+                self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, self.vitalsPatientData[patientId]['rangeBin'])
+
 
     def parseTrackingCfg(self, args):
         PeopleTracking.parseTrackingCfg(self, args)

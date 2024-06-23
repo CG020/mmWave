@@ -31,8 +31,7 @@ from demo_defines import *
 from gui_threads import *
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'Common_Tabs')))
-sys.path.insert(1, os.path.abspath(os.getcwd()) + "\\tools\\visualizers\\Applications_Visualizer\\common") # Uncomment for debug in VSCode or running from Applications_Visualizer dir
-sys.path.insert(1, '../common')
+
 
 from Common_Tabs.plot_1d import Plot1D
 from Common_Tabs.plot_2d import Plot2D

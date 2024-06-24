@@ -12,6 +12,9 @@ from PyQt5.QtWidgets import QGroupBox, QGridLayout, QLabel, QWidget
 from PyQt5.QtGui import QFont
 import pyqtgraph as pg
 from PyQt5.QtCore import Qt
+import datetime
+import os
+
 
 # Vitals Configurables
 MAX_VITALS_PATIENTS = 2
@@ -31,7 +34,8 @@ class VitalSigns(PeopleTracking):
         self.xWRLx432 = False
         self.vitals = []
     
-        self.csv_file = 'vital_signs_data.csv'
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.csv_file = os.path.join('visualizer_data', f'vital_signs_data_{timestamp}.csv')
         self.init_csv()
     
     def init_csv(self):
@@ -156,10 +160,12 @@ class VitalSigns(PeopleTracking):
                 self.vitalsPatientData[patientId]['rangeBin'] = self.vitalsDict['rangeBin']
                 self.vitalsPatientData[patientId]['breathDeviation'] = self.vitalsDict['breathDeviation']
                 self.vitalsPatientData[patientId]['breathRate'] = self.vitalsDict['breathRate']
-
                 self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
+
+                # Ensure we have enough heart rate values for median calculation
                 while len(self.vitalsPatientData[patientId]['heartRate']) > NUM_HEART_RATES_FOR_MEDIAN:
                     self.vitalsPatientData[patientId]['heartRate'].pop(0)
+
                 medianHeartRate = median(self.vitalsPatientData[patientId]['heartRate'])
 
                 if float(self.vitalsDict['breathDeviation']) == 0 or self.numTracks == 0:
@@ -173,7 +179,8 @@ class VitalSigns(PeopleTracking):
                     if medianHeartRate == 0:
                         heartRateText = "Updating"
                     else:
-                        heartRateText = str(round(self.vitalsDict['heartWaveform'][0], 1))
+                        heartRateText = str(round(medianHeartRate, 1))
+
                     if float(self.vitalsDict['breathDeviation']) >= 0.02:
                         patientStatus = 'Presence'
                         if self.vitalsPatientData[patientId]['breathRate'] == 0:
@@ -215,6 +222,8 @@ class VitalSigns(PeopleTracking):
                 self.vitals[patientId]['rangeBin'].setText(str(self.vitalsPatientData[patientId]['rangeBin']))
 
                 self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, self.vitalsPatientData[patientId]['rangeBin'])
+
+
 
 
     def parseTrackingCfg(self, args):

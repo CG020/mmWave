@@ -18,10 +18,12 @@ import os
 
 # Vitals Configurables
 MAX_VITALS_PATIENTS = 2
-NUM_FRAMES_PER_VITALS_PACKET = 15
+NUM_FRAMES_PER_VITALS_PACKET = 10
 NUM_VITALS_FRAMES_IN_PLOT = 150
-NUM_HEART_RATES_FOR_MEDIAN = 10
+NUM_HEART_RATES_FOR_MEDIAN = 6
 NUM_VITALS_FRAMES_IN_PLOT_IWRL6432 = 15
+NUM_BREATH_RATES_FOR_MEDIAN = 2
+
 
 class VitalSigns(PeopleTracking):
     def __init__(self):
@@ -67,17 +69,14 @@ class VitalSigns(PeopleTracking):
             patientDict = {}
             patientName = 'Patient' + str(i+1)
             
-            # Initialize the pane and layout
             patientPane = QGroupBox(patientName)
             patientPaneLayout = QGridLayout()
 
-            # Set up basic labels so we can edit their appearance
             statusLabel = QLabel('Patient Status:')
             breathLabel = QLabel('Breath Rate:')
             heartLabel = QLabel('Heart Rate:')
             rangeBinLabel = QLabel('Range Bin:')
 
-            # Set up patient vitals plot
             patientDict['plot'] = pg.PlotWidget()
             patientDict['plot'].setBackground('w')
             patientDict['plot'].showGrid(x=True,y=True)
@@ -98,14 +97,12 @@ class VitalSigns(PeopleTracking):
             patientDict['plot'].addItem(patientDict['heartGraph'])
             patientDict['plot'].addItem(patientDict['breathGraph'])
 
-            # Set up all other patient data fields
             patientDict['breathRate'] = QLabel('Undefined')
             patientDict['heartRate'] = QLabel('Undefined')
             patientDict['status'] = QLabel('Undefined')
             patientDict['rangeBin'] = QLabel('Undefined')
             patientDict['name'] = patientName
             
-            # Format text to make it attractive
             labelFont = QFont('Arial', 16)
             labelFont.setBold(True)
             dataFont = (QFont('Arial', 12))
@@ -120,7 +117,6 @@ class VitalSigns(PeopleTracking):
             patientDict['heartRate'].setFont(dataFont)
             patientDict['rangeBin'].setFont(dataFont)
 
-            # Put the widgets into the layout
             patientPaneLayout.addWidget(patientDict['plot'],2,0,1,4)
             patientPaneLayout.addWidget(statusLabel,0,0,alignment=Qt.AlignHCenter)
             patientPaneLayout.addWidget(patientDict['status'],1,0,alignment=Qt.AlignHCenter)
@@ -134,13 +130,11 @@ class VitalSigns(PeopleTracking):
             patientPane.setLayout(patientPaneLayout)
             patientDict['pane'] = patientPane
 
-            # Make patient vitals data accessable by other functions
             self.vitals.append(patientDict)
 
             if (i != 0):
                 patientPane.setVisible(False)
 
-            # Add this patient to the overall vitals pane
             vitalsPaneLayout.addWidget(patientPane,i,0)
         
         self.vitalsPane.setLayout(vitalsPaneLayout)
@@ -159,8 +153,20 @@ class VitalSigns(PeopleTracking):
             if patientId < self.maxTracks:
                 self.vitalsPatientData[patientId]['rangeBin'] = self.vitalsDict['rangeBin']
                 self.vitalsPatientData[patientId]['breathDeviation'] = self.vitalsDict['breathDeviation']
-                self.vitalsPatientData[patientId]['breathRate'] = self.vitalsDict['breathRate']
-                self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
+                
+                if self.vitalsDict['breathRate'] > 0:
+                    self.vitalsPatientData[patientId]['breathRates'].append(self.vitalsDict['breathRate'])
+                
+                while len(self.vitalsPatientData[patientId]['breathRates']) > NUM_BREATH_RATES_FOR_MEDIAN:
+                    self.vitalsPatientData[patientId]['breathRates'].pop(0)
+
+                if len(self.vitalsPatientData[patientId]['breathRates']) > 0:
+                    medianBreathRate = median(self.vitalsPatientData[patientId]['breathRates'])
+                else:
+                    medianBreathRate = 0
+
+                if self.vitalsDict['heartRate'] > 0:
+                    self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
 
                 while len(self.vitalsPatientData[patientId]['heartRate']) > NUM_HEART_RATES_FOR_MEDIAN:
                     self.vitalsPatientData[patientId]['heartRate'].pop(0)
@@ -180,12 +186,12 @@ class VitalSigns(PeopleTracking):
                     else:
                         heartRateText = str(round(medianHeartRate, 1))
 
-                    if float(self.vitalsDict['breathDeviation']) >= 0.02:
+                    if float(self.vitalsDict['breathDeviation']) >= 0.01:
                         patientStatus = 'Presence'
-                        if self.vitalsPatientData[patientId]['breathRate'] == 0:
+                        if medianBreathRate == 0:
                             breathRateText = "Updating"
                         else:
-                            breathRateText = str(round(self.vitalsPatientData[patientId]['breathRate'], 1))
+                            breathRateText = str(round(medianBreathRate, 1))
                     else:
                         patientStatus = 'Holding Breath'
                         breathRateText = "N/A"
@@ -222,24 +228,20 @@ class VitalSigns(PeopleTracking):
 
                 self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, self.vitalsPatientData[patientId]['rangeBin'])
 
-
-
-
     def parseTrackingCfg(self, args):
         PeopleTracking.parseTrackingCfg(self, args)
-        if (self.maxTracks == 1):
+        if self.maxTracks == 1:
             self.vitals[1]['pane'].setVisible(False)
-        for i in range(min(self.maxTracks,MAX_VITALS_PATIENTS)):
-            # Initialize Vitals output dictionaries for each potential patient 
+        for i in range(min(self.maxTracks, MAX_VITALS_PATIENTS)):
             patientDict = {}
-            patientDict ['id'] = i
-            patientDict ['rangeBin'] = 0
-            patientDict ['breathDeviation'] = 0
-            patientDict ['heartRate'] = []
-            patientDict ['breathRate'] = 0
-            patientDict ['heartWaveform'] = []
-            patientDict ['breathWaveform'] = []
+            patientDict['id'] = i
+            patientDict['rangeBin'] = 0
+            patientDict['breathDeviation'] = 0
+            patientDict['heartRate'] = []
+            patientDict['breathRates'] = []
+            patientDict['heartWaveform'] = []
+            patientDict['breathWaveform'] = []
             self.vitalsPatientData.append(patientDict)
 
-            # Make each patient's pane visible
             self.vitals[i]['pane'].setVisible(True)
+

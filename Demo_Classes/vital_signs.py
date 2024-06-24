@@ -162,7 +162,6 @@ class VitalSigns(PeopleTracking):
                 self.vitalsPatientData[patientId]['breathRate'] = self.vitalsDict['breathRate']
                 self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
 
-                # Ensure we have enough heart rate values for median calculation
                 while len(self.vitalsPatientData[patientId]['heartRate']) > NUM_HEART_RATES_FOR_MEDIAN:
                     self.vitalsPatientData[patientId]['heartRate'].pop(0)
 

@@ -14,6 +14,8 @@ import pyqtgraph as pg
 from PyQt5.QtCore import Qt
 import datetime
 import os
+import numpy as np
+from scipy.signal import find_peaks
 
 
 # Vitals Configurables
@@ -22,7 +24,6 @@ NUM_FRAMES_PER_VITALS_PACKET = 10
 NUM_VITALS_FRAMES_IN_PLOT = 150
 NUM_HEART_RATES_FOR_MEDIAN = 6
 NUM_VITALS_FRAMES_IN_PLOT_IWRL6432 = 15
-NUM_BREATH_RATES_FOR_MEDIAN = 2
 
 
 class VitalSigns(PeopleTracking):
@@ -35,6 +36,20 @@ class VitalSigns(PeopleTracking):
         self.vitalsPatientData = []
         self.xWRLx432 = False
         self.vitals = []
+
+        self.previous_pulse_time_point1 = None
+        self.previous_pulse_time_point2 = None
+        self.distance_between_points = 0.3
+
+        # empirical constants (to be updated during calibration)
+        self.A = 120
+        self.B = 10
+        self.C = 80
+        self.D = 5
+
+        # blood pressure measurements from sphygmomanometer
+        self.sbp_manual = 120  # Systolic Blood Pressure
+        self.dbp_manual = 80  # Diastolic Blood Pressure
     
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         self.csv_file = os.path.join('visualizer_data', f'vital_signs_data_{timestamp}.csv')
@@ -43,12 +58,50 @@ class VitalSigns(PeopleTracking):
     def init_csv(self):
         with open(self.csv_file, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin'])
+            writer.writerow(['Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin', 'PTT', 'PWV', 'SBP', 'DBP', 'Blood Pressure'])
 
-    def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin):
+    def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp):
         with open(self.csv_file, mode='a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([patient_id, breath_rate, heart_rate, patient_status, range_bin])
+            writer.writerow([patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp])
+
+    def get_pulse_time_point(self, signal):
+        signal = (signal - np.min(signal)) / (np.max(signal) - np.min(signal))
+        signal = np.convolve(signal, np.ones(3)/3, mode='same')
+        peaks, _ = find_peaks(signal, height=0.2, distance=5)
+
+        if len(peaks) > 0:
+            return peaks[0]
+        else:
+            return None
+
+    def calculate_ptt(self, pulse_time_point1, pulse_time_point2):
+        if pulse_time_point1 is None or pulse_time_point2 is None:
+            return None
+        ptt = abs(pulse_time_point2 - pulse_time_point1)
+        return ptt if ptt != 0 else None
+
+    def calculate_pwv(self, ptt):
+        if ptt is None:
+            return None
+        pwv = self.distance_between_points / ptt
+        return pwv
+    
+    def calibrate(self):
+        if self.sbp_manual is None or self.dbp_manual is None:
+            raise ValueError("set manual SBP and DBP measurements before calibration")
+        ptt_initial = 0.1  # PTT value during initial calibration
+        self.B = (self.sbp_manual - 120) / ptt_initial
+        self.D = (self.dbp_manual - 80) / ptt_initial
+        self.A = 120
+        self.C = 80
+
+    def estimate_blood_pressure(self, ptt, pwv):
+        if ptt is None or pwv is None:
+            return None, None
+        sbp = self.A - self.B * ptt
+        dbp = self.C - self.D * ptt
+        return sbp, dbp
 
     def setupGUI(self, gridLayout, demoTabs, device):
         PeopleTracking.setupGUI(self, gridLayout, demoTabs, device)
@@ -153,17 +206,7 @@ class VitalSigns(PeopleTracking):
             if patientId < self.maxTracks:
                 self.vitalsPatientData[patientId]['rangeBin'] = self.vitalsDict['rangeBin']
                 self.vitalsPatientData[patientId]['breathDeviation'] = self.vitalsDict['breathDeviation']
-                
-                if self.vitalsDict['breathRate'] > 0:
-                    self.vitalsPatientData[patientId]['breathRates'].append(self.vitalsDict['breathRate'])
-                
-                while len(self.vitalsPatientData[patientId]['breathRates']) > NUM_BREATH_RATES_FOR_MEDIAN:
-                    self.vitalsPatientData[patientId]['breathRates'].pop(0)
-
-                if len(self.vitalsPatientData[patientId]['breathRates']) > 0:
-                    medianBreathRate = median(self.vitalsPatientData[patientId]['breathRates'])
-                else:
-                    medianBreathRate = 0
+                self.vitalsPatientData[patientId]['breathRate'] = self.vitalsDict['breathRate']
 
                 if self.vitalsDict['heartRate'] > 0:
                     self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
@@ -188,45 +231,61 @@ class VitalSigns(PeopleTracking):
 
                     if float(self.vitalsDict['breathDeviation']) >= 0.01:
                         patientStatus = 'Presence'
-                        if medianBreathRate == 0:
+                        if self.vitalsPatientData[patientId]['breathRate'] == 0:
                             breathRateText = "Updating"
                         else:
-                            breathRateText = str(round(medianBreathRate, 1))
+                            breathRateText = str(round(self.vitalsPatientData[patientId]['breathRate'], 1))
                     else:
                         patientStatus = 'Holding Breath'
                         breathRateText = "N/A"
+                    
+                    # PTT and PWV
+                    current_pulse_time_point1 = self.get_pulse_time_point(self.vitalsDict['heartWaveform'])  # Pass heart waveform data
+                    current_pulse_time_point2 = self.get_pulse_time_point(self.vitalsDict['breathWaveform'])  # Pass breath waveform data
+                    ptt = self.calculate_ptt(current_pulse_time_point1, current_pulse_time_point2)
+                    pwv = self.calculate_pwv(ptt) if ptt is not None else None
 
-                if self.xWRLx432 == 1:
-                    self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
-                    while len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432:
-                        self.vitalsPatientData[patientId]['heartWaveform'].pop(0)
+                    if ptt is not None and pwv is not None:
+                        sbp = self.A * pwv + self.B
+                        dbp = self.C * pwv + self.D
+                        bp = sbp/dbp
+                    else:
+                        sbp = None
+                        dbp = None
+                        bp = None
 
-                    self.vitalsPatientData[patientId]['breathWaveform'].extend(self.vitalsDict['breathWaveform'])
-                    while len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432:
-                        self.vitalsPatientData[patientId]['breathWaveform'].pop(0)
-                else:
-                    self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
-                    while len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT:
-                        self.vitalsPatientData[patientId]['heartWaveform'].pop(0)
+                    if self.xWRLx432 == 1:
+                        self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
+                        while len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432:
+                            self.vitalsPatientData[patientId]['heartWaveform'].pop(0)
 
-                    self.vitalsPatientData[patientId]['breathWaveform'].extend(self.vitalsDict['breathWaveform'])
-                    while len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT:
-                        self.vitalsPatientData[patientId]['breathWaveform'].pop(0)
+                        self.vitalsPatientData[patientId]['breathWaveform'].extend(self.vitalsDict['breathWaveform'])
+                        while len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432:
+                            self.vitalsPatientData[patientId]['breathWaveform'].pop(0)
+                    else:
+                        self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
+                        while len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT:
+                            self.vitalsPatientData[patientId]['heartWaveform'].pop(0)
 
-                heartWaveform = self.vitalsPatientData[patientId]['heartWaveform'].copy()
-                heartWaveform.reverse()
+                        self.vitalsPatientData[patientId]['breathWaveform'].extend(self.vitalsDict['breathWaveform'])
+                        while len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT:
+                            self.vitalsPatientData[patientId]['breathWaveform'].pop(0)
 
-                breathWaveform = self.vitalsPatientData[patientId]['breathWaveform'].copy()
-                breathWaveform.reverse()
+                    heartWaveform = self.vitalsPatientData[patientId]['heartWaveform'].copy()
+                    heartWaveform.reverse()
 
-                self.vitals[patientId]['heartGraph'].setData(heartWaveform)
-                self.vitals[patientId]['breathGraph'].setData(breathWaveform)
-                self.vitals[patientId]['heartRate'].setText(heartRateText)
-                self.vitals[patientId]['breathRate'].setText(breathRateText)
-                self.vitals[patientId]['status'].setText(patientStatus)
-                self.vitals[patientId]['rangeBin'].setText(str(self.vitalsPatientData[patientId]['rangeBin']))
+                    breathWaveform = self.vitalsPatientData[patientId]['breathWaveform'].copy()
+                    breathWaveform.reverse()
 
-                self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, self.vitalsPatientData[patientId]['rangeBin'])
+                    self.vitals[patientId]['heartGraph'].setData(heartWaveform)
+                    self.vitals[patientId]['breathGraph'].setData(breathWaveform)
+                    self.vitals[patientId]['heartRate'].setText(heartRateText)
+                    self.vitals[patientId]['breathRate'].setText(breathRateText)
+                    self.vitals[patientId]['status'].setText(patientStatus)
+                    self.vitals[patientId]['rangeBin'].setText(str(self.vitalsPatientData[patientId]['rangeBin']))
+
+                    self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, self.vitalsPatientData[patientId]['rangeBin'], ptt, pwv, sbp, dbp, bp)
+
 
     def parseTrackingCfg(self, args):
         PeopleTracking.parseTrackingCfg(self, args)
@@ -244,4 +303,5 @@ class VitalSigns(PeopleTracking):
             self.vitalsPatientData.append(patientDict)
 
             self.vitals[i]['pane'].setVisible(True)
+
 

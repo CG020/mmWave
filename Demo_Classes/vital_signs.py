@@ -17,6 +17,9 @@ import os
 import numpy as np
 from scipy.signal import find_peaks
 import time
+from icecream import ic 
+
+import math
 
 
 
@@ -38,6 +41,7 @@ class VitalSigns(PeopleTracking):
         self.vitalsPatientData = []
         self.xWRLx432 = False
         self.vitals = []
+        self.angle_buffer = [] 
         self.start_time = time.time()
 
         self.previous_pulse_time_point1 = None
@@ -58,17 +62,53 @@ class VitalSigns(PeopleTracking):
         self.csv_file = os.path.join('visualizer_data', f'vital_signs_data_{timestamp}.csv')
         self.init_csv()
     
+
+    def estimate_leaning_angle(self, point_cloud):
+        if point_cloud is None or len(point_cloud) < 2:
+            return None
+
+        # Extract x and z coordinates
+        points = point_cloud[:, [0, 2]]  # x and z
+
+        # Remove outliers
+        mean = np.mean(points, axis=0)
+        std = np.std(points, axis=0)
+        inliers = points[np.all(np.abs((points - mean) / std) < 2, axis=1)]
+
+        if len(inliers) < 2:
+            return None
+
+        # Calculate the covariance matrix
+        cov_matrix = np.cov(inliers, rowvar=False)
+
+        # Calculate the eigenvectors
+        eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
+
+        # Get the index of the largest eigenvalue
+        largest_eigenvector = eigenvectors[:, eigenvalues.argmax()]
+
+        # Calculate the angle
+        angle = np.arctan2(largest_eigenvector[0], largest_eigenvector[1])
+        angle_deg = np.degrees(angle)
+
+        # Apply a smaller threshold to consider small angles as "straight"
+        if abs(angle_deg) < 5:
+            return 0
+
+        return angle_deg
+    
+
     def init_csv(self):
         with open(self.csv_file, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Timestamp', 'Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin', 'PTT', 'PWV', 'SBP', 'DBP', 'Blood Pressure'])
+            writer.writerow(['Timestamp', 'Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin', 'PTT', 'PWV', 'SBP', 'DBP', 'Blood Pressure', 'Leaning Angle'])
 
-    def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp):
+    def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp, leaning_angle):
         current_time = time.time() - self.start_time
         with open(self.csv_file, mode='a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([f"{current_time:.3f}", patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp])
-
+            writer.writerow([f"{current_time:.3f}", patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp, leaning_angle])
+    
     def get_pulse_time_point(self, signal):
         signal = (signal - np.min(signal)) / (np.max(signal) - np.min(signal))
         signal = np.convolve(signal, np.ones(3)/3, mode='same')
@@ -195,6 +235,7 @@ class VitalSigns(PeopleTracking):
             vitalsPaneLayout.addWidget(patientPane,i,0)
         
         self.vitalsPane.setLayout(vitalsPaneLayout)
+        
 
     def updateGraph(self, outputDict):
         PeopleTracking.updateGraph(self, outputDict)
@@ -211,6 +252,15 @@ class VitalSigns(PeopleTracking):
                 self.vitalsPatientData[patientId]['rangeBin'] = self.vitalsDict['rangeBin']
                 self.vitalsPatientData[patientId]['breathDeviation'] = self.vitalsDict['breathDeviation']
                 self.vitalsPatientData[patientId]['breathRate'] = self.vitalsDict['breathRate']
+
+                if 'pointCloud' in outputDict:
+                    point_cloud = outputDict['pointCloud']
+                    if len(point_cloud) > 0:
+                        current_angle = self.estimate_leaning_angle(point_cloud)
+                        if current_angle is not None:
+                            leaning_angle = current_angle
+                        else:
+                            leaning_angle = None
 
                 if self.vitalsDict['heartRate'] > 0:
                     self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
@@ -288,8 +338,8 @@ class VitalSigns(PeopleTracking):
                     self.vitals[patientId]['status'].setText(patientStatus)
                     self.vitals[patientId]['rangeBin'].setText(str(self.vitalsPatientData[patientId]['rangeBin']))
 
-                    self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, self.vitalsPatientData[patientId]['rangeBin'], ptt, pwv, sbp, dbp, bp)
-
+                    self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, 
+                              self.vitalsPatientData[patientId]['rangeBin'], ptt, pwv, sbp, dbp, bp, leaning_angle)
 
 
     def parseTrackingCfg(self, args):
@@ -308,5 +358,3 @@ class VitalSigns(PeopleTracking):
             self.vitalsPatientData.append(patientDict)
 
             self.vitals[i]['pane'].setVisible(True)
-
-

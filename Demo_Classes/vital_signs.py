@@ -16,6 +16,8 @@ import datetime
 import os
 import numpy as np
 from scipy.signal import find_peaks
+import time
+
 
 
 # Vitals Configurables
@@ -36,6 +38,7 @@ class VitalSigns(PeopleTracking):
         self.vitalsPatientData = []
         self.xWRLx432 = False
         self.vitals = []
+        self.start_time = time.time()
 
         self.previous_pulse_time_point1 = None
         self.previous_pulse_time_point2 = None
@@ -58,12 +61,13 @@ class VitalSigns(PeopleTracking):
     def init_csv(self):
         with open(self.csv_file, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin', 'PTT', 'PWV', 'SBP', 'DBP', 'Blood Pressure'])
+            writer.writerow(['Timestamp', 'Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin', 'PTT', 'PWV', 'SBP', 'DBP', 'Blood Pressure'])
 
     def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp):
+        current_time = time.time() - self.start_time
         with open(self.csv_file, mode='a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp])
+            writer.writerow([f"{current_time:.3f}", patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp])
 
     def get_pulse_time_point(self, signal):
         signal = (signal - np.min(signal)) / (np.max(signal) - np.min(signal))
@@ -285,6 +289,7 @@ class VitalSigns(PeopleTracking):
                     self.vitals[patientId]['rangeBin'].setText(str(self.vitalsPatientData[patientId]['rangeBin']))
 
                     self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, self.vitalsPatientData[patientId]['rangeBin'], ptt, pwv, sbp, dbp, bp)
+
 
 
     def parseTrackingCfg(self, args):

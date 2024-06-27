@@ -70,34 +70,29 @@ class VitalSigns(PeopleTracking):
         # Extract x and z coordinates
         points = point_cloud[:, [0, 2]]  # x and z
 
-        # Remove outliers
         mean = np.mean(points, axis=0)
-        std = np.std(points, axis=0)
-        inliers = points[np.all(np.abs((points - mean) / std) < 2, axis=1)]
+        points_centered = points - mean
 
-        if len(inliers) < 2:
+        if len(points_centered) < 2:
             return None
 
-        # Calculate the covariance matrix
-        cov_matrix = np.cov(inliers, rowvar=False)
+        cov_matrix = np.cov(points_centered, rowvar=False)
 
-        # Calculate the eigenvectors
         eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
 
-        # Get the index of the largest eigenvalue
         largest_eigenvector = eigenvectors[:, eigenvalues.argmax()]
 
-        # Calculate the angle
-        angle = np.arctan2(largest_eigenvector[0], largest_eigenvector[1])
-        angle_deg = np.degrees(angle)
+        angle_rad = np.arctan2(largest_eigenvector[0], largest_eigenvector[1])
+        angle_deg = np.degrees(angle_rad)
 
-        # Apply a smaller threshold to consider small angles as "straight"
-        if abs(angle_deg) < 5:
-            return 0
+        # normalize
+        if angle_deg > 90:
+            angle_deg -= 180
+        elif angle_deg < -90:
+            angle_deg += 180
 
         return angle_deg
     
-
     def init_csv(self):
         with open(self.csv_file, mode='w', newline='') as file:
             writer = csv.writer(file)
@@ -258,9 +253,14 @@ class VitalSigns(PeopleTracking):
                     if len(point_cloud) > 0:
                         current_angle = self.estimate_leaning_angle(point_cloud)
                         if current_angle is not None:
-                            leaning_angle = current_angle
+                            self.angle_buffer.append(current_angle)
+                            if len(self.angle_buffer) > 10: 
+                                self.angle_buffer.pop(0)
+                            leaning_angle = sum(self.angle_buffer) / len(self.angle_buffer)
                         else:
                             leaning_angle = None
+                    else:
+                        leaning_angle = None
 
                 if self.vitalsDict['heartRate'] > 0:
                     self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])

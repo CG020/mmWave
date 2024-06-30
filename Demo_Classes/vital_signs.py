@@ -66,22 +66,17 @@ class VitalSigns(PeopleTracking):
     def estimate_leaning_angle(self, point_cloud):
         if point_cloud is None or len(point_cloud) < 2:
             return None
-
         # Extract x and z coordinates
         points = point_cloud[:, [0, 2]]  # x and z
-
         mean = np.mean(points, axis=0)
         points_centered = points - mean
 
         if len(points_centered) < 2:
             return None
-
         cov_matrix = np.cov(points_centered, rowvar=False)
-
         eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
 
         largest_eigenvector = eigenvectors[:, eigenvalues.argmax()]
-
         angle_rad = np.arctan2(largest_eigenvector[0], largest_eigenvector[1])
         angle_deg = np.degrees(angle_rad)
 
@@ -264,7 +259,6 @@ class VitalSigns(PeopleTracking):
 
                 if self.vitalsDict['heartRate'] > 0:
                     self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
-
                 while len(self.vitalsPatientData[patientId]['heartRate']) > NUM_HEART_RATES_FOR_MEDIAN:
                     self.vitalsPatientData[patientId]['heartRate'].pop(0)
 

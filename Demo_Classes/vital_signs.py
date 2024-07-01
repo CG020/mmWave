@@ -18,6 +18,7 @@ import numpy as np
 from scipy.signal import find_peaks
 import time
 from icecream import ic 
+from scipy.signal import medfilt
 
 import math
 
@@ -44,6 +45,11 @@ class VitalSigns(PeopleTracking):
         self.angle_buffer = [] 
         self.start_time = time.time()
 
+        self.angle_history = []
+        self.leaning_state = "upright"
+        self.leaning_threshold = 30  # degrees
+        self.state_change_threshold = 5
+
         self.previous_pulse_time_point1 = None
         self.previous_pulse_time_point2 = None
         self.distance_between_points = 0.3
@@ -63,41 +69,81 @@ class VitalSigns(PeopleTracking):
         self.init_csv()
     
 
-    def estimate_leaning_angle(self, point_cloud):
+    def estimate_leaning_angle(self, point_cloud, height_range=(0.5, 1.8)):
         if point_cloud is None or len(point_cloud) < 2:
             return None
-        # Extract x and z coordinates
-        points = point_cloud[:, [0, 2]]  # x and z
-        mean = np.mean(points, axis=0)
-        points_centered = points - mean
 
-        if len(points_centered) < 2:
+        # Filter points to focus on torso region
+        torso_points = point_cloud[(point_cloud[:, 2] > height_range[0]) & (point_cloud[:, 2] < height_range[1])]
+        
+        if len(torso_points) < 2:
             return None
-        cov_matrix = np.cov(points_centered, rowvar=False)
-        eigenvalues, eigenvectors = np.linalg.eig(cov_matrix)
 
-        largest_eigenvector = eigenvectors[:, eigenvalues.argmax()]
-        angle_rad = np.arctan2(largest_eigenvector[0], largest_eigenvector[1])
+        # Extract x and z coordinates
+        points = torso_points[:, [0, 2]]  # x and z
+        
+        # Calculate weights based on y-coordinate (closer points get higher weight)
+        weights = 1 / (torso_points[:, 1] + 0.1)  # Add 0.1 to avoid division by zero
+        
+        # Compute weighted mean and covariance
+        mean = np.average(points, axis=0, weights=weights)
+        cov = np.cov(points.T, aweights=weights)
+
+        # Compute eigenvectors and eigenvalues
+        eigenvalues, eigenvectors = np.linalg.eigh(cov)
+
+        # Use the eigenvector corresponding to the largest eigenvalue
+        angle_rad = np.arctan2(eigenvectors[0, 1], eigenvectors[0, 0])
         angle_deg = np.degrees(angle_rad)
 
-        # normalize
+        # Normalize angle
         if angle_deg > 90:
             angle_deg -= 180
         elif angle_deg < -90:
             angle_deg += 180
 
-        return angle_deg
+        # Apply temporal filtering
+        self.angle_history.append(angle_deg)
+        if len(self.angle_history) > 10:
+            self.angle_history.pop(0)
+
+        filtered_angle = np.median(self.angle_history)
+
+        return filtered_angle
+
+    def update_leaning_state(self, angle):
+        if angle is None:
+            return "unknown"
+
+        if abs(angle) < self.leaning_threshold:
+            new_state = "upright"
+        elif angle > self.leaning_threshold:
+            new_state = "leaning right"
+        else:
+            new_state = "leaning left"
+
+        # Only change state if we've seen consistent readings
+        if new_state != self.leaning_state:
+            consistent_count = sum(1 for a in self.angle_history[-self.state_change_threshold:] 
+                                   if (abs(a) < self.leaning_threshold) == (new_state == "upright"))
+            if consistent_count >= self.state_change_threshold:
+                self.leaning_state = new_state
+                print(f"Leaning state changed to: {self.leaning_state}")
+
+        return self.leaning_state
     
     def init_csv(self):
         with open(self.csv_file, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Timestamp', 'Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin', 'PTT', 'PWV', 'SBP', 'DBP', 'Blood Pressure', 'Leaning Angle'])
+            writer.writerow(['Timestamp', 'Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin', 'PTT',
+                              'PWV', 'SBP', 'DBP', 'Blood Pressure', 'Leaning Angle', 'Leaning State'])
 
-    def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp, leaning_angle):
+    def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp, leaning_angle, leaning_state):
         current_time = time.time() - self.start_time
         with open(self.csv_file, mode='a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([f"{current_time:.3f}", patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp, leaning_angle])
+            writer.writerow([f"{current_time:.3f}", patient_id, breath_rate, heart_rate, patient_status,
+                              range_bin, ptt, pwv, sbp, dbp, bp, leaning_angle, leaning_state])
     
     def get_pulse_time_point(self, signal):
         signal = (signal - np.min(signal)) / (np.max(signal) - np.min(signal))
@@ -230,6 +276,9 @@ class VitalSigns(PeopleTracking):
     def updateGraph(self, outputDict):
         PeopleTracking.updateGraph(self, outputDict)
 
+        leaning_angle = None
+        leaning_state = "unknown"
+
         if 'vitals' in outputDict:
             self.vitalsDict = outputDict['vitals']
 
@@ -245,17 +294,20 @@ class VitalSigns(PeopleTracking):
 
                 if 'pointCloud' in outputDict:
                     point_cloud = outputDict['pointCloud']
-                    if len(point_cloud) > 0:
+                    if isinstance(point_cloud, np.ndarray) and point_cloud.shape[0] > 0:
                         current_angle = self.estimate_leaning_angle(point_cloud)
                         if current_angle is not None:
-                            self.angle_buffer.append(current_angle)
-                            if len(self.angle_buffer) > 10: 
-                                self.angle_buffer.pop(0)
-                            leaning_angle = sum(self.angle_buffer) / len(self.angle_buffer)
+                            leaning_state = self.update_leaning_state(current_angle)
+                            leaning_angle = current_angle if leaning_state != "upright" else 0.0
                         else:
                             leaning_angle = None
+                            leaning_state = "unknown"
                     else:
                         leaning_angle = None
+                        leaning_state = "unknown"
+                else:
+                    leaning_angle = None
+                    leaning_state = "unknown"
 
                 if self.vitalsDict['heartRate'] > 0:
                     self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
@@ -333,7 +385,7 @@ class VitalSigns(PeopleTracking):
                     self.vitals[patientId]['rangeBin'].setText(str(self.vitalsPatientData[patientId]['rangeBin']))
 
                     self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, 
-                              self.vitalsPatientData[patientId]['rangeBin'], ptt, pwv, sbp, dbp, bp, leaning_angle)
+                      self.vitalsPatientData[patientId]['rangeBin'], ptt, pwv, sbp, dbp, bp, leaning_angle, leaning_state)
 
 
     def parseTrackingCfg(self, args):

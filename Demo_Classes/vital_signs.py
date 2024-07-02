@@ -30,6 +30,8 @@ NUM_FRAMES_PER_VITALS_PACKET = 10
 NUM_VITALS_FRAMES_IN_PLOT = 150
 NUM_HEART_RATES_FOR_MEDIAN = 6
 NUM_VITALS_FRAMES_IN_PLOT_IWRL6432 = 15
+SUBJECT = "NAME"
+CHAIR = False
 
 
 class VitalSigns(PeopleTracking):
@@ -52,7 +54,11 @@ class VitalSigns(PeopleTracking):
 
     
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.csv_file = os.path.join('visualizer_data', f'vital_signs_data_{timestamp}.csv')
+        if CHAIR:
+            state = "chair"
+        else:
+            state = "stand"
+        self.csv_file = os.path.join('visualizer_data', f'vs_{SUBJECT}_{state}_{timestamp}.csv')
         self.init_csv()
     
 

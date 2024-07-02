@@ -50,19 +50,6 @@ class VitalSigns(PeopleTracking):
         self.leaning_threshold = 20  # degrees
         self.state_change_threshold = 5
 
-        self.previous_pulse_time_point1 = None
-        self.previous_pulse_time_point2 = None
-        self.distance_between_points = 0.3
-
-        # empirical constants (to be updated during calibration)
-        self.A = 120
-        self.B = 10
-        self.C = 80
-        self.D = 5
-
-        # blood pressure measurements from sphygmomanometer
-        self.sbp_manual = 120  # Systolic Blood Pressure
-        self.dbp_manual = 80  # Diastolic Blood Pressure
     
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         self.csv_file = os.path.join('visualizer_data', f'vital_signs_data_{timestamp}.csv')
@@ -135,15 +122,15 @@ class VitalSigns(PeopleTracking):
     def init_csv(self):
         with open(self.csv_file, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Timestamp', 'Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin', 'PTT',
-                              'PWV', 'SBP', 'DBP', 'Blood Pressure', 'Leaning Angle', 'Leaning State'])
+            writer.writerow(['Timestamp', 'Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin',
+                            'Leaning Angle', 'Leaning State'])
 
-    def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin, ptt, pwv, sbp, dbp, bp, leaning_angle, leaning_state):
+    def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin, leaning_angle, leaning_state):
         current_time = time.time() - self.start_time
         with open(self.csv_file, mode='a', newline='') as file:
             writer = csv.writer(file)
             writer.writerow([f"{current_time:.3f}", patient_id, breath_rate, heart_rate, patient_status,
-                              range_bin, ptt, pwv, sbp, dbp, bp, leaning_angle, leaning_state])
+                              range_bin, leaning_angle, leaning_state])
     
     def get_pulse_time_point(self, signal):
         signal = (signal - np.min(signal)) / (np.max(signal) - np.min(signal))
@@ -155,33 +142,6 @@ class VitalSigns(PeopleTracking):
         else:
             return None
 
-    def calculate_ptt(self, pulse_time_point1, pulse_time_point2):
-        if pulse_time_point1 is None or pulse_time_point2 is None:
-            return None
-        ptt = abs(pulse_time_point2 - pulse_time_point1)
-        return ptt if ptt != 0 else None
-
-    def calculate_pwv(self, ptt):
-        if ptt is None:
-            return None
-        pwv = self.distance_between_points / ptt
-        return pwv
-    
-    def calibrate(self):
-        if self.sbp_manual is None or self.dbp_manual is None:
-            raise ValueError("set manual SBP and DBP measurements before calibration")
-        ptt_initial = 0.1  # PTT value during initial calibration
-        self.B = (self.sbp_manual - 120) / ptt_initial
-        self.D = (self.dbp_manual - 80) / ptt_initial
-        self.A = 120
-        self.C = 80
-
-    def estimate_blood_pressure(self, ptt, pwv):
-        if ptt is None or pwv is None:
-            return None, None
-        sbp = self.A - self.B * ptt
-        dbp = self.C - self.D * ptt
-        return sbp, dbp
 
     def setupGUI(self, gridLayout, demoTabs, device):
         PeopleTracking.setupGUI(self, gridLayout, demoTabs, device)
@@ -349,20 +309,6 @@ class VitalSigns(PeopleTracking):
                     patientStatus = 'Holding Breath'
                     breathRateText = "N/A"
                 
-                # PTT and PWV
-                current_pulse_time_point1 = self.get_pulse_time_point(self.vitalsDict['heartWaveform'])  # Pass heart waveform data
-                current_pulse_time_point2 = self.get_pulse_time_point(self.vitalsDict['breathWaveform'])  # Pass breath waveform data
-                ptt = self.calculate_ptt(current_pulse_time_point1, current_pulse_time_point2)
-                pwv = self.calculate_pwv(ptt) if ptt is not None else None
-
-                if ptt is not None and pwv is not None:
-                    sbp = self.A * pwv + self.B
-                    dbp = self.C * pwv + self.D
-                    bp = sbp/dbp
-                else:
-                    sbp = None
-                    dbp = None
-                    bp = None
 
                 if self.xWRLx432 == 1:
                     self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
@@ -395,7 +341,7 @@ class VitalSigns(PeopleTracking):
                 self.vitals[patientId]['rangeBin'].setText(str(self.vitalsPatientData[patientId]['rangeBin']))
 
                 self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, 
-                    self.vitalsPatientData[patientId]['rangeBin'], ptt, pwv, sbp, dbp, bp, leaning_angle, leaning_state)
+                    self.vitalsPatientData[patientId]['rangeBin'], leaning_angle, leaning_state)
 
 
     def parseTrackingCfg(self, args):

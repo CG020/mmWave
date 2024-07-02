@@ -253,7 +253,7 @@ class VitalSigns(PeopleTracking):
                 self.vitals[patientId]['rangeBin'].setText("0")
                 self.vitals[patientId]['heartGraph'].setData([0] * NUM_VITALS_FRAMES_IN_PLOT)
                 self.vitals[patientId]['breathGraph'].setData([0] * NUM_VITALS_FRAMES_IN_PLOT)
-                self.write_to_csv(patientId, "N/A", "N/A", 'No Patient Detected', 0, None, None, None, None, None, None, "unknown")
+                self.write_to_csv(patientId, "N/A", "N/A", 'No Patient Detected', 0, None, "unknown")
             return
 
         patientId = self.vitalsDict['id']

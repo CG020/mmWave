@@ -47,7 +47,7 @@ class VitalSigns(PeopleTracking):
 
         self.angle_history = []
         self.leaning_state = "upright"
-        self.leaning_threshold = 30  # degrees
+        self.leaning_threshold = 20  # degrees
         self.state_change_threshold = 5
 
         self.previous_pulse_time_point1 = None
@@ -285,107 +285,117 @@ class VitalSigns(PeopleTracking):
         if 'numDetectedTracks' in outputDict:
             self.numTracks = outputDict['numDetectedTracks']
 
-        if self.vitalsDict is not None and self.numTracks is not None:
-            patientId = self.vitalsDict['id']
-            if patientId < self.maxTracks:
-                self.vitalsPatientData[patientId]['rangeBin'] = self.vitalsDict['rangeBin']
-                self.vitalsPatientData[patientId]['breathDeviation'] = self.vitalsDict['breathDeviation']
-                self.vitalsPatientData[patientId]['breathRate'] = self.vitalsDict['breathRate']
+        if self.numTracks == 0 or self.vitalsDict is None:
+            for patientId in range(min(self.maxTracks, MAX_VITALS_PATIENTS)):
+                self.vitals[patientId]['status'].setText('No Patient Detected')
+                self.vitals[patientId]['breathRate'].setText("N/A")
+                self.vitals[patientId]['heartRate'].setText("N/A")
+                self.vitals[patientId]['rangeBin'].setText("0")
+                self.vitals[patientId]['heartGraph'].setData([0] * NUM_VITALS_FRAMES_IN_PLOT)
+                self.vitals[patientId]['breathGraph'].setData([0] * NUM_VITALS_FRAMES_IN_PLOT)
+                self.write_to_csv(patientId, "N/A", "N/A", 'No Patient Detected', 0, None, None, None, None, None, None, "unknown")
+            return
 
-                if 'pointCloud' in outputDict:
-                    point_cloud = outputDict['pointCloud']
-                    if isinstance(point_cloud, np.ndarray) and point_cloud.shape[0] > 0:
-                        current_angle = self.estimate_leaning_angle(point_cloud)
-                        if current_angle is not None:
-                            leaning_state = self.update_leaning_state(current_angle)
-                            leaning_angle = current_angle if leaning_state != "upright" else 0.0
-                        else:
-                            leaning_angle = None
-                            leaning_state = "unknown"
+        patientId = self.vitalsDict['id']
+        if patientId < self.maxTracks:
+            self.vitalsPatientData[patientId]['rangeBin'] = self.vitalsDict['rangeBin']
+            self.vitalsPatientData[patientId]['breathDeviation'] = self.vitalsDict['breathDeviation']
+            self.vitalsPatientData[patientId]['breathRate'] = self.vitalsDict['breathRate']
+
+            if 'pointCloud' in outputDict:
+                point_cloud = outputDict['pointCloud']
+                if isinstance(point_cloud, np.ndarray) and point_cloud.shape[0] > 0:
+                    current_angle = self.estimate_leaning_angle(point_cloud)
+                    if current_angle is not None:
+                        leaning_state = self.update_leaning_state(current_angle)
+                        leaning_angle = current_angle if leaning_state != "upright" else 0.0
                     else:
                         leaning_angle = None
                         leaning_state = "unknown"
                 else:
                     leaning_angle = None
                     leaning_state = "unknown"
+            else:
+                leaning_angle = None
+                leaning_state = "unknown"
 
-                if self.vitalsDict['heartRate'] > 0:
-                    self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
-                while len(self.vitalsPatientData[patientId]['heartRate']) > NUM_HEART_RATES_FOR_MEDIAN:
-                    self.vitalsPatientData[patientId]['heartRate'].pop(0)
+            if self.vitalsDict['heartRate'] > 0:
+                self.vitalsPatientData[patientId]['heartRate'].append(self.vitalsDict['heartRate'])
+            while len(self.vitalsPatientData[patientId]['heartRate']) > NUM_HEART_RATES_FOR_MEDIAN:
+                self.vitalsPatientData[patientId]['heartRate'].pop(0)
 
-                medianHeartRate = median(self.vitalsPatientData[patientId]['heartRate'])
+            medianHeartRate = median(self.vitalsPatientData[patientId]['heartRate'])
 
-                if float(self.vitalsDict['breathDeviation']) == 0 or self.numTracks == 0:
-                    patientStatus = 'No Patient Detected'
-                    breathRateText = "N/A"
-                    heartRateText = "N/A"
-                    for i in range(NUM_FRAMES_PER_VITALS_PACKET):
-                        self.vitalsDict['heartWaveform'][i] = 0
-                        self.vitalsDict['breathWaveform'][i] = 0
+            if float(self.vitalsDict['breathDeviation']) == 0:
+                patientStatus = 'No Patient Detected'
+                breathRateText = "N/A"
+                heartRateText = "N/A"
+                for i in range(NUM_FRAMES_PER_VITALS_PACKET):
+                    self.vitalsDict['heartWaveform'][i] = 0
+                    self.vitalsDict['breathWaveform'][i] = 0
+            else:
+                if medianHeartRate == 0:
+                    heartRateText = "Updating"
                 else:
-                    if medianHeartRate == 0:
-                        heartRateText = "Updating"
+                    heartRateText = str(round(medianHeartRate, 1))
+
+                if float(self.vitalsDict['breathDeviation']) >= 0.01:
+                    patientStatus = 'Presence'
+                    if self.vitalsPatientData[patientId]['breathRate'] == 0:
+                        breathRateText = "Updating"
                     else:
-                        heartRateText = str(round(medianHeartRate, 1))
+                        breathRateText = str(round(self.vitalsPatientData[patientId]['breathRate'], 1))
+                else:
+                    patientStatus = 'Holding Breath'
+                    breathRateText = "N/A"
+                
+                # PTT and PWV
+                current_pulse_time_point1 = self.get_pulse_time_point(self.vitalsDict['heartWaveform'])  # Pass heart waveform data
+                current_pulse_time_point2 = self.get_pulse_time_point(self.vitalsDict['breathWaveform'])  # Pass breath waveform data
+                ptt = self.calculate_ptt(current_pulse_time_point1, current_pulse_time_point2)
+                pwv = self.calculate_pwv(ptt) if ptt is not None else None
 
-                    if float(self.vitalsDict['breathDeviation']) >= 0.01:
-                        patientStatus = 'Presence'
-                        if self.vitalsPatientData[patientId]['breathRate'] == 0:
-                            breathRateText = "Updating"
-                        else:
-                            breathRateText = str(round(self.vitalsPatientData[patientId]['breathRate'], 1))
-                    else:
-                        patientStatus = 'Holding Breath'
-                        breathRateText = "N/A"
-                    
-                    # PTT and PWV
-                    current_pulse_time_point1 = self.get_pulse_time_point(self.vitalsDict['heartWaveform'])  # Pass heart waveform data
-                    current_pulse_time_point2 = self.get_pulse_time_point(self.vitalsDict['breathWaveform'])  # Pass breath waveform data
-                    ptt = self.calculate_ptt(current_pulse_time_point1, current_pulse_time_point2)
-                    pwv = self.calculate_pwv(ptt) if ptt is not None else None
+                if ptt is not None and pwv is not None:
+                    sbp = self.A * pwv + self.B
+                    dbp = self.C * pwv + self.D
+                    bp = sbp/dbp
+                else:
+                    sbp = None
+                    dbp = None
+                    bp = None
 
-                    if ptt is not None and pwv is not None:
-                        sbp = self.A * pwv + self.B
-                        dbp = self.C * pwv + self.D
-                        bp = sbp/dbp
-                    else:
-                        sbp = None
-                        dbp = None
-                        bp = None
+                if self.xWRLx432 == 1:
+                    self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
+                    while len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432:
+                        self.vitalsPatientData[patientId]['heartWaveform'].pop(0)
 
-                    if self.xWRLx432 == 1:
-                        self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
-                        while len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432:
-                            self.vitalsPatientData[patientId]['heartWaveform'].pop(0)
+                    self.vitalsPatientData[patientId]['breathWaveform'].extend(self.vitalsDict['breathWaveform'])
+                    while len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432:
+                        self.vitalsPatientData[patientId]['breathWaveform'].pop(0)
+                else:
+                    self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
+                    while len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT:
+                        self.vitalsPatientData[patientId]['heartWaveform'].pop(0)
 
-                        self.vitalsPatientData[patientId]['breathWaveform'].extend(self.vitalsDict['breathWaveform'])
-                        while len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT_IWRL6432:
-                            self.vitalsPatientData[patientId]['breathWaveform'].pop(0)
-                    else:
-                        self.vitalsPatientData[patientId]['heartWaveform'].extend(self.vitalsDict['heartWaveform'])
-                        while len(self.vitalsPatientData[patientId]['heartWaveform']) > NUM_VITALS_FRAMES_IN_PLOT:
-                            self.vitalsPatientData[patientId]['heartWaveform'].pop(0)
+                    self.vitalsPatientData[patientId]['breathWaveform'].extend(self.vitalsDict['breathWaveform'])
+                    while len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT:
+                        self.vitalsPatientData[patientId]['breathWaveform'].pop(0)
 
-                        self.vitalsPatientData[patientId]['breathWaveform'].extend(self.vitalsDict['breathWaveform'])
-                        while len(self.vitalsPatientData[patientId]['breathWaveform']) > NUM_VITALS_FRAMES_IN_PLOT:
-                            self.vitalsPatientData[patientId]['breathWaveform'].pop(0)
+                heartWaveform = self.vitalsPatientData[patientId]['heartWaveform'].copy()
+                heartWaveform.reverse()
 
-                    heartWaveform = self.vitalsPatientData[patientId]['heartWaveform'].copy()
-                    heartWaveform.reverse()
+                breathWaveform = self.vitalsPatientData[patientId]['breathWaveform'].copy()
+                breathWaveform.reverse()
 
-                    breathWaveform = self.vitalsPatientData[patientId]['breathWaveform'].copy()
-                    breathWaveform.reverse()
+                self.vitals[patientId]['heartGraph'].setData(heartWaveform)
+                self.vitals[patientId]['breathGraph'].setData(breathWaveform)
+                self.vitals[patientId]['heartRate'].setText(heartRateText)
+                self.vitals[patientId]['breathRate'].setText(breathRateText)
+                self.vitals[patientId]['status'].setText(patientStatus)
+                self.vitals[patientId]['rangeBin'].setText(str(self.vitalsPatientData[patientId]['rangeBin']))
 
-                    self.vitals[patientId]['heartGraph'].setData(heartWaveform)
-                    self.vitals[patientId]['breathGraph'].setData(breathWaveform)
-                    self.vitals[patientId]['heartRate'].setText(heartRateText)
-                    self.vitals[patientId]['breathRate'].setText(breathRateText)
-                    self.vitals[patientId]['status'].setText(patientStatus)
-                    self.vitals[patientId]['rangeBin'].setText(str(self.vitalsPatientData[patientId]['rangeBin']))
-
-                    self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, 
-                      self.vitalsPatientData[patientId]['rangeBin'], ptt, pwv, sbp, dbp, bp, leaning_angle, leaning_state)
+                self.write_to_csv(patientId, breathRateText, heartRateText, patientStatus, 
+                    self.vitalsPatientData[patientId]['rangeBin'], ptt, pwv, sbp, dbp, bp, leaning_angle, leaning_state)
 
 
     def parseTrackingCfg(self, args):

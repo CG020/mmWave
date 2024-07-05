@@ -30,7 +30,9 @@ NUM_FRAMES_PER_VITALS_PACKET = 10
 NUM_VITALS_FRAMES_IN_PLOT = 150
 NUM_HEART_RATES_FOR_MEDIAN = 6
 NUM_VITALS_FRAMES_IN_PLOT_IWRL6432 = 15
-SUBJECT = "NAME"
+
+
+SUBJECT = "TEST"
 CHAIR = False
 
 
@@ -66,36 +68,36 @@ class VitalSigns(PeopleTracking):
         if point_cloud is None or len(point_cloud) < 2:
             return None
 
-        # Filter points to focus on torso region
+        # torso region filtering
         torso_points = point_cloud[(point_cloud[:, 2] > height_range[0]) & (point_cloud[:, 2] < height_range[1])]
         
         if len(torso_points) < 2:
             return None
 
-        # Extract x and z coordinates
+        #  x and z coordinates
         points = torso_points[:, [0, 2]]  # x and z
         
-        # Calculate weights based on y-coordinate (closer points get higher weight)
-        weights = 1 / (torso_points[:, 1] + 0.1)  # Add 0.1 to avoid division by zero
+        # weights based on y-coordinate (closer points get higher weight)
+        weights = 1 / (torso_points[:, 1] + 0.1)
         
-        # Compute weighted mean and covariance
+        #  weighted mean and covariance
         mean = np.average(points, axis=0, weights=weights)
         cov = np.cov(points.T, aweights=weights)
 
-        # Compute eigenvectors and eigenvalues
+        #  eigenvectors and eigenvalues
         eigenvalues, eigenvectors = np.linalg.eigh(cov)
 
-        # Use the eigenvector corresponding to the largest eigenvalue
+        # eigenvector corresponding to the largest eigenvalue
         angle_rad = np.arctan2(eigenvectors[0, 1], eigenvectors[0, 0])
         angle_deg = np.degrees(angle_rad)
 
-        # Normalize angle
+        # normalize angle
         if angle_deg > 90:
             angle_deg -= 180
         elif angle_deg < -90:
             angle_deg += 180
 
-        # Apply temporal filtering
+        #  temporal filtering
         self.angle_history.append(angle_deg)
         if len(self.angle_history) > 10:
             self.angle_history.pop(0)
@@ -108,20 +110,20 @@ class VitalSigns(PeopleTracking):
         if angle is None:
             return "unknown"
 
-        if abs(angle) < self.leaning_threshold:
+        if abs(angle) <= self.leaning_threshold:
             new_state = "upright"
         elif angle > self.leaning_threshold:
             new_state = "leaning right"
         else:
             new_state = "leaning left"
 
-        # Only change state if we've seen consistent readings
+        self.leaning_state = new_state
+
         if new_state != self.leaning_state:
             consistent_count = sum(1 for a in self.angle_history[-self.state_change_threshold:] 
                                    if (abs(a) < self.leaning_threshold) == (new_state == "upright"))
             if consistent_count >= self.state_change_threshold:
                 self.leaning_state = new_state
-                print(f"Leaning state changed to: {self.leaning_state}")
 
         return self.leaning_state
     

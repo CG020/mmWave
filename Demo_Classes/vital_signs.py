@@ -72,7 +72,7 @@ class VitalSigns(PeopleTracking):
     def generate_csv_filename(self):
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         state = "chair" if CHAIR else "stand"
-        return os.path.join('visualizer_data', f'vs_{SUBJECT}_{state}_{timestamp}_part{self.file_counter}.csv')
+        return os.path.join('visualizer_data', f'{EXPERIMENT}_{SUBJECT}_{state}_{timestamp}_part{self.file_counter}.csv')
 
     def create_new_csv_file(self):
         self.csv_file = self.generate_csv_filename()

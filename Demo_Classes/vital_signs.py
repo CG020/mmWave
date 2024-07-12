@@ -32,8 +32,9 @@ NUM_HEART_RATES_FOR_MEDIAN = 6
 NUM_VITALS_FRAMES_IN_PLOT_IWRL6432 = 15
 
 
-SUBJECT = "TEST"
-CHAIR = False
+SUBJECT = "MIKHAIL"
+CHAIR = True
+EXPERIMENT = 'floor'
 
 
 class VitalSigns(PeopleTracking):
@@ -49,6 +50,12 @@ class VitalSigns(PeopleTracking):
         self.angle_buffer = [] 
         self.start_time = time.time()
 
+
+        self.current_file_start_time = self.start_time
+        self.file_duration = 300  # Duration in seconds before starting a new file
+        self.file_counter = 0
+        
+
         self.angle_history = []
         self.leaning_state = "upright"
         self.leaning_threshold = 20  # degrees
@@ -60,9 +67,21 @@ class VitalSigns(PeopleTracking):
             state = "chair"
         else:
             state = "stand"
-        self.csv_file = os.path.join('visualizer_data', f'vs_{SUBJECT}_{state}_{timestamp}.csv')
-        self.init_csv()
+        self.create_new_csv_file()
     
+    def generate_csv_filename(self):
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        state = "chair" if CHAIR else "stand"
+        return os.path.join('visualizer_data', f'vs_{SUBJECT}_{state}_{timestamp}_part{self.file_counter}.csv')
+
+    def create_new_csv_file(self):
+        self.csv_file = self.generate_csv_filename()
+        self.file_counter += 1
+        self.current_file_start_time = time.time()
+        with open(self.csv_file, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Timestamp', 'Patient ID', 'Breath Rate', 'Heart Rate', 'Patient Status', 'Range Bin',
+                            'Leaning Angle', 'Leaning State'])
 
     def estimate_leaning_angle(self, point_cloud, height_range=(0.5, 1.8)):
         if point_cloud is None or len(point_cloud) < 2:
@@ -134,11 +153,15 @@ class VitalSigns(PeopleTracking):
                             'Leaning Angle', 'Leaning State'])
 
     def write_to_csv(self, patient_id, breath_rate, heart_rate, patient_status, range_bin, leaning_angle, leaning_state):
-        current_time = time.time() - self.start_time
+        current_time = time.time()
+        if current_time - self.current_file_start_time >= self.file_duration:
+            self.create_new_csv_file()
+        
+        elapsed_time = current_time - self.start_time
         with open(self.csv_file, mode='a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([f"{current_time:.3f}", patient_id, breath_rate, heart_rate, patient_status,
-                              range_bin, leaning_angle, leaning_state])
+            writer.writerow([f"{elapsed_time:.3f}", patient_id, breath_rate, heart_rate, patient_status,
+                            range_bin, leaning_angle, leaning_state])
     
     def get_pulse_time_point(self, signal):
         signal = (signal - np.min(signal)) / (np.max(signal) - np.min(signal))

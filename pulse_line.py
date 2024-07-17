@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from icecream import ic
 
-current = 'floor_AARON_stand'
+current = 'floor_LINDA_stand'
 
 def process_csv_files_in_directory(root_folder, subfolder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data', subfolder)
@@ -43,10 +43,6 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
 
     pulse_data = pulse_data.replace([np.inf, -np.inf], np.nan).dropna()
 
-    print("Pulse data info:")
-    print(pulse_data.info())
-    print("\nPulse data description:")
-    print(pulse_data.describe())
 
     plt.figure(figsize=(14, 7))
 

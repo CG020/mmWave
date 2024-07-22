@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from icecream import ic
 
-current = 'floor_LINDA_stand'
+current = 'floor_LUCAS_stand'
 
 def process_csv_files_in_directory(root_folder, subfolder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data', subfolder)

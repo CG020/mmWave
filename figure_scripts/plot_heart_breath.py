@@ -40,8 +40,14 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
             print(f"No data for {metric_type} in {vitals_file_path}")
             continue
 
-        metric_data['Time_Diff'] = metric_data['Timestamp'].diff()
-        metric_data['Physical_Rate'] = 60 / metric_data['Time_Diff']
+        if metric_type == 'pulse':
+            metric_data['Time_Diff'] = metric_data['Timestamp'].diff()
+            metric_data['Physical_Rate'] = 60 / metric_data['Time_Diff']
+        else:
+            metric_data['Time_Diff'] = metric_data['Timestamp'].diff()
+            metric_data['Pulse_Count'] = metric_data.groupby(metric_data.index // 30)['Time_Diff'].transform('count')
+            metric_data['Physical_Rate'] = (metric_data['Pulse_Count'] * 2).fillna(0)
+
 
         def find_closest_value(timestamp):
             idx = (parts_combined['Timestamp'] - timestamp).abs().idxmin()
@@ -50,6 +56,7 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
         metric_data['Measured_Rate'] = metric_data['Timestamp'].apply(find_closest_value)
         metric_data = metric_data.replace([np.inf, -np.inf], np.nan).dropna(subset=['Physical_Rate', 'Measured_Rate'])
 
+        # Ensure both Physical_Rate and Measured_Rate are numeric
         metric_data['Physical_Rate'] = pd.to_numeric(metric_data['Physical_Rate'], errors='coerce')
         metric_data['Measured_Rate'] = pd.to_numeric(metric_data['Measured_Rate'], errors='coerce')
         metric_data = metric_data.dropna(subset=['Physical_Rate', 'Measured_Rate'])
@@ -78,8 +85,9 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
         plt.xticks(rotation=45)
         plt.tight_layout()
 
-        output_file_name = f"{subfolder}_{metric_type}_comparison.png"
+        output_file_name = f"figures/{subfolder}_{metric_type}_comparison.png"
         plt.savefig(output_file_name)
+        # plt.show()
 
         print(f"\n{metric_type.capitalize()} Rate Range:", 
               metric_data['Physical_Rate'].min(), "-", metric_data['Physical_Rate'].max())

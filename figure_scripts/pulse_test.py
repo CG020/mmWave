@@ -29,77 +29,79 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
 
     vitals = pd.read_csv(vitals_file_path)
 
-    metrics = {
-        'pulse': 'Heart Rate',
-        'breath': 'Breath Rate'
-    }
-    
-    for metric_type, radar_metric in metrics.items():
-        metric_data = vitals[vitals['Type'] == metric_type].copy()
-        if metric_data.empty:
-            print(f"No data for {metric_type} in {vitals_file_path}")
-            continue
+    metric_data = vitals[vitals['Type'] == 'pulse'].copy()
+    if metric_data.empty:
+        print(f"No data for pulse in {vitals_file_path}")
+        return
 
-        if metric_type == 'pulse':
-            metric_data['Time_Diff'] = metric_data['Timestamp'].diff()
-            metric_data['Pulse_Count'] = metric_data.groupby(metric_data.index // 15)['Time_Diff'].transform('count')
-            metric_data['Physical_Rate'] = (metric_data['Pulse_Count'] * 4).fillna(0)
-        else:
-            metric_data['Time_Diff'] = metric_data['Timestamp'].diff()
-            metric_data['Pulse_Count'] = metric_data.groupby(metric_data.index // 30)['Time_Diff'].transform('count')
-            metric_data['Physical_Rate'] = (metric_data['Pulse_Count'] * 2).fillna(0)
+    metric_data['Time_Diff'] = metric_data['Timestamp'].diff()
+    metric_data['Pulse_Count'] = metric_data.groupby(metric_data.index // 15)['Time_Diff'].transform('count')
+    metric_data['Physical_Rate'] = (metric_data['Pulse_Count'] * 4).fillna(0)
 
-        def find_closest_value(timestamp):
-            idx = (parts_combined['Timestamp'] - timestamp).abs().idxmin()
-            return parts_combined.loc[idx, radar_metric] if radar_metric in parts_combined.columns else np.nan
+    def find_closest_value(timestamp):
+        idx = (parts_combined['Timestamp'] - timestamp).abs().idxmin()
+        return parts_combined.loc[idx, 'Heart Rate'] if 'Heart Rate' in parts_combined.columns else np.nan
 
-        metric_data['Measured_Rate'] = metric_data['Timestamp'].apply(find_closest_value)
-        metric_data = metric_data.replace([np.inf, -np.inf], np.nan).dropna(subset=['Physical_Rate', 'Measured_Rate'])
+    metric_data['Measured_Rate'] = metric_data['Timestamp'].apply(find_closest_value)
+    metric_data = metric_data.replace([np.inf, -np.inf], np.nan).dropna(subset=['Physical_Rate', 'Measured_Rate'])
 
-        # Ensure both Physical_Rate and Measured_Rate are numeric
-        metric_data['Physical_Rate'] = pd.to_numeric(metric_data['Physical_Rate'], errors='coerce')
-        metric_data['Measured_Rate'] = pd.to_numeric(metric_data['Measured_Rate'], errors='coerce')
-        metric_data = metric_data.dropna(subset=['Physical_Rate', 'Measured_Rate'])
+    metric_data['Physical_Rate'] = pd.to_numeric(metric_data['Physical_Rate'], errors='coerce')
+    metric_data['Measured_Rate'] = pd.to_numeric(metric_data['Measured_Rate'], errors='coerce')
+    metric_data = metric_data.dropna(subset=['Physical_Rate', 'Measured_Rate'])
 
-        if metric_data.empty:
-            print(f"No aligned data for {metric_type} in {vitals_file_path}")
-            continue
+    if metric_data.empty:
+        print(f"No aligned data for pulse in {vitals_file_path}")
+        return
 
-        plt.figure(figsize=(14, 7))
-        plt.scatter(metric_data['Mark'], metric_data['Physical_Rate'], 
-                    label=f'Taken {metric_type.capitalize()} Rate', marker='o', color='blue', alpha=0.6)
-        plt.scatter(metric_data['Mark'], metric_data['Measured_Rate'], 
-                    label=f'Radar {metric_type.capitalize()} Rate', marker='o', color='red', alpha=0.6)
+    closest_points_list = []
+    for idx, radar_row in metric_data.iterrows():
+        radar_marker = radar_row['Mark']
+        radar_rate = radar_row['Measured_Rate']
+        potential_matches = metric_data[metric_data['Mark'] == radar_marker]
+        closest_idx = (potential_matches['Physical_Rate'] - radar_rate).abs().idxmin()
+        closest_points_list.append(metric_data.loc[closest_idx])
 
-        plt.xlabel('Distance (Markers)')
-        plt.ylabel(f'{metric_type.capitalize()} Rate')
-        plt.title(f'Taken {metric_type.capitalize()} Rate vs MMWave Radar {metric_type.capitalize()} Rate')
-        plt.legend()
-        plt.grid(True)
-        plt.minorticks_on()
+    closest_points = pd.concat(closest_points_list, axis=1).T
 
-        y_min = max(0, min(metric_data['Physical_Rate'].min(), metric_data['Measured_Rate'].min()) - 10)
-        y_max = min(150, max(metric_data['Physical_Rate'].max(), metric_data['Measured_Rate'].max()) + 10)
-        plt.ylim(y_min, y_max)
+    closest_points = closest_points.loc[closest_points.groupby('Mark')['Timestamp'].idxmin()]
 
-        plt.xticks(rotation=45)
-        plt.tight_layout()
+    plt.figure(figsize=(14, 7))
+    plt.scatter(closest_points['Mark'], closest_points['Physical_Rate'], 
+                label=f'Taken Pulse Rate', marker='o', color='blue', alpha=0.6)
+    plt.scatter(closest_points['Mark'], closest_points['Measured_Rate'], 
+                label=f'Radar Pulse Rate', marker='o', color='red', alpha=0.6)
 
-        output_file_name = f"{subfolder}_{metric_type}_comparison.png"
-        plt.savefig(output_file_name)
-        # plt.show()
+    plt.xlabel('Distance (Markers)')
+    plt.ylabel('Pulse Rate')
+    plt.title('Taken Pulse Rate vs MMWave Radar Pulse Rate')
+    plt.legend()
+    plt.grid(True)
+    plt.minorticks_on()
 
-        print(f"\n{metric_type.capitalize()} Rate Range:", 
-              metric_data['Physical_Rate'].min(), "-", metric_data['Physical_Rate'].max())
-        print(f"Measured {metric_type.capitalize()} Rate Range:", 
-              metric_data['Measured_Rate'].min(), "-", metric_data['Measured_Rate'].max())
-        print("\nFirst few rows of aligned data:")
-        print(metric_data[['Mark', 'Physical_Rate', 'Measured_Rate']].head())
+    y_min = max(0, min(closest_points['Physical_Rate'].min(), closest_points['Measured_Rate'].min()) - 10)
+    y_max = min(150, max(closest_points['Physical_Rate'].max(), closest_points['Measured_Rate'].max()) + 10)
+    plt.ylim(y_min, y_max)
 
-        print("\nUnique timestamps in metric_data:", metric_data['Timestamp'].nunique())
-        print("Total rows in metric_data:", len(metric_data))
-        print("\nUnique timestamps in parts_combined:", parts_combined['Timestamp'].nunique())
-        print("Total rows in parts_combined:", len(parts_combined))
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+
+    output_dir = os.path.join('figures', 'pulse_test_plots')
+    os.makedirs(output_dir, exist_ok=True)
+    output_file_name = os.path.join(output_dir, f"{subfolder}_pulse_comparison.png")
+    plt.savefig(output_file_name)
+    plt.close()
+
+    print(f"\nPulse Rate Range:", 
+          closest_points['Physical_Rate'].min(), "-", closest_points['Physical_Rate'].max())
+    print(f"Measured Pulse Rate Range:", 
+          closest_points['Measured_Rate'].min(), "-", closest_points['Measured_Rate'].max())
+    print("\nFirst few rows of aligned data:")
+    print(closest_points[['Mark', 'Physical_Rate', 'Measured_Rate']].head())
+
+    print("\nUnique timestamps in metric_data:", metric_data['Timestamp'].nunique())
+    print("Total rows in metric_data:", len(metric_data))
+    print("\nUnique timestamps in parts_combined:", parts_combined['Timestamp'].nunique())
+    print("Total rows in parts_combined:", len(parts_combined))
 
 if __name__ == "__main__":
     root_folder = '.'

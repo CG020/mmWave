@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from icecream import ic
 
 def process_csv_files_in_directory(root_folder, subfolder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data', subfolder)
@@ -36,6 +37,7 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     
     for metric_type, radar_metric in metrics.items():
         metric_data = vitals[vitals['Type'] == metric_type].copy()
+        ic(metric_data)
         if metric_data.empty:
             print(f"No data for {metric_type} in {vitals_file_path}")
             continue

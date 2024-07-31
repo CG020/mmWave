@@ -32,9 +32,9 @@ NUM_HEART_RATES_FOR_MEDIAN = 6
 NUM_VITALS_FRAMES_IN_PLOT_IWRL6432 = 15
 
 
-SUBJECT = "AARON"
-CHAIR = True
-EXPERIMENT = 'tripod'
+SUBJECT = "CAMILA"
+CHAIR = False
+EXPERIMENT = 'floor'
 
 
 class VitalSigns(PeopleTracking):

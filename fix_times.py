@@ -50,5 +50,5 @@ def process_files(directory):
 
 
 # Usage
-directory = 'visualizer_data/floor_CANDICE_chair'
+directory = 'visualizer_data/tripod_NATALIE_stand'
 process_files(directory)

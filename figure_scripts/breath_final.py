@@ -80,6 +80,17 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
 
     plt.xticks(breath_data['Marker'].unique()[::2])
 
+    y_min = min(breath_data['Breath'].min(), breath_data['Radar Breath Rate'].min())
+    y_max = max(breath_data['Breath'].max(), breath_data['Radar Breath Rate'].max())
+    y_range = y_max - y_min
+    y_bottom = max(0, y_min - y_range * 0.5)
+    y_top = y_max + y_range * 0.5
+    plt.ylim(y_bottom, y_top)
+
+    tick_interval = max(2, int(y_range / 10))
+    y_ticks = np.arange(int(y_bottom), int(y_top) + 1, tick_interval)
+    plt.yticks(y_ticks)
+
     plt.tight_layout()
     output_file_name = f"figures/breath/{subfolder}_breath_comparison.png"
     os.makedirs(os.path.dirname(output_file_name), exist_ok=True)

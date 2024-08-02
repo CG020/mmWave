@@ -83,6 +83,17 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
 
     plt.xticks(vitals_data['Marker'].unique()[::2])
 
+    y_min = min(vitals_data['Pulse'].min(), vitals_data['Radar Heart Rate'].min(), vitals_data['Heart'].min())
+    y_max = max(vitals_data['Pulse'].max(), vitals_data['Radar Heart Rate'].max(), vitals_data['Heart'].max())
+    y_range = y_max - y_min
+    y_bottom = max(0, y_min - y_range * 0.5)
+    y_top = y_max + y_range * 0.5
+    plt.ylim(y_bottom, y_top)
+
+    tick_interval = max(10, int(y_range / 10))
+    y_ticks = np.arange(int(y_bottom), int(y_top) + 1, tick_interval)
+    plt.yticks(y_ticks)
+
     plt.tight_layout()
     output_file_name = f"figures/pulse/{subfolder}_heart_comparison.png"
     os.makedirs(os.path.dirname(output_file_name), exist_ok=True)

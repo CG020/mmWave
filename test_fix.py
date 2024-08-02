@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 
 # Correct path to the CSV file
-file_path = 'visualizer_data/floor_CANDICE_chair/floor_Candice_chair_vitals.csv'
+file_path = 'visualizer_data/tripod_NATALIE_stand/tripod_NATALIE_stand_vitals.csv'
 
 # Read the CSV file
 try:

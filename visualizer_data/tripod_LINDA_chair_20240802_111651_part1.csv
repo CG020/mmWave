@@ -1,0 +1,3335 @@
+Timestamp,Patient ID,Breath Rate,Heart Rate,Patient Status,Range Bin,Leaning Angle,Leaning State
+300.051,0,15.1,85.4,Presence,20,33.188848658501115,leaning right
+300.090,0,15.1,85.4,Presence,20,0.0,upright
+300.184,0,15.1,85.4,Presence,20,0.0,upright
+300.270,0,15.1,85.4,Presence,20,0.0,upright
+300.363,0,15.1,85.4,Presence,20,31.761887907449278,leaning right
+300.452,0,15.1,85.4,Presence,20,,unknown
+300.543,0,15.1,85.4,Presence,20,42.99270988775754,leaning right
+300.631,0,15.1,85.4,Presence,20,46.09034873348895,leaning right
+300.723,0,15.1,85.4,Presence,20,46.09034873348895,leaning right
+300.812,0,15.1,85.4,Presence,20,52.04905265179622,leaning right
+300.904,0,15.1,85.4,Presence,20,52.04905265179622,leaning right
+300.994,0,15.1,85.4,Presence,20,52.04905265179622,leaning right
+301.068,0,15.1,85.4,Presence,20,52.04905265179622,leaning right
+301.157,0,15.1,85.4,Presence,20,,unknown
+301.246,0,15.1,85.4,Presence,20,,unknown
+301.353,0,15.1,85.4,Presence,20,,unknown
+301.472,0,15.1,85.4,Presence,20,,unknown
+301.533,0,15.1,85.4,Presence,20,,unknown
+301.608,0,15.1,85.4,Presence,20,52.04905265179622,leaning right
+301.698,0,15.1,85.4,Presence,20,55.186796462082924,leaning right
+301.787,0,15.1,85.4,Presence,20,46.22709171156538,leaning right
+301.878,0,15.1,85.4,Presence,20,47.40632322185644,leaning right
+301.969,0,15.1,85.4,Presence,20,47.40632322185644,leaning right
+302.058,0,15.1,85.4,Presence,20,,unknown
+302.147,0,15.1,85.4,Presence,20,,unknown
+302.237,0,15.1,85.4,Presence,20,,unknown
+302.350,0,15.1,85.4,Presence,20,,unknown
+302.423,0,15.1,85.4,Presence,20,,unknown
+302.513,0,15.1,85.4,Presence,20,,unknown
+302.604,0,15.1,85.4,Presence,20,49.318167697799105,leaning right
+302.692,0,15.1,85.4,Presence,20,,unknown
+302.783,0,15.1,85.4,Presence,20,,unknown
+302.918,0,8.4,85.4,Presence,18,,unknown
+302.962,0,8.4,85.4,Presence,18,22.290221600835594,leaning right
+303.055,0,8.4,85.4,Presence,18,0.0,upright
+303.144,0,8.4,85.4,Presence,18,0.0,upright
+303.232,0,8.4,85.4,Presence,18,0.0,upright
+303.336,0,8.4,85.4,Presence,18,,unknown
+303.424,0,8.4,85.4,Presence,18,0.0,upright
+303.520,0,8.4,85.4,Presence,18,,unknown
+303.605,0,8.4,85.4,Presence,18,0.0,upright
+303.708,0,8.4,85.4,Presence,18,0.0,upright
+303.796,0,8.4,85.4,Presence,18,0.0,upright
+303.893,0,8.4,85.4,Presence,18,0.0,upright
+303.986,0,8.4,85.4,Presence,18,-47.65781192229175,leaning left
+304.065,0,8.4,85.4,Presence,18,-71.35729141808108,leaning left
+304.162,0,8.4,85.4,Presence,18,-74.35134927453373,leaning left
+304.242,0,8.4,85.4,Presence,18,,unknown
+304.362,0,10.0,85.4,Presence,18,,unknown
+304.412,0,10.0,85.4,Presence,18,,unknown
+304.517,0,10.0,85.4,Presence,18,-74.35134927453373,leaning left
+304.613,0,10.0,85.4,Presence,18,-74.35134927453373,leaning left
+304.697,0,10.0,85.4,Presence,18,-71.35729141808108,leaning left
+304.786,0,10.0,85.4,Presence,18,-74.35134927453373,leaning left
+304.879,0,10.0,85.4,Presence,18,-71.35729141808108,leaning left
+304.973,0,10.0,85.4,Presence,18,-73.79078436094177,leaning left
+305.066,0,10.0,85.4,Presence,18,-73.79078436094177,leaning left
+305.147,0,10.0,85.4,Presence,18,-38.16558649093158,leaning left
+305.233,0,10.0,85.4,Presence,18,,unknown
+305.327,0,10.0,85.4,Presence,18,,unknown
+305.420,0,10.0,85.4,Presence,18,,unknown
+305.506,0,10.0,85.4,Presence,18,0.0,upright
+305.585,0,10.0,85.4,Presence,18,0.0,upright
+305.679,0,10.0,85.4,Presence,18,0.0,upright
+305.805,0,10.0,85.4,Presence,25,-48.15610903625953,leaning left
+305.857,0,10.0,85.4,Presence,25,,unknown
+305.963,0,10.0,85.4,Presence,25,-57.86981829062709,leaning left
+306.046,0,10.0,85.4,Presence,25,-54.07463807664642,leaning left
+306.136,0,10.0,85.4,Presence,25,-60.438462190922465,leaning left
+306.206,0,10.0,85.4,Presence,25,,unknown
+306.312,0,10.0,85.4,Presence,25,-41.15582531252757,leaning left
+306.402,0,10.0,85.4,Presence,25,-41.15582531252757,leaning left
+306.487,0,10.0,85.4,Presence,25,-53.23034998634305,leaning left
+306.585,0,10.0,85.4,Presence,25,-53.23034998634305,leaning left
+306.677,0,10.0,85.4,Presence,25,-53.23034998634305,leaning left
+306.769,0,10.0,85.4,Presence,25,-41.15582531252757,leaning left
+306.859,0,10.0,85.4,Presence,25,-41.15582531252757,leaning left
+306.937,0,10.0,85.4,Presence,25,-41.15582531252757,leaning left
+307.021,0,10.0,85.4,Presence,25,-41.15582531252757,leaning left
+307.114,0,10.0,85.4,Presence,25,,unknown
+307.234,0,15.1,85.4,Presence,17,,unknown
+307.277,0,15.1,85.4,Presence,17,,unknown
+307.383,0,15.1,85.4,Presence,17,-25.21238711735812,leaning left
+307.480,0,15.1,85.4,Presence,17,0.0,upright
+307.576,0,15.1,85.4,Presence,17,0.0,upright
+307.668,0,15.1,85.4,Presence,17,0.0,upright
+307.756,0,15.1,85.4,Presence,17,0.0,upright
+307.843,0,15.1,85.4,Presence,17,0.0,upright
+307.937,0,15.1,85.4,Presence,17,0.0,upright
+308.014,0,15.1,85.4,Presence,17,0.0,upright
+308.103,0,15.1,85.4,Presence,17,,unknown
+308.206,0,15.1,85.4,Presence,17,0.0,upright
+308.279,0,15.1,85.4,Presence,17,0.0,upright
+308.373,0,15.1,85.4,Presence,17,0.0,upright
+308.467,0,15.1,85.4,Presence,17,0.0,upright
+308.568,0,15.1,85.4,Presence,17,0.0,upright
+308.697,0,13.4,85.4,Presence,29,0.0,upright
+308.743,0,13.4,85.4,Presence,29,0.0,upright
+308.843,0,13.4,85.4,Presence,29,0.0,upright
+308.933,0,13.4,85.4,Presence,29,0.0,upright
+309.023,0,13.4,85.4,Presence,29,-27.674443544573442,leaning left
+309.098,0,13.4,85.4,Presence,29,,unknown
+309.196,0,13.4,85.4,Presence,29,-83.3950649387231,leaning left
+309.286,0,13.4,85.4,Presence,29,-83.3950649387231,leaning left
+309.370,0,13.4,85.4,Presence,29,-83.3950649387231,leaning left
+309.453,0,13.4,85.4,Presence,29,,unknown
+309.551,0,13.4,85.4,Presence,29,-38.2225788249803,leaning left
+309.624,0,13.4,85.4,Presence,29,0.0,upright
+309.726,0,13.4,85.4,Presence,29,0.0,upright
+309.814,0,13.4,85.4,Presence,29,0.0,upright
+309.904,0,13.4,85.4,Presence,29,0.0,upright
+309.993,0,13.4,85.4,Presence,29,,unknown
+310.113,0,13.4,85.4,Presence,24,,unknown
+310.180,0,13.4,85.4,Presence,24,0.0,upright
+310.269,0,13.4,85.4,Presence,24,26.42130098101505,leaning right
+310.354,0,13.4,85.4,Presence,24,26.42130098101505,leaning right
+310.450,0,13.4,85.4,Presence,24,26.42130098101505,leaning right
+310.521,0,13.4,85.4,Presence,24,0.0,upright
+310.613,0,13.4,85.4,Presence,24,26.42130098101505,leaning right
+310.713,0,13.4,85.4,Presence,24,26.42130098101505,leaning right
+310.804,0,13.4,85.4,Presence,24,0.0,upright
+310.893,0,13.4,85.4,Presence,24,0.0,upright
+310.983,0,13.4,85.4,Presence,24,,unknown
+311.056,0,13.4,85.4,Presence,24,0.0,upright
+311.148,0,13.4,85.4,Presence,24,0.0,upright
+311.255,0,13.4,85.4,Presence,24,0.0,upright
+311.344,0,13.4,85.4,Presence,24,0.0,upright
+311.436,0,13.4,85.4,Presence,24,0.0,upright
+311.561,0,13.4,85.4,Presence,27,0.0,upright
+311.614,0,13.4,85.4,Presence,27,0.0,upright
+311.705,0,13.4,85.4,Presence,27,0.0,upright
+311.779,0,13.4,85.4,Presence,27,0.0,upright
+311.867,0,13.4,85.4,Presence,27,,unknown
+311.973,0,13.4,85.4,Presence,27,,unknown
+312.047,0,13.4,85.4,Presence,27,,unknown
+312.137,0,13.4,85.4,Presence,27,,unknown
+312.229,0,13.4,85.4,Presence,27,,unknown
+312.318,0,13.4,85.4,Presence,27,0.0,upright
+312.405,0,13.4,85.4,Presence,27,,unknown
+312.496,0,13.4,85.4,Presence,27,,unknown
+312.585,0,13.4,85.4,Presence,27,0.0,upright
+312.676,0,13.4,85.4,Presence,27,0.0,upright
+312.765,0,13.4,85.4,Presence,27,,unknown
+312.870,0,13.4,85.4,Presence,27,0.0,upright
+312.994,0,11.7,85.4,Presence,27,0.0,upright
+313.036,0,11.7,85.4,Presence,27,,unknown
+313.126,0,11.7,85.4,Presence,27,0.0,upright
+313.219,0,11.7,85.4,Presence,27,0.0,upright
+313.308,0,11.7,85.4,Presence,27,,unknown
+313.396,0,11.7,85.4,Presence,27,,unknown
+313.485,0,11.7,85.4,Presence,27,,unknown
+313.576,0,11.7,85.4,Presence,27,,unknown
+313.665,0,11.7,85.4,Presence,27,,unknown
+313.757,0,11.7,85.4,Presence,27,,unknown
+313.862,0,11.7,85.4,Presence,27,0.0,upright
+313.936,0,11.7,85.4,Presence,27,,unknown
+314.026,0,11.7,85.4,Presence,27,,unknown
+314.116,0,11.7,85.4,Presence,27,,unknown
+314.206,0,11.7,85.4,Presence,27,,unknown
+314.295,0,11.7,85.4,Presence,27,,unknown
+314.431,0,10.0,85.4,Presence,27,,unknown
+314.477,0,10.0,85.4,Presence,27,,unknown
+314.566,0,10.0,85.4,Presence,27,,unknown
+314.656,0,10.0,85.4,Presence,27,,unknown
+314.745,0,10.0,85.4,Presence,27,,unknown
+314.853,0,10.0,85.4,Presence,27,,unknown
+314.927,0,10.0,85.4,Presence,27,,unknown
+315.016,0,10.0,85.4,Presence,27,,unknown
+315.106,0,10.0,85.4,Presence,27,,unknown
+315.195,0,10.0,85.4,Presence,27,,unknown
+315.285,0,10.0,85.4,Presence,27,,unknown
+315.377,0,10.0,85.4,Presence,27,0.0,upright
+315.466,0,10.0,85.4,Presence,27,,unknown
+315.556,0,10.0,85.4,Presence,27,0.0,upright
+315.645,0,10.0,85.4,Presence,27,,unknown
+315.751,0,10.0,85.4,Presence,27,,unknown
+315.871,0,8.4,85.4,Presence,27,,unknown
+315.915,0,8.4,85.4,Presence,27,,unknown
+316.006,0,8.4,85.4,Presence,27,,unknown
+316.095,0,8.4,85.4,Presence,27,,unknown
+316.186,0,8.4,85.4,Presence,27,,unknown
+316.277,0,8.4,85.4,Presence,27,0.0,upright
+316.367,0,8.4,85.4,Presence,27,,unknown
+316.456,0,8.4,85.4,Presence,27,0.0,upright
+316.546,0,8.4,85.4,Presence,27,0.0,upright
+316.637,0,8.4,85.4,Presence,27,0.0,upright
+316.741,0,8.4,85.4,Presence,27,,unknown
+316.816,0,8.4,85.4,Presence,27,,unknown
+316.905,0,8.4,85.4,Presence,27,,unknown
+316.994,0,8.4,85.4,Presence,27,,unknown
+317.086,0,8.4,85.4,Presence,27,0.0,upright
+317.176,0,8.4,85.4,Presence,27,0.0,upright
+317.313,0,8.4,85.4,Presence,27,0.0,upright
+317.373,0,8.4,85.4,Presence,27,,unknown
+317.448,0,8.4,85.4,Presence,27,,unknown
+317.536,0,8.4,85.4,Presence,27,,unknown
+317.628,0,8.4,85.4,Presence,27,,unknown
+317.733,0,8.4,85.4,Presence,27,,unknown
+317.806,0,8.4,85.4,Presence,27,,unknown
+317.896,0,8.4,85.4,Presence,27,,unknown
+317.987,0,8.4,85.4,Presence,27,,unknown
+318.079,0,8.4,85.4,Presence,27,,unknown
+318.166,0,8.4,85.4,Presence,27,,unknown
+318.257,0,8.4,85.4,Presence,27,,unknown
+318.346,0,8.4,85.4,Presence,27,,unknown
+318.435,0,8.4,85.4,Presence,27,,unknown
+318.526,0,8.4,85.4,Presence,27,,unknown
+318.631,0,8.4,85.4,Presence,27,,unknown
+318.752,0,8.4,85.4,Presence,27,,unknown
+318.798,0,8.4,85.4,Presence,27,,unknown
+318.885,0,8.4,85.4,Presence,27,,unknown
+318.977,0,8.4,85.4,Presence,27,,unknown
+319.066,0,8.4,85.4,Presence,27,0.0,upright
+319.172,0,8.4,85.4,Presence,27,0.0,upright
+319.247,0,8.4,85.4,Presence,27,0.0,upright
+319.335,0,8.4,85.4,Presence,27,,unknown
+319.428,0,8.4,85.4,Presence,27,0.0,upright
+319.516,0,8.4,85.4,Presence,27,,unknown
+319.628,0,8.4,85.4,Presence,27,,unknown
+319.702,0,8.4,85.4,Presence,27,,unknown
+319.792,0,8.4,85.4,Presence,27,,unknown
+319.881,0,8.4,85.4,Presence,27,,unknown
+319.972,0,8.4,85.4,Presence,27,,unknown
+320.062,0,8.4,85.4,Presence,27,,unknown
+320.197,0,10.0,85.4,Presence,27,,unknown
+320.241,0,10.0,85.4,Presence,27,,unknown
+320.332,0,10.0,85.4,Presence,27,,unknown
+320.422,0,10.0,85.4,Presence,27,,unknown
+320.512,0,10.0,85.4,Presence,27,,unknown
+320.617,0,10.0,85.4,Presence,27,,unknown
+320.692,0,10.0,85.4,Presence,27,,unknown
+320.782,0,10.0,85.4,Presence,27,,unknown
+320.871,0,10.0,85.4,Presence,27,0.0,upright
+320.964,0,10.0,85.4,Presence,27,,unknown
+321.054,0,10.0,85.4,Presence,27,,unknown
+321.142,0,10.0,85.4,Presence,27,,unknown
+321.232,0,10.0,85.4,Presence,27,,unknown
+321.320,0,10.0,85.4,Presence,27,,unknown
+321.411,0,10.0,85.4,Presence,27,,unknown
+321.518,0,10.0,85.4,Presence,27,0.0,upright
+321.643,0,10.0,85.4,Presence,27,0.0,upright
+321.686,0,10.0,85.4,Presence,27,,unknown
+321.778,0,10.0,85.4,Presence,27,,unknown
+321.867,0,10.0,85.4,Presence,27,0.0,upright
+321.958,0,10.0,85.4,Presence,27,0.0,upright
+322.046,0,10.0,85.4,Presence,27,0.0,upright
+322.139,0,10.0,85.4,Presence,27,0.0,upright
+322.228,0,10.0,85.4,Presence,27,,unknown
+322.317,0,10.0,85.4,Presence,27,,unknown
+322.407,0,10.0,85.4,Presence,27,,unknown
+322.509,0,10.0,85.4,Presence,27,0.0,upright
+322.583,0,10.0,85.4,Presence,27,,unknown
+322.670,0,10.0,85.4,Presence,27,,unknown
+322.763,0,10.0,85.4,Presence,27,,unknown
+322.851,0,10.0,85.4,Presence,27,,unknown
+322.941,0,10.0,85.4,Presence,27,,unknown
+323.076,0,10.0,85.4,Presence,27,,unknown
+323.121,0,10.0,85.4,Presence,27,,unknown
+323.214,0,10.0,85.4,Presence,27,0.0,upright
+323.303,0,10.0,85.4,Presence,27,,unknown
+323.394,0,10.0,85.4,Presence,27,0.0,upright
+323.497,0,10.0,85.4,Presence,27,-25.552591621299783,leaning left
+323.572,0,10.0,85.4,Presence,27,,unknown
+323.663,0,10.0,85.4,Presence,27,,unknown
+323.753,0,10.0,85.4,Presence,27,,unknown
+323.843,0,10.0,85.4,Presence,27,,unknown
+323.932,0,10.0,85.4,Presence,27,,unknown
+324.021,0,10.0,85.4,Presence,27,,unknown
+324.114,0,10.0,85.4,Presence,27,0.0,upright
+324.203,0,10.0,85.4,Presence,27,,unknown
+324.293,0,10.0,85.4,Presence,27,0.0,upright
+324.398,0,10.0,85.4,Presence,27,,unknown
+324.523,0,10.0,85.4,Presence,27,,unknown
+324.567,0,10.0,85.4,Presence,27,0.0,upright
+324.658,0,10.0,85.4,Presence,27,,unknown
+324.748,0,10.0,85.4,Presence,27,,unknown
+324.837,0,10.0,85.4,Presence,27,,unknown
+324.926,0,10.0,85.4,Presence,27,,unknown
+325.016,0,10.0,85.4,Presence,27,,unknown
+325.106,0,10.0,85.4,Presence,27,,unknown
+325.197,0,10.0,85.4,Presence,27,,unknown
+325.286,0,10.0,85.4,Presence,27,,unknown
+325.389,0,10.0,85.4,Presence,27,,unknown
+325.463,0,10.0,85.4,Presence,27,,unknown
+325.552,0,10.0,85.4,Presence,27,,unknown
+325.642,0,10.0,85.4,Presence,27,,unknown
+325.732,0,10.0,85.4,Presence,27,,unknown
+325.823,0,10.0,85.4,Presence,27,0.0,upright
+325.960,0,11.7,85.4,Presence,27,0.0,upright
+326.001,0,11.7,85.4,Presence,27,,unknown
+326.092,0,11.7,85.4,Presence,27,,unknown
+326.182,0,11.7,85.4,Presence,27,,unknown
+326.272,0,11.7,85.4,Presence,27,,unknown
+326.360,0,11.7,85.4,Presence,27,,unknown
+326.452,0,11.7,85.4,Presence,27,,unknown
+326.540,0,11.7,85.4,Presence,27,0.0,upright
+326.633,0,11.7,85.4,Presence,27,0.0,upright
+326.723,0,11.7,85.4,Presence,27,0.0,upright
+326.813,0,11.7,85.4,Presence,27,,unknown
+326.902,0,11.7,85.4,Presence,27,,unknown
+326.992,0,11.7,85.4,Presence,27,,unknown
+327.081,0,11.7,85.4,Presence,27,0.0,upright
+327.185,0,11.7,85.4,Presence,27,0.0,upright
+327.273,0,11.7,85.4,Presence,27,,unknown
+327.393,0,10.0,85.4,Presence,27,,unknown
+327.465,0,10.0,85.4,Presence,27,0.0,upright
+327.542,0,10.0,85.4,Presence,27,,unknown
+327.641,0,10.0,85.4,Presence,27,0.0,upright
+327.726,0,10.0,85.4,Presence,27,0.0,upright
+327.821,0,10.0,85.4,Presence,27,0.0,upright
+327.903,0,10.0,85.4,Presence,27,0.0,upright
+327.977,0,10.0,85.4,Presence,27,-29.07250644707898,leaning left
+328.080,0,10.0,85.4,Presence,27,-45.98854911309617,leaning left
+328.160,0,10.0,85.4,Presence,27,-49.907106080102594,leaning left
+328.269,0,10.0,85.4,Presence,27,-49.907106080102594,leaning left
+328.355,0,10.0,85.4,Presence,27,-49.907106080102594,leaning left
+328.443,0,10.0,85.4,Presence,27,-45.98854911309617,leaning left
+328.518,0,10.0,85.4,Presence,27,-29.07250644707898,leaning left
+328.620,0,10.0,85.4,Presence,27,-24.987102765690025,leaning left
+328.699,0,10.0,85.4,Presence,27,0.0,upright
+328.834,0,13.4,85.4,Presence,27,0.0,upright
+328.878,0,13.4,85.4,Presence,27,0.0,upright
+328.968,0,13.4,85.4,Presence,27,0.0,upright
+329.074,0,13.4,85.4,Presence,27,0.0,upright
+329.162,0,13.4,85.4,Presence,27,,unknown
+329.252,0,13.4,85.4,Presence,27,,unknown
+329.344,0,13.4,85.4,Presence,27,0.0,upright
+329.446,0,13.4,85.4,Presence,27,0.0,upright
+329.526,0,13.4,85.4,Presence,27,,unknown
+329.619,0,13.4,85.4,Presence,27,0.0,upright
+329.703,0,13.4,85.4,Presence,27,0.0,upright
+329.800,0,13.4,85.4,Presence,27,23.05461857767571,leaning right
+329.884,0,13.4,85.4,Presence,27,,unknown
+329.980,0,13.4,85.4,Presence,27,0.0,upright
+330.066,0,13.4,85.4,Presence,27,0.0,upright
+330.151,0,13.4,85.4,Presence,27,,unknown
+330.273,0,18.4,85.4,Presence,27,,unknown
+330.337,0,18.4,85.4,Presence,27,0.0,upright
+330.425,0,18.4,85.4,Presence,27,0.0,upright
+330.520,0,18.4,85.4,Presence,27,0.0,upright
+330.605,0,18.4,85.4,Presence,27,43.57546984652663,leaning right
+330.705,0,18.4,85.4,Presence,27,43.57546984652663,leaning right
+330.784,0,18.4,85.4,Presence,27,43.57546984652663,leaning right
+330.881,0,18.4,85.4,Presence,27,36.901243887632106,leaning right
+330.971,0,18.4,85.4,Presence,27,0.0,upright
+331.055,0,18.4,85.4,Presence,27,0.0,upright
+331.146,0,18.4,85.4,Presence,27,,unknown
+331.251,0,18.4,85.4,Presence,27,0.0,upright
+331.342,0,18.4,85.4,Presence,27,0.0,upright
+331.426,0,18.4,85.4,Presence,27,0.0,upright
+331.523,0,18.4,85.4,Presence,27,0.0,upright
+331.612,0,18.4,85.4,Presence,27,0.0,upright
+331.736,0,20.1,85.4,Presence,27,0.0,upright
+331.790,0,20.1,85.4,Presence,27,0.0,upright
+331.866,0,20.1,85.4,Presence,27,-53.172312044739,leaning left
+331.961,0,20.1,85.4,Presence,27,-66.52668656866538,leaning left
+332.066,0,20.1,85.4,Presence,27,-66.52668656866538,leaning left
+332.137,0,20.1,85.4,Presence,27,,unknown
+332.241,0,20.1,85.4,Presence,27,-66.52668656866538,leaning left
+332.333,0,20.1,85.4,Presence,27,-73.78423823337019,leaning left
+332.422,0,20.1,85.4,Presence,27,-79.93683107738963,leaning left
+332.513,0,20.1,85.4,Presence,27,-79.93683107738963,leaning left
+332.602,0,20.1,85.4,Presence,27,-79.93683107738963,leaning left
+332.692,0,20.1,85.4,Presence,27,-76.88269837415007,leaning left
+332.783,0,20.1,85.4,Presence,27,-79.93683107738963,leaning left
+332.862,0,20.1,85.4,Presence,27,-78.68632651416608,leaning left
+332.951,0,20.1,85.4,Presence,27,-76.88269837415007,leaning left
+333.045,0,20.1,85.4,Presence,27,,unknown
+333.170,0,18.4,85.4,Presence,20,,unknown
+333.218,0,18.4,85.4,Presence,20,-76.88269837415007,leaning left
+333.311,0,18.4,85.4,Presence,20,-76.88269837415007,leaning left
+333.400,0,18.4,85.4,Presence,20,-75.25652756736343,leaning left
+333.485,0,18.4,85.4,Presence,20,-37.647324103245246,leaning left
+333.574,0,18.4,85.4,Presence,20,-36.77888765764176,leaning left
+333.663,0,18.4,85.4,Presence,20,-36.77888765764176,leaning left
+333.750,0,18.4,85.4,Presence,20,-36.77888765764176,leaning left
+333.827,0,18.4,85.4,Presence,20,,unknown
+333.918,0,18.4,85.4,Presence,20,0.0,upright
+334.022,0,18.4,85.4,Presence,20,,unknown
+334.113,0,18.4,85.4,Presence,20,,unknown
+334.204,0,18.4,85.4,Presence,20,0.0,upright
+334.292,0,18.4,85.4,Presence,20,0.0,upright
+334.383,0,18.4,85.4,Presence,20,0.0,upright
+334.480,0,18.4,85.4,Presence,20,,unknown
+334.610,0,18.4,85.4,Presence,27,,unknown
+334.652,0,18.4,85.4,Presence,27,0.0,upright
+334.743,0,18.4,85.4,Presence,27,0.0,upright
+334.839,0,18.4,85.4,Presence,27,0.0,upright
+334.923,0,18.4,85.4,Presence,27,,unknown
+335.013,0,18.4,85.4,Presence,27,,unknown
+335.086,0,18.4,85.4,Presence,27,,unknown
+335.195,0,18.4,85.4,Presence,27,0.0,upright
+335.269,0,18.4,85.4,Presence,27,0.0,upright
+335.359,0,18.4,85.4,Presence,27,0.0,upright
+335.449,0,18.4,85.4,Presence,27,0.0,upright
+335.539,0,18.4,85.4,Presence,27,0.0,upright
+335.629,0,18.4,85.4,Presence,27,0.0,upright
+335.718,0,18.4,85.4,Presence,27,0.0,upright
+335.806,0,18.4,85.4,Presence,27,0.0,upright
+335.913,0,18.4,85.4,Presence,27,,unknown
+336.032,0,18.4,85.4,Presence,27,,unknown
+336.075,0,18.4,85.4,Presence,27,,unknown
+336.167,0,18.4,85.4,Presence,27,,unknown
+336.258,0,18.4,85.4,Presence,27,,unknown
+336.346,0,18.4,85.4,Presence,27,,unknown
+336.436,0,18.4,85.4,Presence,27,,unknown
+336.527,0,18.4,85.4,Presence,27,,unknown
+336.617,0,18.4,85.4,Presence,27,,unknown
+336.707,0,18.4,85.4,Presence,27,,unknown
+336.798,0,18.4,85.4,Presence,27,,unknown
+336.903,0,18.4,85.4,Presence,27,,unknown
+336.977,0,18.4,85.4,Presence,27,,unknown
+337.066,0,18.4,85.4,Presence,27,,unknown
+337.157,0,18.4,85.4,Presence,27,,unknown
+337.247,0,18.4,85.4,Presence,27,,unknown
+337.335,0,18.4,85.4,Presence,27,,unknown
+337.473,0,16.7,85.4,Presence,27,,unknown
+337.517,0,16.7,85.4,Presence,27,,unknown
+337.608,0,16.7,85.4,Presence,27,0.0,upright
+337.696,0,16.7,85.4,Presence,27,0.0,upright
+337.787,0,16.7,85.4,Presence,27,,unknown
+337.891,0,16.7,85.4,Presence,27,,unknown
+337.968,0,16.7,85.4,Presence,27,,unknown
+338.057,0,16.7,85.4,Presence,27,,unknown
+338.147,0,16.7,85.4,Presence,27,,unknown
+338.237,0,16.7,85.4,Presence,27,,unknown
+338.327,0,16.7,85.4,Presence,27,,unknown
+338.417,0,16.7,85.4,Presence,27,,unknown
+338.508,0,16.7,85.4,Presence,27,,unknown
+338.597,0,16.7,85.4,Presence,27,,unknown
+338.687,0,16.7,85.4,Presence,27,,unknown
+338.798,0,16.7,85.4,Presence,27,,unknown
+338.927,0,20.1,85.4,Presence,27,,unknown
+338.974,0,20.1,85.4,Presence,27,,unknown
+339.048,0,20.1,85.4,Presence,27,,unknown
+339.136,0,20.1,85.4,Presence,27,,unknown
+339.228,0,20.1,85.4,Presence,27,,unknown
+339.317,0,20.1,85.4,Presence,27,,unknown
+339.407,0,20.1,85.4,Presence,27,,unknown
+339.497,0,20.1,85.4,Presence,27,,unknown
+339.587,0,20.1,85.4,Presence,27,,unknown
+339.677,0,20.1,85.4,Presence,27,,unknown
+339.785,0,20.1,85.4,Presence,27,0.0,upright
+339.857,0,20.1,85.4,Presence,27,,unknown
+339.946,0,20.1,85.4,Presence,27,,unknown
+340.037,0,20.1,85.4,Presence,27,,unknown
+340.127,0,20.1,85.4,Presence,27,,unknown
+340.217,0,20.1,85.4,Presence,27,,unknown
+340.352,0,18.4,85.4,Presence,27,,unknown
+340.396,0,18.4,85.4,Presence,27,,unknown
+340.487,0,18.4,85.4,Presence,27,,unknown
+340.577,0,18.4,85.4,Presence,27,,unknown
+340.667,0,18.4,85.4,Presence,27,,unknown
+340.772,0,18.4,85.4,Presence,27,,unknown
+340.847,0,18.4,85.4,Presence,27,,unknown
+340.937,0,18.4,85.4,Presence,27,,unknown
+341.027,0,18.4,85.4,Presence,27,,unknown
+341.116,0,18.4,85.4,Presence,27,,unknown
+341.207,0,18.4,85.4,Presence,27,,unknown
+341.298,0,18.4,85.4,Presence,27,,unknown
+341.388,0,18.4,85.4,Presence,27,,unknown
+341.478,0,18.4,85.4,Presence,27,,unknown
+341.567,0,18.4,85.4,Presence,27,,unknown
+341.678,0,18.4,85.4,Presence,27,,unknown
+341.804,0,18.4,85.4,Presence,27,,unknown
+341.847,0,18.4,85.4,Presence,27,,unknown
+341.937,0,18.4,85.4,Presence,27,,unknown
+342.027,0,18.4,85.4,Presence,27,0.0,upright
+342.117,0,18.4,85.4,Presence,27,0.0,upright
+342.209,0,18.4,85.4,Presence,27,0.0,upright
+342.299,0,18.4,85.4,Presence,27,0.0,upright
+342.387,0,18.4,85.4,Presence,27,,unknown
+342.477,0,18.4,85.4,Presence,27,,unknown
+342.565,0,18.4,85.4,Presence,27,,unknown
+342.657,0,18.4,85.4,Presence,27,,unknown
+342.748,0,18.4,85.4,Presence,27,,unknown
+342.837,0,18.4,85.4,Presence,27,,unknown
+342.927,0,18.4,85.4,Presence,27,,unknown
+343.017,0,18.4,85.4,Presence,27,,unknown
+343.106,0,18.4,85.4,Presence,27,,unknown
+343.227,0,16.7,85.4,Presence,27,,unknown
+343.289,0,16.7,85.4,Presence,27,0.0,upright
+343.381,0,16.7,85.4,Presence,27,0.0,upright
+343.468,0,16.7,85.4,Presence,27,,unknown
+343.559,0,16.7,85.4,Presence,27,0.0,upright
+343.648,0,16.7,85.4,Presence,27,,unknown
+343.738,0,16.7,85.4,Presence,27,,unknown
+343.828,0,16.7,85.4,Presence,27,,unknown
+343.917,0,16.7,85.4,Presence,27,,unknown
+344.007,0,16.7,85.4,Presence,27,,unknown
+344.096,0,16.7,85.4,Presence,27,,unknown
+344.200,0,16.7,85.4,Presence,27,,unknown
+344.276,0,16.7,85.4,Presence,27,,unknown
+344.367,0,16.7,85.4,Presence,27,,unknown
+344.457,0,16.7,85.4,Presence,27,,unknown
+344.548,0,16.7,85.4,Presence,27,,unknown
+344.682,0,8.4,85.4,Presence,27,,unknown
+344.727,0,8.4,85.4,Presence,27,,unknown
+344.817,0,8.4,85.4,Presence,27,,unknown
+344.906,0,8.4,85.4,Presence,27,,unknown
+344.999,0,8.4,85.4,Presence,27,0.0,upright
+345.088,0,8.4,85.4,Presence,27,0.0,upright
+345.178,0,8.4,85.4,Presence,27,0.0,upright
+345.269,0,8.4,85.4,Presence,27,,unknown
+345.357,0,8.4,85.4,Presence,27,,unknown
+345.447,0,8.4,85.4,Presence,27,,unknown
+345.537,0,8.4,85.4,Presence,27,,unknown
+345.628,0,8.4,85.4,Presence,27,,unknown
+345.718,0,8.4,85.4,Presence,27,,unknown
+345.808,0,8.4,85.4,Presence,27,-23.51143210245064,leaning left
+345.898,0,8.4,85.4,Presence,27,,unknown
+345.986,0,8.4,85.4,Presence,27,,unknown
+346.108,0,18.4,85.4,Presence,27,,unknown
+346.164,0,18.4,85.4,Presence,27,,unknown
+346.258,0,18.4,85.4,Presence,27,,unknown
+346.348,0,18.4,85.4,Presence,27,,unknown
+346.435,0,18.4,85.4,Presence,27,,unknown
+346.529,0,18.4,85.4,Presence,27,,unknown
+346.617,0,18.4,85.4,Presence,27,,unknown
+346.707,0,18.4,85.4,Presence,27,,unknown
+346.798,0,18.4,85.4,Presence,27,,unknown
+346.889,0,18.4,85.4,Presence,27,-23.51143210245064,leaning left
+346.979,0,18.4,85.4,Presence,27,0.0,upright
+347.068,0,18.4,85.4,Presence,27,0.0,upright
+347.157,0,18.4,85.4,Presence,27,,unknown
+347.245,0,18.4,85.4,Presence,27,0.0,upright
+347.335,0,18.4,85.4,Presence,27,,unknown
+347.426,0,18.4,85.4,Presence,27,,unknown
+347.562,0,18.4,85.4,Presence,27,,unknown
+347.606,0,18.4,85.4,Presence,27,,unknown
+347.697,0,18.4,85.4,Presence,27,,unknown
+347.787,0,18.4,85.4,Presence,27,,unknown
+347.878,0,18.4,85.4,Presence,27,,unknown
+347.967,0,18.4,85.4,Presence,27,,unknown
+348.057,0,18.4,85.4,Presence,27,,unknown
+348.146,0,18.4,85.4,Presence,27,,unknown
+348.235,0,18.4,85.4,Presence,27,,unknown
+348.328,0,18.4,85.4,Presence,27,,unknown
+348.416,0,18.4,85.4,Presence,27,,unknown
+348.507,0,18.4,85.4,Presence,27,,unknown
+348.597,0,18.4,85.4,Presence,27,,unknown
+348.687,0,18.4,85.4,Presence,27,,unknown
+348.777,0,18.4,85.4,Presence,27,,unknown
+348.868,0,18.4,85.4,Presence,27,,unknown
+349.003,0,16.7,85.4,Presence,27,,unknown
+349.046,0,16.7,85.4,Presence,27,,unknown
+349.138,0,16.7,85.4,Presence,27,,unknown
+349.227,0,16.7,85.4,Presence,27,,unknown
+349.317,0,16.7,85.4,Presence,27,,unknown
+349.407,0,16.7,85.4,Presence,27,,unknown
+349.498,0,16.7,85.4,Presence,27,,unknown
+349.587,0,16.7,85.4,Presence,27,,unknown
+349.678,0,16.7,85.4,Presence,27,,unknown
+349.765,0,16.7,85.4,Presence,27,,unknown
+349.857,0,16.7,85.4,Presence,27,,unknown
+349.947,0,16.7,85.4,Presence,27,,unknown
+350.037,0,16.7,85.4,Presence,27,,unknown
+350.128,0,16.7,85.4,Presence,27,,unknown
+350.215,0,16.7,85.4,Presence,27,,unknown
+350.306,0,16.7,85.4,Presence,27,,unknown
+350.428,0,16.7,85.4,Presence,27,,unknown
+350.487,0,16.7,85.4,Presence,27,,unknown
+350.580,0,16.7,85.4,Presence,27,,unknown
+350.668,0,16.7,85.4,Presence,27,,unknown
+350.757,0,16.7,85.4,Presence,27,,unknown
+350.847,0,16.7,85.4,Presence,27,,unknown
+350.938,0,16.7,85.4,Presence,27,,unknown
+351.028,0,16.7,85.4,Presence,27,,unknown
+351.117,0,16.7,85.4,Presence,27,0.0,upright
+351.207,0,16.7,85.4,Presence,27,,unknown
+351.298,0,16.7,85.4,Presence,27,0.0,upright
+351.388,0,16.7,85.4,Presence,27,,unknown
+351.477,0,16.7,85.4,Presence,27,,unknown
+351.568,0,16.7,85.4,Presence,27,,unknown
+351.656,0,16.7,85.4,Presence,27,,unknown
+351.747,0,16.7,85.4,Presence,27,,unknown
+351.867,0,15.1,85.4,Presence,27,,unknown
+351.928,0,15.1,85.4,Presence,27,,unknown
+352.017,0,15.1,85.4,Presence,27,,unknown
+352.107,0,15.1,85.4,Presence,27,,unknown
+352.197,0,15.1,85.4,Presence,27,,unknown
+352.299,0,15.1,85.4,Presence,27,,unknown
+352.371,0,15.1,85.4,Presence,27,,unknown
+352.462,0,15.1,85.4,Presence,27,,unknown
+352.552,0,15.1,85.4,Presence,27,,unknown
+352.643,0,15.1,85.4,Presence,27,,unknown
+352.733,0,15.1,85.4,Presence,27,,unknown
+352.823,0,15.1,85.4,Presence,27,,unknown
+352.911,0,15.1,85.4,Presence,27,,unknown
+353.002,0,15.1,85.4,Presence,27,,unknown
+353.092,0,15.1,85.4,Presence,27,,unknown
+353.181,0,15.1,85.4,Presence,27,0.0,upright
+353.318,0,15.1,85.4,Presence,27,0.0,upright
+353.361,0,15.1,85.4,Presence,27,,unknown
+353.454,0,15.1,85.4,Presence,27,24.011157758402277,leaning right
+353.540,0,15.1,85.4,Presence,27,,unknown
+353.633,0,15.1,85.4,Presence,27,,unknown
+353.723,0,15.1,85.4,Presence,27,,unknown
+353.813,0,15.1,85.4,Presence,27,,unknown
+353.901,0,15.1,85.4,Presence,27,,unknown
+353.992,0,15.1,85.4,Presence,27,,unknown
+354.083,0,15.1,85.4,Presence,27,24.011157758402277,leaning right
+354.188,0,15.1,85.4,Presence,27,,unknown
+354.275,0,15.1,85.4,Presence,27,24.011157758402277,leaning right
+354.349,0,15.1,85.4,Presence,27,24.011157758402277,leaning right
+354.453,0,15.1,85.4,Presence,27,24.011157758402277,leaning right
+354.543,0,15.1,85.4,Presence,27,23.215391675402046,leaning right
+354.618,0,15.1,85.4,Presence,27,0.0,upright
+354.753,0,20.1,85.4,Presence,27,0.0,upright
+354.814,0,20.1,85.4,Presence,27,0.0,upright
+354.902,0,20.1,85.4,Presence,27,,unknown
+354.999,0,20.1,85.4,Presence,27,,unknown
+355.091,0,20.1,85.4,Presence,27,,unknown
+355.176,0,20.1,85.4,Presence,27,,unknown
+355.271,0,20.1,85.4,Presence,27,,unknown
+355.342,0,20.1,85.4,Presence,27,,unknown
+355.445,0,20.1,85.4,Presence,27,0.0,upright
+355.532,0,20.1,85.4,Presence,27,0.0,upright
+355.624,0,20.1,85.4,Presence,27,0.0,upright
+355.714,0,20.1,85.4,Presence,27,0.0,upright
+355.789,0,20.1,85.4,Presence,27,0.0,upright
+355.878,0,20.1,85.4,Presence,27,,unknown
+355.968,0,20.1,85.4,Presence,27,0.0,upright
+356.073,0,20.1,85.4,Presence,27,,unknown
+356.202,0,20.1,85.4,Presence,27,,unknown
+356.248,0,20.1,85.4,Presence,27,0.0,upright
+356.338,0,20.1,85.4,Presence,27,0.0,upright
+356.429,0,20.1,85.4,Presence,27,0.0,upright
+356.516,0,20.1,85.4,Presence,27,0.0,upright
+356.609,0,20.1,85.4,Presence,27,,unknown
+356.698,0,20.1,85.4,Presence,27,,unknown
+356.787,0,20.1,85.4,Presence,27,,unknown
+356.878,0,20.1,85.4,Presence,27,,unknown
+356.968,0,20.1,85.4,Presence,27,,unknown
+357.069,0,20.1,85.4,Presence,27,,unknown
+357.142,0,20.1,85.4,Presence,27,,unknown
+357.233,0,20.1,85.4,Presence,27,,unknown
+357.323,0,20.1,85.4,Presence,27,,unknown
+357.413,0,20.1,85.4,Presence,27,,unknown
+357.503,0,20.1,85.4,Presence,27,,unknown
+357.638,0,16.7,85.4,Presence,27,,unknown
+357.682,0,16.7,85.4,Presence,27,,unknown
+357.773,0,16.7,85.4,Presence,27,0.0,upright
+357.863,0,16.7,85.4,Presence,27,,unknown
+357.953,0,16.7,85.4,Presence,27,,unknown
+358.056,0,16.7,85.4,Presence,27,,unknown
+358.133,0,16.7,85.4,Presence,27,,unknown
+358.222,0,16.7,85.4,Presence,27,,unknown
+358.313,0,16.7,85.4,Presence,27,,unknown
+358.401,0,16.7,85.4,Presence,27,,unknown
+358.492,0,16.7,85.4,Presence,27,,unknown
+358.582,0,16.7,85.4,Presence,27,,unknown
+358.673,0,16.7,85.4,Presence,27,,unknown
+358.763,0,16.7,85.4,Presence,27,,unknown
+358.853,0,16.7,85.4,Presence,27,,unknown
+358.958,0,16.7,85.4,Presence,27,0.0,upright
+359.076,0,15.1,85.4,Presence,27,0.0,upright
+359.121,0,15.1,85.4,Presence,27,,unknown
+359.213,0,15.1,85.4,Presence,27,,unknown
+359.303,0,15.1,85.4,Presence,27,,unknown
+359.393,0,15.1,85.4,Presence,27,,unknown
+359.482,0,15.1,85.4,Presence,27,,unknown
+359.571,0,15.1,85.4,Presence,27,,unknown
+359.663,0,15.1,85.4,Presence,27,,unknown
+359.752,0,15.1,85.4,Presence,27,,unknown
+359.842,0,15.1,85.4,Presence,27,,unknown
+359.947,0,15.1,85.4,Presence,27,,unknown
+360.021,0,15.1,85.4,Presence,27,,unknown
+360.111,0,15.1,85.4,Presence,27,,unknown
+360.202,0,15.1,85.4,Presence,27,,unknown
+360.292,0,15.1,85.4,Presence,27,,unknown
+360.381,0,15.1,85.4,Presence,27,,unknown
+360.517,0,16.7,85.4,Presence,27,,unknown
+360.561,0,16.7,85.4,Presence,27,,unknown
+360.653,0,16.7,85.4,Presence,27,,unknown
+360.742,0,16.7,85.4,Presence,27,,unknown
+360.831,0,16.7,85.4,Presence,27,,unknown
+360.939,0,16.7,85.4,Presence,27,0.0,upright
+361.014,0,16.7,85.4,Presence,27,,unknown
+361.103,0,16.7,85.4,Presence,27,,unknown
+361.193,0,16.7,85.4,Presence,27,,unknown
+361.283,0,16.7,85.4,Presence,27,,unknown
+361.374,0,16.7,85.4,Presence,27,,unknown
+361.462,0,16.7,85.4,Presence,27,,unknown
+361.551,0,16.7,85.4,Presence,27,,unknown
+361.642,0,16.7,85.4,Presence,27,,unknown
+361.733,0,16.7,85.4,Presence,27,,unknown
+361.822,0,16.7,85.4,Presence,27,,unknown
+361.958,0,10.0,85.4,Presence,27,,unknown
+362.001,0,10.0,85.4,Presence,27,,unknown
+362.093,0,10.0,85.4,Presence,27,,unknown
+362.180,0,10.0,85.4,Presence,27,,unknown
+362.273,0,10.0,85.4,Presence,27,,unknown
+362.363,0,10.0,85.4,Presence,27,,unknown
+362.452,0,10.0,85.4,Presence,27,,unknown
+362.543,0,10.0,85.4,Presence,27,,unknown
+362.632,0,10.0,85.4,Presence,27,,unknown
+362.723,0,10.0,85.4,Presence,27,,unknown
+362.830,0,10.0,85.4,Presence,27,,unknown
+362.900,0,10.0,85.4,Presence,27,,unknown
+362.992,0,10.0,85.4,Presence,27,,unknown
+363.082,0,10.0,85.4,Presence,27,,unknown
+363.173,0,10.0,85.4,Presence,27,,unknown
+363.263,0,10.0,85.4,Presence,27,,unknown
+363.397,0,10.0,85.4,Presence,27,,unknown
+363.452,0,10.0,85.4,Presence,27,0.0,upright
+363.541,0,10.0,85.4,Presence,27,,unknown
+363.634,0,10.0,85.4,Presence,27,0.0,upright
+363.720,0,10.0,85.4,Presence,27,,unknown
+363.813,0,10.0,85.4,Presence,27,,unknown
+363.904,0,10.0,85.4,Presence,27,0.0,upright
+364.007,0,10.0,85.4,Presence,27,0.0,upright
+364.082,0,10.0,85.4,Presence,27,0.0,upright
+364.194,0,10.0,85.4,Presence,27,0.0,upright
+364.274,0,10.0,85.4,Presence,27,0.0,upright
+364.360,0,10.0,85.4,Presence,27,-35.06034448545025,leaning left
+364.445,0,10.0,85.4,Presence,27,-35.06034448545025,leaning left
+364.549,0,10.0,85.4,Presence,27,-35.06034448545025,leaning left
+364.629,0,10.0,85.4,Presence,27,-35.06034448545025,leaning left
+364.744,0,10.0,85.4,Presence,27,,unknown
+364.843,0,10.0,85.4,Presence,27,,unknown
+364.898,0,10.0,85.4,Presence,27,0.0,upright
+364.991,0,10.0,85.4,Presence,27,31.365170914143917,leaning right
+365.088,0,10.0,85.4,Presence,27,0.0,upright
+365.183,0,10.0,85.4,Presence,27,31.365170914143917,leaning right
+365.264,0,10.0,85.4,Presence,27,31.365170914143917,leaning right
+365.365,0,10.0,85.4,Presence,27,31.365170914143917,leaning right
+365.447,0,10.0,85.4,Presence,27,31.365170914143917,leaning right
+365.543,0,10.0,85.4,Presence,27,0.0,upright
+365.633,0,10.0,85.4,Presence,27,-29.092000654793736,leaning left
+365.702,0,10.0,85.4,Presence,27,,unknown
+365.805,0,10.0,85.4,Presence,27,-41.506206046453,leaning left
+365.902,0,10.0,85.4,Presence,27,-41.506206046453,leaning left
+365.993,0,10.0,85.4,Presence,27,-44.754251539091456,leaning left
+366.076,0,10.0,85.4,Presence,27,-50.61967891989518,leaning left
+366.155,0,10.0,85.4,Presence,27,-50.61967891989518,leaning left
+366.288,0,8.4,85.4,Presence,27,-50.61967891989518,leaning left
+366.346,0,8.4,85.4,Presence,27,-50.61967891989518,leaning left
+366.437,0,8.4,85.4,Presence,27,-50.61967891989518,leaning left
+366.516,0,8.4,85.4,Presence,27,-50.61967891989518,leaning left
+366.610,0,8.4,85.4,Presence,27,-37.97758904421754,leaning left
+366.698,0,8.4,85.4,Presence,27,,unknown
+366.784,0,8.4,85.4,Presence,27,0.0,upright
+366.873,0,8.4,85.4,Presence,27,-25.99964030098333,leaning left
+366.964,0,8.4,85.4,Presence,27,-25.634211072057493,leaning left
+367.055,0,8.4,85.4,Presence,27,-25.634211072057493,leaning left
+367.151,0,8.4,85.4,Presence,27,-66.8214235895946,leaning left
+367.235,0,8.4,85.4,Presence,27,-66.8214235895946,leaning left
+367.333,0,8.4,85.4,Presence,27,-78.75171415769367,leaning left
+367.423,0,8.4,85.4,Presence,27,-66.8214235895946,leaning left
+367.512,0,8.4,85.4,Presence,27,-67.21364607622175,leaning left
+367.596,0,8.4,85.4,Presence,27,,unknown
+367.719,0,20.1,85.4,Presence,26,,unknown
+367.765,0,20.1,85.4,Presence,26,-67.21364607622175,leaning left
+367.851,0,20.1,85.4,Presence,26,-67.21364607622175,leaning left
+367.954,0,20.1,85.4,Presence,26,-65.44337625111855,leaning left
+368.042,0,20.1,85.4,Presence,26,-39.41907642116611,leaning left
+368.135,0,20.1,85.4,Presence,26,0.0,upright
+368.208,0,20.1,85.4,Presence,26,0.0,upright
+368.300,0,20.1,85.4,Presence,26,0.0,upright
+368.386,0,20.1,85.4,Presence,26,0.0,upright
+368.479,0,20.1,85.4,Presence,26,,unknown
+368.582,0,20.1,85.4,Presence,26,,unknown
+368.658,0,20.1,85.4,Presence,26,0.0,upright
+368.749,0,20.1,85.4,Presence,26,0.0,upright
+368.840,0,20.1,85.4,Presence,26,0.0,upright
+368.927,0,20.1,85.4,Presence,26,,unknown
+369.017,0,20.1,85.4,Presence,26,,unknown
+369.153,0,20.1,85.4,Presence,26,,unknown
+369.197,0,20.1,85.4,Presence,26,,unknown
+369.289,0,20.1,85.4,Presence,26,0.0,upright
+369.378,0,20.1,85.4,Presence,26,,unknown
+369.468,0,20.1,85.4,Presence,26,0.0,upright
+369.579,0,20.1,85.4,Presence,26,,unknown
+369.653,0,20.1,85.4,Presence,26,0.0,upright
+369.744,0,20.1,85.4,Presence,26,,unknown
+369.833,0,20.1,85.4,Presence,26,0.0,upright
+369.921,0,20.1,85.4,Presence,26,0.0,upright
+370.013,0,20.1,85.4,Presence,26,0.0,upright
+370.103,0,20.1,85.4,Presence,26,0.0,upright
+370.194,0,20.1,85.4,Presence,26,0.0,upright
+370.283,0,20.1,85.4,Presence,26,0.0,upright
+370.373,0,20.1,85.4,Presence,26,0.0,upright
+370.485,0,20.1,85.4,Presence,26,,unknown
+370.611,0,11.7,85.4,Presence,26,,unknown
+370.644,0,11.7,85.4,Presence,26,0.0,upright
+370.728,0,11.7,85.4,Presence,26,0.0,upright
+370.819,0,11.7,85.4,Presence,26,0.0,upright
+370.908,0,11.7,85.4,Presence,26,,unknown
+370.998,0,11.7,85.4,Presence,26,,unknown
+371.087,0,11.7,85.4,Presence,26,,unknown
+371.177,0,11.7,85.4,Presence,26,,unknown
+371.268,0,11.7,85.4,Presence,26,,unknown
+371.358,0,11.7,85.4,Presence,26,,unknown
+371.461,0,11.7,85.4,Presence,26,,unknown
+371.536,0,11.7,85.4,Presence,26,,unknown
+371.628,0,11.7,85.4,Presence,26,,unknown
+371.718,0,11.7,85.4,Presence,26,,unknown
+371.806,0,11.7,85.4,Presence,26,,unknown
+371.898,0,11.7,85.4,Presence,26,0.0,upright
+372.034,0,11.7,85.4,Presence,26,0.0,upright
+372.093,0,11.7,85.4,Presence,26,30.86117602206062,leaning right
+372.166,0,11.7,85.4,Presence,26,0.0,upright
+372.258,0,11.7,85.4,Presence,26,0.0,upright
+372.348,0,11.7,85.4,Presence,26,0.0,upright
+372.453,0,11.7,85.4,Presence,26,,unknown
+372.529,0,11.7,85.4,Presence,26,0.0,upright
+372.618,0,11.7,85.4,Presence,26,0.0,upright
+372.707,0,11.7,85.4,Presence,26,,unknown
+372.797,0,11.7,85.4,Presence,26,0.0,upright
+372.888,0,11.7,85.4,Presence,26,,unknown
+372.979,0,11.7,85.4,Presence,26,,unknown
+373.068,0,11.7,85.4,Presence,26,,unknown
+373.159,0,11.7,85.4,Presence,26,0.0,upright
+373.249,0,11.7,85.4,Presence,26,0.0,upright
+373.359,0,11.7,85.4,Presence,26,,unknown
+373.483,0,11.7,85.4,Presence,26,,unknown
+373.526,0,11.7,85.4,Presence,26,,unknown
+373.619,0,11.7,85.4,Presence,26,0.0,upright
+373.706,0,11.7,85.4,Presence,26,0.0,upright
+373.798,0,11.7,85.4,Presence,26,0.0,upright
+373.888,0,11.7,85.4,Presence,26,0.0,upright
+373.977,0,11.7,85.4,Presence,26,0.0,upright
+374.066,0,11.7,85.4,Presence,26,,unknown
+374.156,0,11.7,85.4,Presence,26,,unknown
+374.247,0,11.7,85.4,Presence,26,,unknown
+374.337,0,11.7,85.4,Presence,26,0.0,upright
+374.427,0,11.7,85.4,Presence,26,,unknown
+374.516,0,11.7,85.4,Presence,26,,unknown
+374.606,0,11.7,85.4,Presence,26,,unknown
+374.695,0,11.7,85.4,Presence,26,,unknown
+374.786,0,11.7,85.4,Presence,26,,unknown
+374.906,0,11.7,85.4,Presence,26,,unknown
+374.966,0,11.7,85.4,Presence,26,,unknown
+375.056,0,11.7,85.4,Presence,26,,unknown
+375.144,0,11.7,85.4,Presence,26,,unknown
+375.236,0,11.7,85.4,Presence,26,,unknown
+375.326,0,11.7,85.4,Presence,26,,unknown
+375.416,0,11.7,85.4,Presence,26,,unknown
+375.505,0,11.7,85.4,Presence,26,,unknown
+375.596,0,11.7,85.4,Presence,26,,unknown
+375.686,0,11.7,85.4,Presence,26,,unknown
+375.777,0,11.7,85.4,Presence,26,,unknown
+375.865,0,11.7,85.4,Presence,26,,unknown
+375.956,0,11.7,85.4,Presence,26,,unknown
+376.046,0,11.7,85.4,Presence,26,0.0,upright
+376.137,0,11.7,85.4,Presence,26,0.0,upright
+376.236,0,11.7,85.4,Presence,26,,unknown
+376.363,0,11.7,85.4,Presence,26,,unknown
+376.406,0,11.7,85.4,Presence,26,0.0,upright
+376.496,0,11.7,85.4,Presence,26,0.0,upright
+376.586,0,11.7,85.4,Presence,26,0.0,upright
+376.678,0,11.7,85.4,Presence,26,21.18681897672377,leaning right
+376.766,0,11.7,85.4,Presence,26,,unknown
+376.856,0,11.7,85.4,Presence,26,,unknown
+376.946,0,11.7,85.4,Presence,26,,unknown
+377.036,0,11.7,85.4,Presence,26,,unknown
+377.125,0,11.7,85.4,Presence,26,,unknown
+377.216,0,11.7,85.4,Presence,26,,unknown
+377.306,0,11.7,85.4,Presence,26,,unknown
+377.395,0,11.7,85.4,Presence,26,,unknown
+377.486,0,11.7,85.4,Presence,26,,unknown
+377.577,0,11.7,85.4,Presence,26,0.0,upright
+377.666,0,11.7,85.4,Presence,26,,unknown
+377.787,0,11.7,85.4,Presence,26,,unknown
+377.847,0,11.7,85.4,Presence,26,0.0,upright
+377.938,0,11.7,85.4,Presence,26,0.0,upright
+378.027,0,11.7,85.4,Presence,26,0.0,upright
+378.117,0,11.7,85.4,Presence,26,0.0,upright
+378.206,0,11.7,85.4,Presence,26,0.0,upright
+378.296,0,11.7,85.4,Presence,26,0.0,upright
+378.387,0,11.7,85.4,Presence,26,,unknown
+378.478,0,11.7,85.4,Presence,26,,unknown
+378.568,0,11.7,85.4,Presence,26,0.0,upright
+378.657,0,11.7,85.4,Presence,26,0.0,upright
+378.749,0,11.7,85.4,Presence,26,0.0,upright
+378.839,0,11.7,85.4,Presence,26,0.0,upright
+378.927,0,11.7,85.4,Presence,26,,unknown
+379.016,0,11.7,85.4,Presence,26,,unknown
+379.105,0,11.7,85.4,Presence,26,,unknown
+379.227,0,11.7,85.4,Presence,26,,unknown
+379.286,0,11.7,85.4,Presence,26,,unknown
+379.377,0,11.7,85.4,Presence,26,,unknown
+379.466,0,11.7,85.4,Presence,26,,unknown
+379.555,0,11.7,85.4,Presence,26,,unknown
+379.648,0,11.7,85.4,Presence,26,0.0,upright
+379.738,0,11.7,85.4,Presence,26,0.0,upright
+379.829,0,11.7,85.4,Presence,26,0.0,upright
+379.916,0,11.7,85.4,Presence,26,0.0,upright
+380.006,0,11.7,85.4,Presence,26,,unknown
+380.096,0,11.7,85.4,Presence,26,,unknown
+380.187,0,11.7,85.4,Presence,26,,unknown
+380.276,0,11.7,85.4,Presence,26,,unknown
+380.366,0,11.7,85.4,Presence,26,,unknown
+380.457,0,11.7,85.4,Presence,26,,unknown
+380.548,0,11.7,85.4,Presence,26,,unknown
+380.669,0,13.4,85.4,Presence,26,,unknown
+380.726,0,13.4,85.4,Presence,26,,unknown
+380.815,0,13.4,85.4,Presence,26,,unknown
+380.907,0,13.4,85.4,Presence,26,0.0,upright
+380.997,0,13.4,85.4,Presence,26,0.0,upright
+381.088,0,13.4,85.4,Presence,26,,unknown
+381.177,0,13.4,85.4,Presence,26,,unknown
+381.267,0,13.4,85.4,Presence,26,0.0,upright
+381.363,0,13.4,85.4,Presence,26,0.0,upright
+381.438,0,13.4,85.4,Presence,26,0.0,upright
+381.528,0,13.4,85.4,Presence,26,0.0,upright
+381.617,0,13.4,85.4,Presence,26,0.0,upright
+381.709,0,13.4,85.4,Presence,26,0.0,upright
+381.798,0,13.4,85.4,Presence,26,0.0,upright
+381.887,0,13.4,85.4,Presence,26,,unknown
+381.993,0,13.4,85.4,Presence,26,,unknown
+382.113,0,10.0,85.4,Presence,26,,unknown
+382.161,0,10.0,85.4,Presence,26,,unknown
+382.246,0,10.0,85.4,Presence,26,,unknown
+382.338,0,10.0,85.4,Presence,26,0.0,upright
+382.428,0,10.0,85.4,Presence,26,0.0,upright
+382.519,0,10.0,85.4,Presence,26,,unknown
+382.607,0,10.0,85.4,Presence,26,,unknown
+382.698,0,10.0,85.4,Presence,26,0.0,upright
+382.786,0,10.0,85.4,Presence,26,0.0,upright
+382.880,0,10.0,85.4,Presence,26,,unknown
+382.983,0,10.0,85.4,Presence,26,,unknown
+383.075,0,10.0,85.4,Presence,26,0.0,upright
+383.165,0,10.0,85.4,Presence,26,0.0,upright
+383.239,0,10.0,85.4,Presence,26,,unknown
+383.342,0,10.0,85.4,Presence,26,0.0,upright
+383.418,0,10.0,85.4,Presence,26,0.0,upright
+383.554,0,13.4,85.4,Presence,26,24.778886006879702,leaning right
+383.597,0,13.4,85.4,Presence,26,0.0,upright
+383.688,0,13.4,85.4,Presence,26,,unknown
+383.778,0,13.4,85.4,Presence,26,0.0,upright
+383.868,0,13.4,85.4,Presence,26,0.0,upright
+383.979,0,13.4,85.4,Presence,26,,unknown
+384.052,0,13.4,85.4,Presence,26,,unknown
+384.143,0,13.4,85.4,Presence,26,,unknown
+384.234,0,13.4,85.4,Presence,26,0.0,upright
+384.322,0,13.4,85.4,Presence,26,,unknown
+384.413,0,13.4,85.4,Presence,26,,unknown
+384.503,0,13.4,85.4,Presence,26,,unknown
+384.592,0,13.4,85.4,Presence,26,,unknown
+384.682,0,13.4,85.4,Presence,26,,unknown
+384.773,0,13.4,85.4,Presence,26,,unknown
+384.875,0,13.4,85.4,Presence,26,,unknown
+384.998,0,11.7,85.4,Presence,26,,unknown
+385.042,0,11.7,85.4,Presence,26,30.43735355869866,leaning right
+385.132,0,11.7,85.4,Presence,26,30.43735355869866,leaning right
+385.224,0,11.7,85.4,Presence,26,0.0,upright
+385.314,0,11.7,85.4,Presence,26,0.0,upright
+385.403,0,11.7,85.4,Presence,26,0.0,upright
+385.492,0,11.7,85.4,Presence,26,,unknown
+385.583,0,11.7,85.4,Presence,26,0.0,upright
+385.673,0,11.7,85.4,Presence,26,,unknown
+385.763,0,11.7,85.4,Presence,26,,unknown
+385.869,0,11.7,85.4,Presence,26,,unknown
+385.942,0,11.7,85.4,Presence,26,,unknown
+386.033,0,11.7,85.4,Presence,26,0.0,upright
+386.123,0,11.7,85.4,Presence,26,0.0,upright
+386.214,0,11.7,85.4,Presence,26,,unknown
+386.303,0,11.7,85.4,Presence,26,,unknown
+386.436,0,11.7,85.4,Presence,26,,unknown
+386.482,0,11.7,85.4,Presence,26,,unknown
+386.573,0,11.7,85.4,Presence,26,,unknown
+386.661,0,11.7,85.4,Presence,26,,unknown
+386.754,0,11.7,85.4,Presence,26,,unknown
+386.859,0,11.7,85.4,Presence,26,,unknown
+386.931,0,11.7,85.4,Presence,26,,unknown
+387.022,0,11.7,85.4,Presence,26,,unknown
+387.113,0,11.7,85.4,Presence,26,,unknown
+387.203,0,11.7,85.4,Presence,26,,unknown
+387.293,0,11.7,85.4,Presence,26,,unknown
+387.383,0,11.7,85.4,Presence,26,,unknown
+387.472,0,11.7,85.4,Presence,26,,unknown
+387.563,0,11.7,85.4,Presence,26,,unknown
+387.652,0,11.7,85.4,Presence,26,,unknown
+387.742,0,11.7,85.4,Presence,26,,unknown
+387.876,0,18.4,85.4,Presence,26,,unknown
+387.920,0,18.4,85.4,Presence,26,,unknown
+388.013,0,18.4,85.4,Presence,26,,unknown
+388.101,0,18.4,85.4,Presence,26,,unknown
+388.192,0,18.4,85.4,Presence,26,,unknown
+388.283,0,18.4,85.4,Presence,26,,unknown
+388.373,0,18.4,85.4,Presence,26,,unknown
+388.462,0,18.4,85.4,Presence,26,,unknown
+388.552,0,18.4,85.4,Presence,26,,unknown
+388.642,0,18.4,85.4,Presence,26,,unknown
+388.748,0,18.4,85.4,Presence,26,,unknown
+388.822,0,18.4,85.4,Presence,26,,unknown
+388.913,0,18.4,85.4,Presence,26,,unknown
+389.001,0,18.4,85.4,Presence,26,,unknown
+389.092,0,18.4,85.4,Presence,26,,unknown
+389.182,0,18.4,85.4,Presence,26,,unknown
+389.317,0,15.1,85.4,Presence,26,,unknown
+389.366,0,15.1,85.4,Presence,26,,unknown
+389.452,0,15.1,85.4,Presence,26,,unknown
+389.542,0,15.1,85.4,Presence,26,,unknown
+389.633,0,15.1,85.4,Presence,26,,unknown
+389.723,0,15.1,85.4,Presence,26,,unknown
+389.813,0,15.1,85.4,Presence,26,,unknown
+389.903,0,15.1,85.4,Presence,26,,unknown
+389.992,0,15.1,85.4,Presence,26,,unknown
+390.081,0,15.1,85.4,Presence,26,,unknown
+390.173,0,15.1,85.4,Presence,26,,unknown
+390.262,0,15.1,85.4,Presence,26,,unknown
+390.353,0,15.1,85.4,Presence,26,,unknown
+390.443,0,15.1,85.4,Presence,26,,unknown
+390.531,0,15.1,85.4,Presence,26,,unknown
+390.623,0,15.1,85.4,Presence,26,,unknown
+390.758,0,5.0,85.4,Presence,26,,unknown
+390.812,0,5.0,85.4,Presence,26,,unknown
+390.892,0,5.0,85.4,Presence,26,,unknown
+390.982,0,5.0,85.4,Presence,26,,unknown
+391.073,0,5.0,85.4,Presence,26,,unknown
+391.163,0,5.0,85.4,Presence,26,0.0,upright
+391.252,0,5.0,85.4,Presence,26,,unknown
+391.343,0,5.0,85.4,Presence,26,,unknown
+391.432,0,5.0,85.4,Presence,26,,unknown
+391.524,0,5.0,85.4,Presence,26,0.0,upright
+391.613,0,5.0,85.4,Presence,26,,unknown
+391.703,0,5.0,85.4,Presence,26,,unknown
+391.794,0,5.0,85.4,Presence,26,0.0,upright
+391.884,0,5.0,85.4,Presence,26,0.0,upright
+391.973,0,5.0,85.4,Presence,26,0.0,upright
+392.061,0,5.0,85.4,Presence,26,0.0,upright
+392.198,0,6.7,85.4,Presence,26,0.0,upright
+392.241,0,6.7,85.4,Presence,26,,unknown
+392.333,0,6.7,85.4,Presence,26,,unknown
+392.423,0,6.7,85.4,Presence,26,,unknown
+392.512,0,6.7,85.4,Presence,26,,unknown
+392.617,0,6.7,85.4,Presence,26,,unknown
+392.692,0,6.7,85.4,Presence,26,,unknown
+392.782,0,6.7,85.4,Presence,26,,unknown
+392.874,0,6.7,85.4,Presence,26,,unknown
+392.963,0,6.7,85.4,Presence,26,,unknown
+393.053,0,6.7,85.4,Presence,26,,unknown
+393.142,0,6.7,85.4,Presence,26,,unknown
+393.231,0,6.7,85.4,Presence,26,,unknown
+393.322,0,6.7,85.4,Presence,26,,unknown
+393.413,0,6.7,85.4,Presence,26,,unknown
+393.519,0,6.7,85.4,Presence,26,,unknown
+393.643,0,16.7,85.4,Presence,26,,unknown
+393.688,0,16.7,85.4,Presence,26,0.0,upright
+393.781,0,16.7,85.4,Presence,26,0.0,upright
+393.868,0,16.7,85.4,Presence,26,0.0,upright
+393.959,0,16.7,85.4,Presence,26,0.0,upright
+394.047,0,16.7,85.4,Presence,26,,unknown
+394.136,0,16.7,85.4,Presence,26,,unknown
+394.228,0,16.7,85.4,Presence,26,,unknown
+394.317,0,16.7,85.4,Presence,26,,unknown
+394.407,0,16.7,85.4,Presence,26,,unknown
+394.498,0,16.7,85.4,Presence,26,,unknown
+394.587,0,16.7,85.4,Presence,26,,unknown
+394.677,0,16.7,85.4,Presence,26,,unknown
+394.767,0,16.7,85.4,Presence,26,,unknown
+394.857,0,16.7,85.4,Presence,26,,unknown
+394.948,0,16.7,85.4,Presence,26,,unknown
+395.068,0,6.7,85.4,Presence,26,,unknown
+395.126,0,6.7,85.4,Presence,26,,unknown
+395.217,0,6.7,85.4,Presence,26,,unknown
+395.307,0,6.7,85.4,Presence,26,,unknown
+395.397,0,6.7,85.4,Presence,26,,unknown
+395.498,0,6.7,85.4,Presence,26,,unknown
+395.573,0,6.7,85.4,Presence,26,,unknown
+395.661,0,6.7,85.4,Presence,26,,unknown
+395.753,0,6.7,85.4,Presence,26,,unknown
+395.846,0,6.7,85.4,Presence,26,,unknown
+395.932,0,6.7,85.4,Presence,26,,unknown
+396.023,0,6.7,85.4,Presence,26,,unknown
+396.113,0,6.7,85.4,Presence,26,,unknown
+396.202,0,6.7,85.4,Presence,26,,unknown
+396.291,0,6.7,85.4,Presence,26,0.0,upright
+396.398,0,6.7,85.4,Presence,26,,unknown
+396.519,0,16.7,85.4,Presence,26,,unknown
+396.563,0,16.7,85.4,Presence,26,0.0,upright
+396.650,0,16.7,85.4,Presence,26,,unknown
+396.742,0,16.7,85.4,Presence,26,,unknown
+396.833,0,16.7,85.4,Presence,26,,unknown
+396.922,0,16.7,85.4,Presence,26,,unknown
+397.012,0,16.7,85.4,Presence,26,,unknown
+397.104,0,16.7,85.4,Presence,26,,unknown
+397.192,0,16.7,85.4,Presence,26,,unknown
+397.281,0,16.7,85.4,Presence,26,,unknown
+397.389,0,16.7,85.4,Presence,26,,unknown
+397.461,0,16.7,85.4,Presence,26,,unknown
+397.553,0,16.7,85.4,Presence,26,,unknown
+397.643,0,16.7,85.4,Presence,26,,unknown
+397.730,0,16.7,85.4,Presence,26,,unknown
+397.822,0,16.7,85.4,Presence,26,,unknown
+397.957,0,6.7,85.4,Presence,26,,unknown
+398.002,0,6.7,85.4,Presence,26,0.0,upright
+398.095,0,6.7,85.4,Presence,26,0.0,upright
+398.185,0,6.7,85.4,Presence,26,0.0,upright
+398.298,0,6.7,85.4,Presence,26,0.0,upright
+398.369,0,6.7,85.4,Presence,26,,unknown
+398.463,0,6.7,85.4,Presence,26,0.0,upright
+398.561,0,6.7,85.4,Presence,26,0.0,upright
+398.664,0,6.7,85.4,Presence,26,0.0,upright
+398.748,0,6.7,85.4,Presence,26,0.0,upright
+398.831,0,6.7,85.4,Presence,26,0.0,upright
+398.914,0,6.7,85.4,Presence,26,0.0,upright
+399.011,0,6.7,85.4,Presence,26,0.0,upright
+399.100,0,6.7,85.4,Presence,26,0.0,upright
+399.192,0,6.7,85.4,Presence,26,0.0,upright
+399.276,0,6.7,85.4,Presence,26,,unknown
+399.398,0,16.7,85.4,Presence,26,,unknown
+399.471,0,16.7,85.4,Presence,26,-29.156124875015635,leaning left
+399.557,0,16.7,85.4,Presence,26,-68.01407779790074,leaning left
+399.652,0,16.7,85.4,Presence,26,-83.25745225374777,leaning left
+399.744,0,16.7,85.4,Presence,26,-68.01407779790074,leaning left
+399.832,0,16.7,85.4,Presence,26,-62.74092276713415,leaning left
+399.923,0,16.7,85.4,Presence,26,-76.28806428247498,leaning left
+400.014,0,16.7,85.4,Presence,26,-78.3668405986156,leaning left
+400.097,0,16.7,85.4,Presence,26,-78.3668405986156,leaning left
+400.184,0,16.7,85.4,Presence,26,-78.3668405986156,leaning left
+400.267,0,16.7,85.4,Presence,26,,unknown
+400.372,0,16.7,85.4,Presence,26,-78.51956662494297,leaning left
+400.456,0,16.7,85.4,Presence,26,-73.09368556784902,leaning left
+400.535,0,16.7,85.4,Presence,26,-54.892936957436234,leaning left
+400.631,0,16.7,85.4,Presence,26,-54.892936957436234,leaning left
+400.725,0,16.7,85.4,Presence,26,-54.11579768195139,leaning left
+400.848,0,20.1,85.4,Presence,26,-37.216686112194395,leaning left
+400.893,0,20.1,85.4,Presence,26,-26.28478348288445,leaning left
+400.990,0,20.1,85.4,Presence,26,-26.28478348288445,leaning left
+401.064,0,20.1,85.4,Presence,26,-26.28478348288445,leaning left
+401.154,0,20.1,85.4,Presence,26,0.0,upright
+401.242,0,20.1,85.4,Presence,26,,unknown
+401.334,0,20.1,85.4,Presence,26,0.0,upright
+401.441,0,20.1,85.4,Presence,26,0.0,upright
+401.533,0,20.1,85.4,Presence,26,-30.02399853464678,leaning left
+401.621,0,20.1,85.4,Presence,26,-30.02399853464678,leaning left
+401.701,0,20.1,85.4,Presence,26,0.0,upright
+401.800,0,20.1,85.4,Presence,26,0.0,upright
+401.881,0,20.1,85.4,Presence,26,0.0,upright
+401.982,0,20.1,85.4,Presence,26,0.0,upright
+402.067,0,20.1,85.4,Presence,26,0.0,upright
+402.156,0,20.1,85.4,Presence,26,,unknown
+402.283,0,20.1,85.4,Presence,28,,unknown
+402.332,0,20.1,85.4,Presence,28,0.0,upright
+402.436,0,20.1,85.4,Presence,28,0.0,upright
+402.528,0,20.1,85.4,Presence,28,-25.570575596605238,leaning left
+402.618,0,20.1,85.4,Presence,28,0.0,upright
+402.702,0,20.1,85.4,Presence,28,0.0,upright
+402.773,0,20.1,85.4,Presence,28,24.788595798634972,leaning right
+402.885,0,20.1,85.4,Presence,28,44.66487704704386,leaning right
+402.971,0,20.1,85.4,Presence,28,62.648195040970066,leaning right
+403.054,0,20.1,85.4,Presence,28,62.648195040970066,leaning right
+403.145,0,20.1,85.4,Presence,28,,unknown
+403.240,0,20.1,85.4,Presence,28,62.648195040970066,leaning right
+403.313,0,20.1,85.4,Presence,28,62.648195040970066,leaning right
+403.402,0,20.1,85.4,Presence,28,,unknown
+403.504,0,20.1,85.4,Presence,28,63.23917173639423,leaning right
+403.594,0,20.1,85.4,Presence,28,63.23917173639423,leaning right
+403.723,0,15.1,85.4,Presence,28,63.23917173639423,leaning right
+403.767,0,15.1,85.4,Presence,28,58.027129277649216,leaning right
+403.866,0,15.1,85.4,Presence,28,47.47814464746256,leaning right
+403.936,0,15.1,85.4,Presence,28,22.2203431805154,leaning right
+404.046,0,15.1,85.4,Presence,28,0.0,upright
+404.138,0,15.1,85.4,Presence,28,,unknown
+404.225,0,15.1,85.4,Presence,28,0.0,upright
+404.299,0,15.1,85.4,Presence,28,0.0,upright
+404.405,0,15.1,85.4,Presence,28,0.0,upright
+404.494,0,15.1,85.4,Presence,28,0.0,upright
+404.581,0,15.1,85.4,Presence,28,0.0,upright
+404.675,0,15.1,85.4,Presence,28,0.0,upright
+404.766,0,15.1,85.4,Presence,28,,unknown
+404.837,0,15.1,85.4,Presence,28,,unknown
+404.944,0,15.1,85.4,Presence,28,0.0,upright
+405.040,0,15.1,85.4,Presence,28,,unknown
+405.164,0,16.7,85.4,Presence,32,,unknown
+405.212,0,16.7,85.4,Presence,32,0.0,upright
+405.310,0,16.7,85.4,Presence,32,0.0,upright
+405.396,0,16.7,85.4,Presence,32,0.0,upright
+405.481,0,16.7,85.4,Presence,32,0.0,upright
+405.576,0,16.7,85.4,Presence,32,0.0,upright
+405.648,0,16.7,85.4,Presence,32,0.0,upright
+405.739,0,16.7,85.4,Presence,32,0.0,upright
+405.829,0,16.7,85.4,Presence,32,,unknown
+405.919,0,16.7,85.4,Presence,32,0.0,upright
+406.022,0,16.7,85.4,Presence,32,,unknown
+406.098,0,16.7,85.4,Presence,32,,unknown
+406.188,0,16.7,85.4,Presence,32,,unknown
+406.278,0,16.7,85.4,Presence,32,,unknown
+406.368,0,16.7,85.4,Presence,32,,unknown
+406.457,0,16.7,85.4,Presence,32,,unknown
+406.593,0,16.7,85.4,Presence,32,,unknown
+406.637,0,16.7,85.4,Presence,32,0.0,upright
+406.728,0,16.7,85.4,Presence,32,0.0,upright
+406.818,0,16.7,85.4,Presence,32,,unknown
+406.908,0,16.7,85.4,Presence,32,,unknown
+407.011,0,16.7,85.4,Presence,32,,unknown
+407.087,0,16.7,85.4,Presence,32,,unknown
+407.179,0,16.7,85.4,Presence,32,0.0,upright
+407.267,0,16.7,85.4,Presence,32,0.0,upright
+407.358,0,16.7,85.4,Presence,32,,unknown
+407.447,0,16.7,85.4,Presence,32,,unknown
+407.536,0,16.7,85.4,Presence,32,,unknown
+407.629,0,16.7,85.4,Presence,32,,unknown
+407.717,0,16.7,85.4,Presence,32,,unknown
+407.807,0,16.7,85.4,Presence,32,,unknown
+407.913,0,16.7,85.4,Presence,32,,unknown
+408.033,0,15.1,85.4,Presence,32,,unknown
+408.076,0,15.1,85.4,Presence,32,,unknown
+408.168,0,15.1,85.4,Presence,32,,unknown
+408.258,0,15.1,85.4,Presence,32,,unknown
+408.348,0,15.1,85.4,Presence,32,,unknown
+408.439,0,15.1,85.4,Presence,32,0.0,upright
+408.528,0,15.1,85.4,Presence,32,,unknown
+408.616,0,15.1,85.4,Presence,32,,unknown
+408.707,0,15.1,85.4,Presence,32,,unknown
+408.799,0,15.1,85.4,Presence,32,0.0,upright
+408.903,0,15.1,85.4,Presence,32,,unknown
+408.977,0,15.1,85.4,Presence,32,,unknown
+409.068,0,15.1,85.4,Presence,32,,unknown
+409.157,0,15.1,85.4,Presence,32,,unknown
+409.247,0,15.1,85.4,Presence,32,,unknown
+409.338,0,15.1,85.4,Presence,32,,unknown
+409.473,0,15.1,85.4,Presence,32,,unknown
+409.516,0,15.1,85.4,Presence,32,,unknown
+409.608,0,15.1,85.4,Presence,32,,unknown
+409.697,0,15.1,85.4,Presence,32,,unknown
+409.787,0,15.1,85.4,Presence,32,,unknown
+409.894,0,15.1,85.4,Presence,32,0.0,upright
+409.968,0,15.1,85.4,Presence,32,,unknown
+410.058,0,15.1,85.4,Presence,32,,unknown
+410.146,0,15.1,85.4,Presence,32,,unknown
+410.238,0,15.1,85.4,Presence,32,,unknown
+410.328,0,15.1,85.4,Presence,32,,unknown
+410.419,0,15.1,85.4,Presence,32,,unknown
+410.508,0,15.1,85.4,Presence,32,,unknown
+410.597,0,15.1,85.4,Presence,32,,unknown
+410.686,0,15.1,85.4,Presence,32,,unknown
+410.798,0,15.1,85.4,Presence,32,,unknown
+410.923,0,15.1,85.4,Presence,32,,unknown
+410.966,0,15.1,85.4,Presence,32,,unknown
+411.057,0,15.1,85.4,Presence,32,,unknown
+411.147,0,15.1,85.4,Presence,32,,unknown
+411.237,0,15.1,85.4,Presence,32,,unknown
+411.328,0,15.1,85.4,Presence,32,,unknown
+411.417,0,15.1,85.4,Presence,32,,unknown
+411.508,0,15.1,85.4,Presence,32,,unknown
+411.597,0,15.1,85.4,Presence,32,,unknown
+411.685,0,15.1,85.4,Presence,32,,unknown
+411.779,0,15.1,85.4,Presence,32,0.0,upright
+411.868,0,15.1,85.4,Presence,32,,unknown
+411.957,0,15.1,85.4,Presence,32,,unknown
+412.047,0,15.1,85.4,Presence,32,,unknown
+412.138,0,15.1,85.4,Presence,32,,unknown
+412.226,0,15.1,85.4,Presence,32,,unknown
+412.348,0,15.1,85.4,Presence,32,,unknown
+412.407,0,15.1,85.4,Presence,32,,unknown
+412.497,0,15.1,85.4,Presence,32,,unknown
+412.588,0,15.1,85.4,Presence,32,,unknown
+412.676,0,15.1,85.4,Presence,32,,unknown
+412.768,0,15.1,85.4,Presence,32,,unknown
+412.857,0,15.1,85.4,Presence,32,,unknown
+412.948,0,15.1,85.4,Presence,32,,unknown
+413.037,0,15.1,85.4,Presence,32,,unknown
+413.128,0,15.1,85.4,Presence,32,,unknown
+413.217,0,15.1,85.4,Presence,32,,unknown
+413.308,0,15.1,85.4,Presence,32,,unknown
+413.396,0,15.1,85.4,Presence,32,,unknown
+413.487,0,15.1,85.4,Presence,32,,unknown
+413.577,0,15.1,85.4,Presence,32,,unknown
+413.666,0,15.1,85.4,Presence,32,,unknown
+413.803,0,15.1,85.4,Presence,32,,unknown
+413.847,0,15.1,85.4,Presence,32,,unknown
+413.937,0,15.1,85.4,Presence,32,,unknown
+414.026,0,15.1,85.4,Presence,32,,unknown
+414.119,0,15.1,85.4,Presence,32,,unknown
+414.207,0,15.1,85.4,Presence,32,,unknown
+414.297,0,15.1,85.4,Presence,32,,unknown
+414.388,0,15.1,85.4,Presence,32,,unknown
+414.477,0,15.1,85.4,Presence,32,,unknown
+414.566,0,15.1,85.4,Presence,32,,unknown
+414.656,0,15.1,85.4,Presence,32,,unknown
+414.747,0,15.1,85.4,Presence,32,,unknown
+414.836,0,15.1,85.4,Presence,32,,unknown
+414.927,0,15.1,85.4,Presence,32,,unknown
+415.017,0,15.1,85.4,Presence,32,,unknown
+415.108,0,15.1,85.4,Presence,32,,unknown
+415.228,0,15.1,85.4,Presence,32,,unknown
+415.285,0,15.1,85.4,Presence,32,,unknown
+415.379,0,15.1,85.4,Presence,32,,unknown
+415.469,0,15.1,85.4,Presence,32,0.0,upright
+415.557,0,15.1,85.4,Presence,32,,unknown
+415.660,0,15.1,85.4,Presence,32,0.0,upright
+415.733,0,15.1,85.4,Presence,32,0.0,upright
+415.823,0,15.1,85.4,Presence,32,0.0,upright
+415.914,0,15.1,85.4,Presence,32,0.0,upright
+416.002,0,15.1,85.4,Presence,32,,unknown
+416.093,0,15.1,85.4,Presence,32,,unknown
+416.182,0,15.1,85.4,Presence,32,,unknown
+416.273,0,15.1,85.4,Presence,32,0.0,upright
+416.363,0,15.1,85.4,Presence,32,0.0,upright
+416.454,0,15.1,85.4,Presence,32,0.0,upright
+416.560,0,15.1,85.4,Presence,32,0.0,upright
+416.685,0,15.1,85.4,Presence,32,0.0,upright
+416.726,0,15.1,85.4,Presence,32,,unknown
+416.816,0,15.1,85.4,Presence,32,,unknown
+416.907,0,15.1,85.4,Presence,32,,unknown
+416.997,0,15.1,85.4,Presence,32,,unknown
+417.087,0,15.1,85.4,Presence,32,,unknown
+417.177,0,15.1,85.4,Presence,32,,unknown
+417.267,0,15.1,85.4,Presence,32,,unknown
+417.356,0,15.1,85.4,Presence,32,,unknown
+417.447,0,15.1,85.4,Presence,32,,unknown
+417.538,0,15.1,85.4,Presence,32,,unknown
+417.626,0,15.1,85.4,Presence,32,,unknown
+417.716,0,15.1,85.4,Presence,32,,unknown
+417.807,0,15.1,85.4,Presence,32,,unknown
+417.896,0,15.1,85.4,Presence,32,,unknown
+417.986,0,15.1,85.4,Presence,32,,unknown
+418.108,0,11.7,85.4,Presence,32,,unknown
+418.166,0,11.7,85.4,Presence,32,,unknown
+418.258,0,11.7,85.4,Presence,32,,unknown
+418.347,0,11.7,85.4,Presence,32,,unknown
+418.438,0,11.7,85.4,Presence,32,,unknown
+418.539,0,11.7,85.4,Presence,32,,unknown
+418.611,0,11.7,85.4,Presence,32,,unknown
+418.702,0,11.7,85.4,Presence,32,,unknown
+418.793,0,11.7,85.4,Presence,32,,unknown
+418.882,0,11.7,85.4,Presence,32,,unknown
+418.972,0,11.7,85.4,Presence,32,,unknown
+419.062,0,11.7,85.4,Presence,32,,unknown
+419.152,0,11.7,85.4,Presence,32,,unknown
+419.242,0,11.7,85.4,Presence,32,,unknown
+419.332,0,11.7,85.4,Presence,32,,unknown
+419.421,0,11.7,85.4,Presence,32,,unknown
+419.558,0,13.4,85.4,Presence,32,,unknown
+419.602,0,13.4,85.4,Presence,32,,unknown
+419.692,0,13.4,85.4,Presence,32,,unknown
+419.783,0,13.4,85.4,Presence,32,,unknown
+419.874,0,13.4,85.4,Presence,32,0.0,upright
+419.963,0,13.4,85.4,Presence,32,,unknown
+420.053,0,13.4,85.4,Presence,32,,unknown
+420.145,0,13.4,85.4,Presence,32,30.225914550036634,leaning right
+420.233,0,13.4,85.4,Presence,32,,unknown
+420.323,0,13.4,85.4,Presence,32,,unknown
+420.429,0,13.4,85.4,Presence,32,,unknown
+420.502,0,13.4,85.4,Presence,32,,unknown
+420.593,0,13.4,85.4,Presence,32,,unknown
+420.683,0,13.4,85.4,Presence,32,,unknown
+420.772,0,13.4,85.4,Presence,32,,unknown
+420.861,0,13.4,85.4,Presence,32,,unknown
+420.996,0,11.7,85.4,Presence,32,,unknown
+421.041,0,11.7,85.4,Presence,32,,unknown
+421.131,0,11.7,85.4,Presence,32,,unknown
+421.222,0,11.7,85.4,Presence,32,,unknown
+421.311,0,11.7,85.4,Presence,32,,unknown
+421.401,0,11.7,85.4,Presence,32,,unknown
+421.491,0,11.7,85.4,Presence,32,,unknown
+421.583,0,11.7,85.4,Presence,32,,unknown
+421.673,0,11.7,85.4,Presence,32,,unknown
+421.763,0,11.7,85.4,Presence,32,,unknown
+421.854,0,11.7,85.4,Presence,32,0.0,upright
+421.944,0,11.7,85.4,Presence,32,,unknown
+422.044,0,11.7,85.4,Presence,32,0.0,upright
+422.121,0,11.7,85.4,Presence,32,0.0,upright
+422.225,0,11.7,85.4,Presence,32,0.0,upright
+422.311,0,11.7,85.4,Presence,32,,unknown
+422.434,0,13.4,85.4,Presence,32,,unknown
+422.506,0,13.4,85.4,Presence,32,0.0,upright
+422.584,0,13.4,85.4,Presence,32,0.0,upright
+422.681,0,13.4,85.4,Presence,32,0.0,upright
+422.765,0,13.4,85.4,Presence,32,0.0,upright
+422.838,0,13.4,85.4,Presence,32,0.0,upright
+422.929,0,13.4,85.4,Presence,32,0.0,upright
+423.019,0,13.4,85.4,Presence,32,0.0,upright
+423.111,0,13.4,85.4,Presence,32,0.0,upright
+423.214,0,13.4,85.4,Presence,32,0.0,upright
+423.308,0,13.4,85.4,Presence,32,,unknown
+423.387,0,13.4,85.4,Presence,32,0.0,upright
+423.474,0,13.4,85.4,Presence,32,0.0,upright
+423.561,0,13.4,85.4,Presence,32,,unknown
+423.664,0,13.4,85.4,Presence,32,0.0,upright
+423.737,0,13.4,85.4,Presence,32,0.0,upright
+423.875,0,11.7,85.4,Presence,32,0.0,upright
+423.936,0,11.7,85.4,Presence,32,0.0,upright
+424.031,0,11.7,85.4,Presence,32,,unknown
+424.122,0,11.7,85.4,Presence,32,0.0,upright
+424.206,0,11.7,85.4,Presence,32,0.0,upright
+424.294,0,11.7,85.4,Presence,32,,unknown
+424.391,0,11.7,85.4,Presence,32,0.0,upright
+424.493,0,11.7,85.4,Presence,32,0.0,upright
+424.569,0,11.7,85.4,Presence,32,0.0,upright
+424.674,0,11.7,85.4,Presence,32,0.0,upright
+424.760,0,11.7,85.4,Presence,32,0.0,upright
+424.855,0,11.7,85.4,Presence,32,0.0,upright
+424.931,0,11.7,85.4,Presence,32,0.0,upright
+425.023,0,11.7,85.4,Presence,32,0.0,upright
+425.108,0,11.7,85.4,Presence,32,0.0,upright
+425.198,0,11.7,85.4,Presence,32,,unknown
+425.318,0,6.7,85.4,Presence,32,,unknown
+425.379,0,6.7,85.4,Presence,32,-39.59649672433603,leaning left
+425.465,0,6.7,85.4,Presence,32,-61.702159920895966,leaning left
+425.568,0,6.7,85.4,Presence,32,-21.28592389506681,leaning left
+425.650,0,6.7,85.4,Presence,32,0.0,upright
+425.733,0,6.7,85.4,Presence,32,0.0,upright
+425.825,0,6.7,85.4,Presence,32,33.901661836448454,leaning right
+425.920,0,6.7,85.4,Presence,32,0.0,upright
+426.014,0,6.7,85.4,Presence,32,-44.16792190927503,leaning left
+426.112,0,6.7,85.4,Presence,32,-44.16792190927503,leaning left
+426.186,0,6.7,85.4,Presence,32,,unknown
+426.287,0,6.7,85.4,Presence,32,-44.16792190927503,leaning left
+426.372,0,6.7,85.4,Presence,32,0.0,upright
+426.472,0,6.7,85.4,Presence,32,0.0,upright
+426.563,0,6.7,85.4,Presence,32,-44.16792190927503,leaning left
+426.642,0,6.7,85.4,Presence,32,-61.70276059236765,leaning left
+426.767,0,20.1,85.4,Presence,28,-61.70276059236765,leaning left
+426.819,0,20.1,85.4,Presence,28,-76.77430556150941,leaning left
+426.908,0,20.1,85.4,Presence,28,-76.77430556150941,leaning left
+427.001,0,20.1,85.4,Presence,28,-80.965084922876,leaning left
+427.095,0,20.1,85.4,Presence,28,-80.965084922876,leaning left
+427.178,0,20.1,85.4,Presence,28,-78.94892417504664,leaning left
+427.266,0,20.1,85.4,Presence,28,-78.94892417504664,leaning left
+427.363,0,20.1,85.4,Presence,28,-43.78580490814811,leaning left
+427.446,0,20.1,85.4,Presence,28,-43.351212411493634,leaning left
+427.532,0,20.1,85.4,Presence,28,0.0,upright
+427.610,0,20.1,85.4,Presence,28,0.0,upright
+427.696,0,20.1,85.4,Presence,28,0.0,upright
+427.788,0,20.1,85.4,Presence,28,0.0,upright
+427.879,0,20.1,85.4,Presence,28,0.0,upright
+427.981,0,20.1,85.4,Presence,28,0.0,upright
+428.079,0,20.1,85.4,Presence,28,,unknown
+428.202,0,20.1,85.4,Presence,28,,unknown
+428.247,0,20.1,85.4,Presence,28,,unknown
+428.339,0,20.1,85.4,Presence,28,0.0,upright
+428.434,0,20.1,85.4,Presence,28,0.0,upright
+428.510,0,20.1,85.4,Presence,28,0.0,upright
+428.612,0,20.1,85.4,Presence,28,0.0,upright
+428.703,0,20.1,85.4,Presence,28,0.0,upright
+428.803,0,20.1,85.4,Presence,28,0.0,upright
+428.884,0,20.1,85.4,Presence,28,0.0,upright
+428.981,0,20.1,85.4,Presence,28,0.0,upright
+429.066,0,20.1,85.4,Presence,28,,unknown
+429.155,0,20.1,85.4,Presence,28,0.0,upright
+429.252,0,20.1,85.4,Presence,28,0.0,upright
+429.335,0,20.1,85.4,Presence,28,0.0,upright
+429.432,0,20.1,85.4,Presence,28,0.0,upright
+429.520,0,20.1,85.4,Presence,28,0.0,upright
+429.651,0,6.7,85.4,Presence,28,0.0,upright
+429.698,0,6.7,85.4,Presence,28,0.0,upright
+429.771,0,6.7,85.4,Presence,28,0.0,upright
+429.862,0,6.7,85.4,Presence,28,0.0,upright
+429.952,0,6.7,85.4,Presence,28,,unknown
+430.042,0,6.7,85.4,Presence,28,,unknown
+430.134,0,6.7,85.4,Presence,28,0.0,upright
+430.224,0,6.7,85.4,Presence,28,0.0,upright
+430.314,0,6.7,85.4,Presence,28,-45.45216996418995,leaning left
+430.403,0,6.7,85.4,Presence,28,,unknown
+430.494,0,6.7,85.4,Presence,28,0.0,upright
+430.584,0,6.7,85.4,Presence,28,0.0,upright
+430.673,0,6.7,85.4,Presence,28,,unknown
+430.764,0,6.7,85.4,Presence,28,0.0,upright
+430.854,0,6.7,85.4,Presence,28,0.0,upright
+430.944,0,6.7,85.4,Presence,28,0.0,upright
+431.078,0,11.7,85.4,Presence,28,0.0,upright
+431.122,0,11.7,85.4,Presence,28,,unknown
+431.224,0,11.7,85.4,Presence,28,0.0,upright
+431.312,0,11.7,85.4,Presence,28,0.0,upright
+431.387,0,11.7,85.4,Presence,28,0.0,upright
+431.495,0,11.7,85.4,Presence,28,0.0,upright
+431.592,0,11.7,85.4,Presence,28,0.0,upright
+431.663,0,11.7,85.4,Presence,28,,unknown
+431.771,0,11.7,85.4,Presence,28,0.0,upright
+431.858,0,11.7,85.4,Presence,28,,unknown
+431.954,0,11.7,85.4,Presence,28,,unknown
+432.046,0,11.7,85.4,Presence,28,0.0,upright
+432.122,0,11.7,85.4,Presence,28,-21.706366832166538,leaning left
+432.221,0,11.7,85.4,Presence,28,-21.706366832166538,leaning left
+432.305,0,11.7,85.4,Presence,28,0.0,upright
+432.396,0,11.7,85.4,Presence,28,0.0,upright
+432.523,0,10.0,85.4,Presence,31,20.386580078741716,leaning right
+432.574,0,10.0,85.4,Presence,31,0.0,upright
+432.666,0,10.0,85.4,Presence,31,0.0,upright
+432.759,0,10.0,85.4,Presence,31,0.0,upright
+432.846,0,10.0,85.4,Presence,31,0.0,upright
+432.934,0,10.0,85.4,Presence,31,,unknown
+433.021,0,10.0,85.4,Presence,31,,unknown
+433.120,0,10.0,85.4,Presence,31,0.0,upright
+433.205,0,10.0,85.4,Presence,31,0.0,upright
+433.295,0,10.0,85.4,Presence,31,0.0,upright
+433.381,0,10.0,85.4,Presence,31,,unknown
+433.459,0,10.0,85.4,Presence,31,24.943412009891375,leaning right
+433.563,0,10.0,85.4,Presence,31,,unknown
+433.653,0,10.0,85.4,Presence,31,,unknown
+433.729,0,10.0,85.4,Presence,31,,unknown
+433.834,0,10.0,85.4,Presence,31,,unknown
+433.963,0,20.1,85.4,Presence,31,,unknown
+434.006,0,20.1,85.4,Presence,31,,unknown
+434.100,0,20.1,85.4,Presence,31,,unknown
+434.195,0,20.1,85.4,Presence,31,,unknown
+434.290,0,20.1,85.4,Presence,31,,unknown
+434.375,0,20.1,85.4,Presence,31,,unknown
+434.464,0,20.1,85.4,Presence,31,,unknown
+434.556,0,20.1,85.4,Presence,31,0.0,upright
+434.645,0,20.1,85.4,Presence,31,,unknown
+434.719,0,20.1,85.4,Presence,31,0.0,upright
+434.825,0,20.1,85.4,Presence,31,0.0,upright
+434.917,0,20.1,85.4,Presence,31,0.0,upright
+435.006,0,20.1,85.4,Presence,31,0.0,upright
+435.105,0,20.1,85.4,Presence,31,0.0,upright
+435.184,0,20.1,85.4,Presence,31,0.0,upright
+435.275,0,20.1,85.4,Presence,31,0.0,upright
+435.399,0,10.0,85.4,Presence,31,0.0,upright
+435.442,0,10.0,85.4,Presence,31,0.0,upright
+435.535,0,10.0,85.4,Presence,31,0.0,upright
+435.633,0,10.0,85.4,Presence,31,0.0,upright
+435.731,0,10.0,85.4,Presence,31,0.0,upright
+435.818,0,10.0,85.4,Presence,31,,unknown
+435.903,0,10.0,85.4,Presence,31,0.0,upright
+436.000,0,10.0,85.4,Presence,31,0.0,upright
+436.087,0,10.0,85.4,Presence,31,0.0,upright
+436.158,0,10.0,85.4,Presence,31,0.0,upright
+436.248,0,10.0,85.4,Presence,31,0.0,upright
+436.338,0,10.0,85.4,Presence,31,,unknown
+436.428,0,10.0,85.4,Presence,31,,unknown
+436.519,0,10.0,85.4,Presence,31,0.0,upright
+436.607,0,10.0,85.4,Presence,31,,unknown
+436.714,0,10.0,85.4,Presence,31,,unknown
+436.834,0,20.1,85.4,Presence,32,,unknown
+436.877,0,20.1,85.4,Presence,32,,unknown
+436.967,0,20.1,85.4,Presence,32,0.0,upright
+437.058,0,20.1,85.4,Presence,32,,unknown
+437.148,0,20.1,85.4,Presence,32,,unknown
+437.240,0,20.1,85.4,Presence,32,0.0,upright
+437.329,0,20.1,85.4,Presence,32,0.0,upright
+437.419,0,20.1,85.4,Presence,32,0.0,upright
+437.506,0,20.1,85.4,Presence,32,0.0,upright
+437.596,0,20.1,85.4,Presence,32,,unknown
+437.705,0,20.1,85.4,Presence,32,0.0,upright
+437.779,0,20.1,85.4,Presence,32,,unknown
+437.867,0,20.1,85.4,Presence,32,,unknown
+437.957,0,20.1,85.4,Presence,32,,unknown
+438.047,0,20.1,85.4,Presence,32,,unknown
+438.138,0,20.1,85.4,Presence,32,,unknown
+438.274,0,20.1,85.4,Presence,32,,unknown
+438.317,0,20.1,85.4,Presence,32,,unknown
+438.408,0,20.1,85.4,Presence,32,,unknown
+438.497,0,20.1,85.4,Presence,32,,unknown
+438.588,0,20.1,85.4,Presence,32,,unknown
+438.693,0,20.1,85.4,Presence,32,,unknown
+438.767,0,20.1,85.4,Presence,32,,unknown
+438.858,0,20.1,85.4,Presence,32,,unknown
+438.947,0,20.1,85.4,Presence,32,,unknown
+439.036,0,20.1,85.4,Presence,32,,unknown
+439.128,0,20.1,85.4,Presence,32,0.0,upright
+439.218,0,20.1,85.4,Presence,32,0.0,upright
+439.308,0,20.1,85.4,Presence,32,,unknown
+439.398,0,20.1,85.4,Presence,32,,unknown
+439.488,0,20.1,85.4,Presence,32,,unknown
+439.594,0,20.1,85.4,Presence,32,,unknown
+439.713,0,18.4,85.4,Presence,32,,unknown
+439.757,0,18.4,85.4,Presence,32,,unknown
+439.850,0,18.4,85.4,Presence,32,0.0,upright
+439.938,0,18.4,85.4,Presence,32,,unknown
+440.031,0,18.4,85.4,Presence,32,0.0,upright
+440.119,0,18.4,85.4,Presence,32,0.0,upright
+440.209,0,18.4,85.4,Presence,32,0.0,upright
+440.298,0,18.4,85.4,Presence,32,0.0,upright
+440.388,0,18.4,85.4,Presence,32,,unknown
+440.478,0,18.4,85.4,Presence,32,,unknown
+440.582,0,18.4,85.4,Presence,32,,unknown
+440.657,0,18.4,85.4,Presence,32,,unknown
+440.747,0,18.4,85.4,Presence,32,,unknown
+440.837,0,18.4,85.4,Presence,32,,unknown
+440.928,0,18.4,85.4,Presence,32,0.0,upright
+441.017,0,18.4,85.4,Presence,32,,unknown
+441.153,0,18.4,85.4,Presence,32,,unknown
+441.196,0,18.4,85.4,Presence,32,,unknown
+441.288,0,18.4,85.4,Presence,32,,unknown
+441.377,0,18.4,85.4,Presence,32,0.0,upright
+441.467,0,18.4,85.4,Presence,32,,unknown
+441.573,0,18.4,85.4,Presence,32,,unknown
+441.647,0,18.4,85.4,Presence,32,,unknown
+441.738,0,18.4,85.4,Presence,32,,unknown
+441.828,0,18.4,85.4,Presence,32,,unknown
+441.918,0,18.4,85.4,Presence,32,,unknown
+442.009,0,18.4,85.4,Presence,32,0.0,upright
+442.099,0,18.4,85.4,Presence,32,,unknown
+442.188,0,18.4,85.4,Presence,32,,unknown
+442.278,0,18.4,85.4,Presence,32,,unknown
+442.369,0,18.4,85.4,Presence,32,0.0,upright
+442.480,0,18.4,85.4,Presence,32,,unknown
+442.605,0,18.4,85.4,Presence,32,,unknown
+442.647,0,18.4,85.4,Presence,32,0.0,upright
+442.739,0,18.4,85.4,Presence,32,0.0,upright
+442.830,0,18.4,85.4,Presence,32,0.0,upright
+442.924,0,18.4,85.4,Presence,32,,unknown
+442.996,0,18.4,85.4,Presence,32,,unknown
+443.087,0,18.4,85.4,Presence,32,,unknown
+443.178,0,18.4,85.4,Presence,32,0.0,upright
+443.268,0,18.4,85.4,Presence,32,,unknown
+443.358,0,18.4,85.4,Presence,32,,unknown
+443.464,0,18.4,85.4,Presence,32,,unknown
+443.555,0,18.4,85.4,Presence,32,0.0,upright
+443.630,0,18.4,85.4,Presence,32,0.0,upright
+443.718,0,18.4,85.4,Presence,32,0.0,upright
+443.809,0,18.4,85.4,Presence,32,0.0,upright
+443.917,0,18.4,85.4,Presence,32,,unknown
+444.039,0,8.4,85.4,Presence,32,,unknown
+444.081,0,8.4,85.4,Presence,32,,unknown
+444.171,0,8.4,85.4,Presence,32,0.0,upright
+444.274,0,8.4,85.4,Presence,32,0.0,upright
+444.365,0,8.4,85.4,Presence,32,0.0,upright
+444.453,0,8.4,85.4,Presence,32,,unknown
+444.544,0,8.4,85.4,Presence,32,0.0,upright
+444.619,0,8.4,85.4,Presence,32,0.0,upright
+444.707,0,8.4,85.4,Presence,32,,unknown
+444.798,0,8.4,85.4,Presence,32,,unknown
+444.888,0,8.4,85.4,Presence,32,,unknown
+444.978,0,8.4,85.4,Presence,32,,unknown
+445.067,0,8.4,85.4,Presence,32,,unknown
+445.157,0,8.4,85.4,Presence,32,,unknown
+445.248,0,8.4,85.4,Presence,32,,unknown
+445.361,0,8.4,85.4,Presence,32,0.0,upright
+445.487,0,18.4,85.4,Presence,32,0.0,upright
+445.528,0,18.4,85.4,Presence,32,,unknown
+445.618,0,18.4,85.4,Presence,32,,unknown
+445.709,0,18.4,85.4,Presence,32,0.0,upright
+445.797,0,18.4,85.4,Presence,32,,unknown
+445.888,0,18.4,85.4,Presence,32,,unknown
+445.977,0,18.4,85.4,Presence,32,,unknown
+446.067,0,18.4,85.4,Presence,32,,unknown
+446.157,0,18.4,85.4,Presence,32,,unknown
+446.246,0,18.4,85.4,Presence,32,,unknown
+446.338,0,18.4,85.4,Presence,32,,unknown
+446.428,0,18.4,85.4,Presence,32,,unknown
+446.518,0,18.4,85.4,Presence,32,,unknown
+446.608,0,18.4,85.4,Presence,32,,unknown
+446.696,0,18.4,85.4,Presence,32,,unknown
+446.786,0,18.4,85.4,Presence,32,,unknown
+446.907,0,10.0,85.4,Presence,32,,unknown
+446.968,0,10.0,85.4,Presence,32,,unknown
+447.058,0,10.0,85.4,Presence,32,,unknown
+447.147,0,10.0,85.4,Presence,32,,unknown
+447.238,0,10.0,85.4,Presence,32,0.0,upright
+447.329,0,10.0,85.4,Presence,32,22.682157090368477,leaning right
+447.418,0,10.0,85.4,Presence,32,,unknown
+447.507,0,10.0,85.4,Presence,32,,unknown
+447.596,0,10.0,85.4,Presence,32,,unknown
+447.688,0,10.0,85.4,Presence,32,,unknown
+447.778,0,10.0,85.4,Presence,32,,unknown
+447.867,0,10.0,85.4,Presence,32,,unknown
+447.957,0,10.0,85.4,Presence,32,,unknown
+448.047,0,10.0,85.4,Presence,32,,unknown
+448.138,0,10.0,85.4,Presence,32,,unknown
+448.229,0,10.0,85.4,Presence,32,,unknown
+448.358,0,6.7,85.4,Presence,32,,unknown
+448.401,0,6.7,85.4,Presence,32,,unknown
+448.493,0,6.7,85.4,Presence,32,,unknown
+448.583,0,6.7,85.4,Presence,32,,unknown
+448.672,0,6.7,85.4,Presence,32,,unknown
+448.763,0,6.7,85.4,Presence,32,,unknown
+448.851,0,6.7,85.4,Presence,32,,unknown
+448.943,0,6.7,85.4,Presence,32,,unknown
+449.031,0,6.7,85.4,Presence,32,,unknown
+449.123,0,6.7,85.4,Presence,32,,unknown
+449.215,0,6.7,85.4,Presence,32,42.05068411539038,leaning right
+449.303,0,6.7,85.4,Presence,32,,unknown
+449.392,0,6.7,85.4,Presence,32,,unknown
+449.483,0,6.7,85.4,Presence,32,,unknown
+449.572,0,6.7,85.4,Presence,32,,unknown
+449.663,0,6.7,85.4,Presence,32,,unknown
+449.798,0,10.0,85.4,Presence,32,,unknown
+449.842,0,10.0,85.4,Presence,32,,unknown
+449.932,0,10.0,85.4,Presence,32,,unknown
+450.022,0,10.0,85.4,Presence,32,,unknown
+450.113,0,10.0,85.4,Presence,32,,unknown
+450.219,0,10.0,85.4,Presence,32,,unknown
+450.293,0,10.0,85.4,Presence,32,,unknown
+450.383,0,10.0,85.4,Presence,32,,unknown
+450.473,0,10.0,85.4,Presence,32,,unknown
+450.563,0,10.0,85.4,Presence,32,,unknown
+450.653,0,10.0,85.4,Presence,32,,unknown
+450.743,0,10.0,85.4,Presence,32,,unknown
+450.831,0,10.0,85.4,Presence,32,,unknown
+450.921,0,10.0,85.4,Presence,32,,unknown
+451.013,0,10.0,85.4,Presence,32,,unknown
+451.118,0,10.0,85.4,Presence,32,,unknown
+451.244,0,11.7,85.4,Presence,32,,unknown
+451.286,0,11.7,85.4,Presence,32,,unknown
+451.378,0,11.7,85.4,Presence,32,,unknown
+451.467,0,11.7,85.4,Presence,32,,unknown
+451.557,0,11.7,85.4,Presence,32,,unknown
+451.646,0,11.7,85.4,Presence,32,,unknown
+451.738,0,11.7,85.4,Presence,32,,unknown
+451.828,0,11.7,85.4,Presence,32,,unknown
+451.916,0,11.7,85.4,Presence,32,,unknown
+452.006,0,11.7,85.4,Presence,32,,unknown
+452.098,0,11.7,85.4,Presence,32,,unknown
+452.187,0,11.7,85.4,Presence,32,,unknown
+452.278,0,11.7,85.4,Presence,32,,unknown
+452.367,0,11.7,85.4,Presence,32,,unknown
+452.456,0,11.7,85.4,Presence,32,,unknown
+452.547,0,11.7,85.4,Presence,32,,unknown
+452.668,0,10.0,85.4,Presence,32,,unknown
+452.728,0,10.0,85.4,Presence,32,,unknown
+452.817,0,10.0,85.4,Presence,32,,unknown
+452.907,0,10.0,85.4,Presence,32,,unknown
+452.997,0,10.0,85.4,Presence,32,,unknown
+453.099,0,10.0,85.4,Presence,32,,unknown
+453.174,0,10.0,85.4,Presence,32,,unknown
+453.263,0,10.0,85.4,Presence,32,,unknown
+453.354,0,10.0,85.4,Presence,32,,unknown
+453.444,0,10.0,85.4,Presence,32,,unknown
+453.533,0,10.0,85.4,Presence,32,,unknown
+453.622,0,10.0,85.4,Presence,32,,unknown
+453.713,0,10.0,85.4,Presence,32,,unknown
+453.804,0,10.0,85.4,Presence,32,,unknown
+453.893,0,10.0,85.4,Presence,32,,unknown
+453.997,0,10.0,85.4,Presence,32,,unknown
+454.118,0,10.0,85.4,Presence,32,,unknown
+454.162,0,10.0,85.4,Presence,32,,unknown
+454.253,0,10.0,85.4,Presence,32,,unknown
+454.342,0,10.0,85.4,Presence,32,,unknown
+454.432,0,10.0,85.4,Presence,32,,unknown
+454.522,0,10.0,85.4,Presence,32,,unknown
+454.613,0,10.0,85.4,Presence,32,,unknown
+454.703,0,10.0,85.4,Presence,32,,unknown
+454.792,0,10.0,85.4,Presence,32,,unknown
+454.883,0,10.0,85.4,Presence,32,,unknown
+454.973,0,10.0,85.4,Presence,32,,unknown
+455.061,0,10.0,85.4,Presence,32,,unknown
+455.153,0,10.0,85.4,Presence,32,,unknown
+455.243,0,10.0,85.4,Presence,32,,unknown
+455.333,0,10.0,85.4,Presence,32,,unknown
+455.422,0,10.0,85.4,Presence,32,,unknown
+455.556,0,10.0,85.4,Presence,32,,unknown
+455.601,0,10.0,85.4,Presence,32,,unknown
+455.693,0,10.0,85.4,Presence,32,,unknown
+455.783,0,10.0,85.4,Presence,32,,unknown
+455.872,0,10.0,85.4,Presence,32,,unknown
+455.963,0,10.0,85.4,Presence,32,,unknown
+456.054,0,10.0,85.4,Presence,32,,unknown
+456.142,0,10.0,85.4,Presence,32,,unknown
+456.232,0,10.0,85.4,Presence,32,,unknown
+456.323,0,10.0,85.4,Presence,32,,unknown
+456.413,0,10.0,85.4,Presence,32,,unknown
+456.519,0,10.0,85.4,Presence,32,,unknown
+456.593,0,10.0,85.4,Presence,32,,unknown
+456.683,0,10.0,85.4,Presence,32,,unknown
+456.773,0,10.0,85.4,Presence,32,,unknown
+456.874,0,10.0,85.4,Presence,32,,unknown
+457.000,0,8.4,85.4,Presence,32,,unknown
+457.041,0,8.4,85.4,Presence,32,,unknown
+457.130,0,8.4,85.4,Presence,32,,unknown
+457.223,0,8.4,85.4,Presence,32,,unknown
+457.313,0,8.4,85.4,Presence,32,,unknown
+457.402,0,8.4,85.4,Presence,32,,unknown
+457.492,0,8.4,85.4,Presence,32,,unknown
+457.583,0,8.4,85.4,Presence,32,,unknown
+457.672,0,8.4,85.4,Presence,32,,unknown
+457.763,0,8.4,85.4,Presence,32,,unknown
+457.870,0,8.4,85.4,Presence,32,,unknown
+457.943,0,8.4,85.4,Presence,32,,unknown
+458.031,0,8.4,85.4,Presence,32,,unknown
+458.123,0,8.4,85.4,Presence,32,,unknown
+458.212,0,8.4,85.4,Presence,32,,unknown
+458.302,0,8.4,85.4,Presence,32,,unknown
+458.438,0,8.4,85.4,Presence,32,,unknown
+458.481,0,8.4,85.4,Presence,32,,unknown
+458.574,0,8.4,85.4,Presence,32,42.05068411539038,leaning right
+458.672,0,8.4,85.4,Presence,32,33.235975283214074,leaning right
+458.765,0,8.4,85.4,Presence,32,47.135085241957256,leaning right
+458.854,0,8.4,85.4,Presence,32,50.6196665435693,leaning right
+458.945,0,8.4,85.4,Presence,32,47.135085241957256,leaning right
+459.041,0,8.4,85.4,Presence,32,38.60395937646658,leaning right
+459.124,0,8.4,85.4,Presence,32,24.82656675092194,leaning right
+459.212,0,8.4,85.4,Presence,32,38.60395937646658,leaning right
+459.317,0,8.4,85.4,Presence,32,24.82656675092194,leaning right
+459.396,0,8.4,85.4,Presence,32,24.82656675092194,leaning right
+459.469,0,8.4,85.4,Presence,32,20.41224515481065,leaning right
+459.560,0,8.4,85.4,Presence,32,0.0,upright
+459.666,0,8.4,85.4,Presence,32,0.0,upright
+459.753,0,8.4,85.4,Presence,32,,unknown
+459.878,0,8.4,85.4,Presence,32,,unknown
+459.923,0,8.4,85.4,Presence,32,,unknown
+460.015,0,8.4,85.4,Presence,32,0.0,upright
+460.114,0,8.4,85.4,Presence,32,,unknown
+460.204,0,8.4,85.4,Presence,32,0.0,upright
+460.294,0,8.4,85.4,Presence,32,0.0,upright
+460.392,0,8.4,85.4,Presence,32,0.0,upright
+460.483,0,8.4,85.4,Presence,32,0.0,upright
+460.572,0,8.4,85.4,Presence,32,0.0,upright
+460.673,0,8.4,85.4,Presence,32,0.0,upright
+460.742,0,8.4,85.4,Presence,32,,unknown
+460.842,0,8.4,85.4,Presence,32,0.0,upright
+460.933,0,8.4,85.4,Presence,32,21.255117950953164,leaning right
+461.023,0,8.4,85.4,Presence,32,0.0,upright
+461.112,0,8.4,85.4,Presence,32,0.0,upright
+461.196,0,8.4,85.4,Presence,32,0.0,upright
+461.330,0,8.4,85.4,Presence,32,0.0,upright
+461.377,0,8.4,85.4,Presence,32,-32.636670913773,leaning left
+461.471,0,8.4,85.4,Presence,32,-27.672935913131848,leaning left
+461.561,0,8.4,85.4,Presence,32,-56.104070105523746,leaning left
+461.642,0,8.4,85.4,Presence,32,-56.104070105523746,leaning left
+461.733,0,8.4,85.4,Presence,32,,unknown
+461.832,0,8.4,85.4,Presence,32,-56.104070105523746,leaning left
+461.921,0,8.4,85.4,Presence,32,-56.104070105523746,leaning left
+462.013,0,8.4,85.4,Presence,32,-56.104070105523746,leaning left
+462.101,0,8.4,85.4,Presence,32,-73.7879069422832,leaning left
+462.203,0,8.4,85.4,Presence,32,-73.7879069422832,leaning left
+462.280,0,8.4,85.4,Presence,32,-73.7879069422832,leaning left
+462.374,0,8.4,85.4,Presence,32,-42.86677670045598,leaning left
+462.464,0,8.4,85.4,Presence,32,-42.86677670045598,leaning left
+462.552,0,8.4,85.4,Presence,32,0.0,upright
+462.638,0,8.4,85.4,Presence,32,,unknown
+462.758,0,21.8,85.4,Presence,27,,unknown
+462.828,0,21.8,85.4,Presence,27,0.0,upright
+462.907,0,21.8,85.4,Presence,27,-43.37414314813981,leaning left
+462.998,0,21.8,85.4,Presence,27,-45.80074009849304,leaning left
+463.099,0,21.8,85.4,Presence,27,-45.80074009849304,leaning left
+463.172,0,21.8,85.4,Presence,27,-46.273177525903755,leaning left
+463.262,0,21.8,85.4,Presence,27,,unknown
+463.338,0,21.8,85.4,Presence,27,0.0,upright
+463.442,0,21.8,85.4,Presence,27,0.0,upright
+463.537,0,21.8,85.4,Presence,27,0.0,upright
+463.626,0,21.8,85.4,Presence,27,,unknown
+463.711,0,21.8,85.4,Presence,27,0.0,upright
+463.809,0,21.8,85.4,Presence,27,-52.02410192369961,leaning left
+463.893,0,21.8,85.4,Presence,27,0.0,upright
+463.987,0,21.8,85.4,Presence,27,0.0,upright
+464.080,0,21.8,85.4,Presence,27,0.0,upright
+464.208,0,8.4,85.4,Presence,27,-52.02410192369961,leaning left
+464.258,0,8.4,85.4,Presence,27,0.0,upright
+464.348,0,8.4,85.4,Presence,27,33.56905786891312,leaning right
+464.422,0,8.4,85.4,Presence,27,,unknown
+464.512,0,8.4,85.4,Presence,27,77.30746674002808,leaning right
+464.607,0,8.4,85.4,Presence,27,,unknown
+464.703,0,8.4,85.4,Presence,27,82.10281462461259,leaning right
+464.791,0,8.4,85.4,Presence,27,82.10281462461259,leaning right
+464.867,0,8.4,85.4,Presence,27,82.10281462461259,leaning right
+464.971,0,8.4,85.4,Presence,27,41.24920387066172,leaning right
+465.067,0,8.4,85.4,Presence,27,-20.66157897057316,leaning left
+465.151,0,8.4,85.4,Presence,27,41.24920387066172,leaning right
+465.228,0,8.4,85.4,Presence,27,41.24920387066172,leaning right
+465.332,0,8.4,85.4,Presence,27,0.0,upright
+465.423,0,8.4,85.4,Presence,27,0.0,upright
+465.512,0,8.4,85.4,Presence,27,0.0,upright
+465.632,0,23.4,85.4,Presence,32,0.0,upright
+465.690,0,23.4,85.4,Presence,32,0.0,upright
+465.781,0,23.4,85.4,Presence,32,0.0,upright
+465.873,0,23.4,85.4,Presence,32,0.0,upright
+465.963,0,23.4,85.4,Presence,32,0.0,upright
+466.035,0,23.4,85.4,Presence,32,0.0,upright
+466.143,0,23.4,85.4,Presence,32,0.0,upright
+466.233,0,23.4,85.4,Presence,32,0.0,upright
+466.308,0,23.4,85.4,Presence,32,0.0,upright
+466.417,0,23.4,85.4,Presence,32,0.0,upright
+466.507,0,23.4,85.4,Presence,32,,unknown
+466.595,0,23.4,85.4,Presence,32,0.0,upright
+466.681,0,23.4,85.4,Presence,32,0.0,upright
+466.774,0,23.4,85.4,Presence,32,0.0,upright
+466.851,0,23.4,85.4,Presence,32,0.0,upright
+466.951,0,23.4,85.4,Presence,32,-35.45360007013058,leaning left
+467.080,0,10.0,85.4,Presence,32,-72.67885199133102,leaning left
+467.123,0,10.0,85.4,Presence,32,-72.67885199133102,leaning left
+467.213,0,10.0,85.4,Presence,32,,unknown
+467.303,0,10.0,85.4,Presence,32,,unknown
+467.395,0,10.0,85.4,Presence,32,-36.70889728638056,leaning left
+467.496,0,10.0,85.4,Presence,32,,unknown
+467.573,0,10.0,85.4,Presence,32,,unknown
+467.664,0,10.0,85.4,Presence,32,0.0,upright
+467.754,0,10.0,85.4,Presence,32,0.0,upright
+467.844,0,10.0,85.4,Presence,32,-40.50857355642424,leaning left
+467.932,0,10.0,85.4,Presence,32,-49.146289173361765,leaning left
+468.021,0,10.0,85.4,Presence,32,-57.56683080476759,leaning left
+468.110,0,10.0,85.4,Presence,32,,unknown
+468.203,0,10.0,85.4,Presence,32,-74.445237494586,leaning left
+468.301,0,10.0,85.4,Presence,32,,unknown
+468.392,0,10.0,85.4,Presence,32,,unknown
+468.517,0,23.4,85.4,Presence,32,,unknown
+468.563,0,23.4,85.4,Presence,32,-45.98948964910602,leaning left
+468.651,0,23.4,85.4,Presence,32,-25.19372981918589,leaning left
+468.742,0,23.4,85.4,Presence,32,-25.19372981918589,leaning left
+468.833,0,23.4,85.4,Presence,32,-25.19372981918589,leaning left
+468.922,0,23.4,85.4,Presence,32,-25.19372981918589,leaning left
+469.012,0,23.4,85.4,Presence,32,-25.19372981918589,leaning left
+469.103,0,23.4,85.4,Presence,32,,unknown
+469.192,0,23.4,85.4,Presence,32,0.0,upright
+469.284,0,23.4,85.4,Presence,32,0.0,upright
+469.373,0,23.4,85.4,Presence,32,,unknown
+469.463,0,23.4,85.4,Presence,32,,unknown
+469.551,0,23.4,85.4,Presence,32,0.0,upright
+469.646,0,23.4,85.4,Presence,32,0.0,upright
+469.735,0,23.4,85.4,Presence,32,0.0,upright
+469.823,0,23.4,85.4,Presence,32,,unknown
+469.956,0,21.8,85.4,Presence,32,,unknown
+470.003,0,21.8,85.4,Presence,32,0.0,upright
+470.092,0,21.8,85.4,Presence,32,0.0,upright
+470.183,0,21.8,85.4,Presence,32,,unknown
+470.275,0,21.8,85.4,Presence,32,0.0,upright
+470.379,0,21.8,85.4,Presence,32,21.76166347494261,leaning right
+470.455,0,21.8,85.4,Presence,32,0.0,upright
+470.544,0,21.8,85.4,Presence,32,,unknown
+470.633,0,21.8,85.4,Presence,32,,unknown
+470.724,0,21.8,85.4,Presence,32,,unknown
+470.813,0,21.8,85.4,Presence,32,,unknown
+470.904,0,21.8,85.4,Presence,32,,unknown
+470.991,0,21.8,85.4,Presence,32,,unknown
+471.081,0,21.8,85.4,Presence,32,0.0,upright
+471.171,0,21.8,85.4,Presence,32,,unknown
+471.262,0,21.8,85.4,Presence,32,,unknown
+471.396,0,21.8,85.4,Presence,32,,unknown
+471.441,0,21.8,85.4,Presence,32,,unknown
+471.531,0,21.8,85.4,Presence,32,0.0,upright
+471.622,0,21.8,85.4,Presence,32,,unknown
+471.713,0,21.8,85.4,Presence,32,,unknown
+471.803,0,21.8,85.4,Presence,32,,unknown
+471.894,0,21.8,85.4,Presence,32,,unknown
+471.981,0,21.8,85.4,Presence,32,,unknown
+472.073,0,21.8,85.4,Presence,32,,unknown
+472.163,0,21.8,85.4,Presence,32,,unknown
+472.269,0,21.8,85.4,Presence,32,,unknown
+472.342,0,21.8,85.4,Presence,32,,unknown
+472.431,0,21.8,85.4,Presence,32,,unknown
+472.522,0,21.8,85.4,Presence,32,,unknown
+472.614,0,21.8,85.4,Presence,32,,unknown
+472.703,0,21.8,85.4,Presence,32,,unknown
+472.838,0,21.8,85.4,Presence,32,,unknown
+472.883,0,21.8,85.4,Presence,32,,unknown
+472.973,0,21.8,85.4,Presence,32,,unknown
+473.062,0,21.8,85.4,Presence,32,,unknown
+473.153,0,21.8,85.4,Presence,32,,unknown
+473.245,0,21.8,85.4,Presence,32,,unknown
+473.334,0,21.8,85.4,Presence,32,,unknown
+473.423,0,21.8,85.4,Presence,32,,unknown
+473.514,0,21.8,85.4,Presence,32,,unknown
+473.604,0,21.8,85.4,Presence,32,,unknown
+473.694,0,21.8,85.4,Presence,32,,unknown
+473.784,0,21.8,85.4,Presence,32,,unknown
+473.871,0,21.8,85.4,Presence,32,,unknown
+473.963,0,21.8,85.4,Presence,32,,unknown
+474.052,0,21.8,85.4,Presence,32,,unknown
+474.143,0,21.8,85.4,Presence,32,,unknown
+474.278,0,8.4,85.4,Presence,32,,unknown
+474.321,0,8.4,85.4,Presence,32,,unknown
+474.413,0,8.4,85.4,Presence,32,,unknown
+474.502,0,8.4,85.4,Presence,32,,unknown
+474.592,0,8.4,85.4,Presence,32,,unknown
+474.681,0,8.4,85.4,Presence,32,,unknown
+474.774,0,8.4,85.4,Presence,32,,unknown
+474.862,0,8.4,85.4,Presence,32,,unknown
+474.952,0,8.4,85.4,Presence,32,,unknown
+475.043,0,8.4,85.4,Presence,32,,unknown
+475.135,0,8.4,85.4,Presence,32,0.0,upright
+475.222,0,8.4,85.4,Presence,32,,unknown
+475.313,0,8.4,85.4,Presence,32,,unknown
+475.403,0,8.4,85.4,Presence,32,,unknown
+475.493,0,8.4,85.4,Presence,32,,unknown
+475.584,0,8.4,85.4,Presence,32,,unknown
+475.716,0,15.1,85.4,Presence,32,,unknown
+475.762,0,15.1,85.4,Presence,32,,unknown
+475.854,0,15.1,85.4,Presence,32,,unknown
+475.943,0,15.1,85.4,Presence,32,,unknown
+476.033,0,15.1,85.4,Presence,32,,unknown
+476.123,0,15.1,85.4,Presence,32,,unknown
+476.213,0,15.1,85.4,Presence,32,,unknown
+476.303,0,15.1,85.4,Presence,32,,unknown
+476.393,0,15.1,85.4,Presence,32,,unknown
+476.482,0,15.1,85.4,Presence,32,,unknown
+476.573,0,15.1,85.4,Presence,32,,unknown
+476.662,0,15.1,85.4,Presence,32,,unknown
+476.751,0,15.1,85.4,Presence,32,,unknown
+476.843,0,15.1,85.4,Presence,32,,unknown
+476.932,0,15.1,85.4,Presence,32,,unknown
+477.021,0,15.1,85.4,Presence,32,,unknown
+477.159,0,13.4,85.4,Presence,32,,unknown
+477.202,0,13.4,85.4,Presence,32,,unknown
+477.292,0,13.4,85.4,Presence,32,,unknown
+477.383,0,13.4,85.4,Presence,32,,unknown
+477.472,0,13.4,85.4,Presence,32,,unknown
+477.563,0,13.4,85.4,Presence,32,,unknown
+477.653,0,13.4,85.4,Presence,32,,unknown
+477.742,0,13.4,85.4,Presence,32,,unknown
+477.833,0,13.4,85.4,Presence,32,,unknown
+477.924,0,13.4,85.4,Presence,32,,unknown
+478.013,0,13.4,85.4,Presence,32,,unknown
+478.102,0,13.4,85.4,Presence,32,,unknown
+478.193,0,13.4,85.4,Presence,32,,unknown
+478.282,0,13.4,85.4,Presence,32,,unknown
+478.373,0,13.4,85.4,Presence,32,,unknown
+478.463,0,13.4,85.4,Presence,32,,unknown
+478.598,0,8.4,85.4,Presence,32,,unknown
+478.642,0,8.4,85.4,Presence,32,,unknown
+478.733,0,8.4,85.4,Presence,32,,unknown
+478.822,0,8.4,85.4,Presence,32,,unknown
+478.913,0,8.4,85.4,Presence,32,,unknown
+479.003,0,8.4,85.4,Presence,32,,unknown
+479.092,0,8.4,85.4,Presence,32,,unknown
+479.183,0,8.4,85.4,Presence,32,,unknown
+479.272,0,8.4,85.4,Presence,32,,unknown
+479.363,0,8.4,85.4,Presence,32,,unknown
+479.454,0,8.4,85.4,Presence,32,,unknown
+479.543,0,8.4,85.4,Presence,32,,unknown
+479.632,0,8.4,85.4,Presence,32,,unknown
+479.721,0,8.4,85.4,Presence,32,,unknown
+479.813,0,8.4,85.4,Presence,32,,unknown
+479.906,0,8.4,85.4,Presence,32,0.0,upright
+480.045,0,8.4,85.4,Presence,32,0.0,upright
+480.106,0,8.4,85.4,Presence,32,,unknown
+480.177,0,8.4,85.4,Presence,32,,unknown
+480.267,0,8.4,85.4,Presence,32,,unknown
+480.357,0,8.4,85.4,Presence,32,,unknown
+480.447,0,8.4,85.4,Presence,32,,unknown
+480.535,0,8.4,85.4,Presence,32,,unknown
+480.630,0,8.4,85.4,Presence,32,,unknown
+480.717,0,8.4,85.4,Presence,32,,unknown
+480.808,0,8.4,85.4,Presence,32,,unknown
+480.896,0,8.4,85.4,Presence,32,,unknown
+480.987,0,8.4,85.4,Presence,32,,unknown
+481.078,0,8.4,85.4,Presence,32,,unknown
+481.168,0,8.4,85.4,Presence,32,,unknown
+481.258,0,8.4,85.4,Presence,32,,unknown
+481.347,0,8.4,85.4,Presence,32,,unknown
+481.468,0,8.4,85.4,Presence,32,,unknown
+481.527,0,8.4,85.4,Presence,32,,unknown
+481.617,0,8.4,85.4,Presence,32,,unknown
+481.708,0,8.4,85.4,Presence,32,,unknown
+481.797,0,8.4,85.4,Presence,32,,unknown
+481.888,0,8.4,85.4,Presence,32,,unknown
+481.978,0,8.4,85.4,Presence,32,,unknown
+482.068,0,8.4,85.4,Presence,32,,unknown
+482.158,0,8.4,85.4,Presence,32,,unknown
+482.247,0,8.4,85.4,Presence,32,,unknown
+482.339,0,8.4,85.4,Presence,32,,unknown
+482.426,0,8.4,85.4,Presence,32,,unknown
+482.518,0,8.4,85.4,Presence,32,,unknown
+482.607,0,8.4,85.4,Presence,32,,unknown
+482.698,0,8.4,85.4,Presence,32,,unknown
+482.789,0,8.4,85.4,Presence,32,,unknown
+482.918,0,6.7,85.4,Presence,32,,unknown
+482.962,0,6.7,85.4,Presence,32,,unknown
+483.051,0,6.7,85.4,Presence,32,,unknown
+483.143,0,6.7,85.4,Presence,32,,unknown
+483.233,0,6.7,85.4,Presence,32,,unknown
+483.322,0,6.7,85.4,Presence,32,,unknown
+483.413,0,6.7,85.4,Presence,32,,unknown
+483.503,0,6.7,85.4,Presence,32,,unknown
+483.593,0,6.7,85.4,Presence,32,,unknown
+483.684,0,6.7,85.4,Presence,32,,unknown
+483.772,0,6.7,85.4,Presence,32,,unknown
+483.863,0,6.7,85.4,Presence,32,,unknown
+483.953,0,6.7,85.4,Presence,32,,unknown
+484.043,0,6.7,85.4,Presence,32,,unknown
+484.134,0,6.7,85.4,Presence,32,,unknown
+484.224,0,6.7,85.4,Presence,32,,unknown
+484.359,0,8.4,85.4,Presence,32,,unknown
+484.401,0,8.4,85.4,Presence,32,,unknown
+484.491,0,8.4,85.4,Presence,32,,unknown
+484.583,0,8.4,85.4,Presence,32,,unknown
+484.673,0,8.4,85.4,Presence,32,,unknown
+484.763,0,8.4,85.4,Presence,32,,unknown
+484.853,0,8.4,85.4,Presence,32,,unknown
+484.943,0,8.4,85.4,Presence,32,,unknown
+485.031,0,8.4,85.4,Presence,32,,unknown
+485.122,0,8.4,85.4,Presence,32,,unknown
+485.214,0,8.4,85.4,Presence,32,,unknown
+485.303,0,8.4,85.4,Presence,32,,unknown
+485.393,0,8.4,85.4,Presence,32,,unknown
+485.484,0,8.4,85.4,Presence,32,0.0,upright
+485.574,0,8.4,85.4,Presence,32,0.0,upright
+485.680,0,8.4,85.4,Presence,32,0.0,upright
+485.804,0,8.4,85.4,Presence,32,0.0,upright
+485.864,0,8.4,85.4,Presence,32,0.0,upright
+485.946,0,8.4,85.4,Presence,32,0.0,upright
+486.017,0,8.4,85.4,Presence,32,0.0,upright
+486.110,0,8.4,85.4,Presence,32,0.0,upright
+486.200,0,8.4,85.4,Presence,32,0.0,upright
+486.291,0,8.4,85.4,Presence,32,0.0,upright
+486.380,0,8.4,85.4,Presence,32,0.0,upright
+486.466,0,8.4,85.4,Presence,32,,unknown
+486.556,0,8.4,85.4,Presence,32,,unknown
+486.663,0,8.4,85.4,Presence,32,,unknown
+486.740,0,8.4,85.4,Presence,32,26.358433134224853,leaning right
+486.829,0,8.4,85.4,Presence,32,,unknown
+486.936,0,8.4,85.4,Presence,32,0.0,upright
+487.023,0,8.4,85.4,Presence,32,0.0,upright
+487.116,0,8.4,85.4,Presence,32,0.0,upright
+487.240,0,5.0,85.4,Presence,32,0.0,upright
+487.294,0,5.0,85.4,Presence,32,0.0,upright
+487.369,0,5.0,85.4,Presence,32,0.0,upright
+487.472,0,5.0,85.4,Presence,32,0.0,upright
+487.563,0,5.0,85.4,Presence,32,0.0,upright
+487.661,0,5.0,85.4,Presence,32,,unknown
+487.734,0,5.0,85.4,Presence,32,,unknown
+487.824,0,5.0,85.4,Presence,32,30.399330786020826,leaning right
+487.914,0,5.0,85.4,Presence,32,0.0,upright
+488.005,0,5.0,85.4,Presence,32,0.0,upright
+488.092,0,5.0,85.4,Presence,32,,unknown
+488.184,0,5.0,85.4,Presence,32,0.0,upright
+488.273,0,5.0,85.4,Presence,32,0.0,upright
+488.364,0,5.0,85.4,Presence,32,0.0,upright
+488.454,0,5.0,85.4,Presence,32,,unknown
+488.544,0,5.0,85.4,Presence,32,20.204705890078486,leaning right
+488.678,0,8.4,85.4,Presence,29,20.204705890078486,leaning right
+488.722,0,8.4,85.4,Presence,29,,unknown
+488.815,0,8.4,85.4,Presence,29,20.204705890078486,leaning right
+488.902,0,8.4,85.4,Presence,29,0.0,upright
+488.993,0,8.4,85.4,Presence,29,0.0,upright
+489.084,0,8.4,85.4,Presence,29,0.0,upright
+489.173,0,8.4,85.4,Presence,29,,unknown
+489.265,0,8.4,85.4,Presence,29,0.0,upright
+489.353,0,8.4,85.4,Presence,29,,unknown
+489.444,0,8.4,85.4,Presence,29,,unknown
+489.534,0,8.4,85.4,Presence,29,,unknown
+489.622,0,8.4,85.4,Presence,29,,unknown
+489.713,0,8.4,85.4,Presence,29,,unknown
+489.804,0,8.4,85.4,Presence,29,,unknown
+489.893,0,8.4,85.4,Presence,29,0.0,upright
+489.985,0,8.4,85.4,Presence,29,0.0,upright
+490.120,0,6.7,85.4,Presence,29,0.0,upright
+490.164,0,6.7,85.4,Presence,29,0.0,upright
+490.253,0,6.7,85.4,Presence,29,,unknown
+490.343,0,6.7,85.4,Presence,29,,unknown
+490.433,0,6.7,85.4,Presence,29,,unknown
+490.524,0,6.7,85.4,Presence,29,,unknown
+490.612,0,6.7,85.4,Presence,29,,unknown
+490.703,0,6.7,85.4,Presence,29,,unknown
+490.794,0,6.7,85.4,Presence,29,,unknown
+490.883,0,6.7,85.4,Presence,29,,unknown
+490.974,0,6.7,85.4,Presence,29,,unknown
+491.063,0,6.7,85.4,Presence,29,,unknown
+491.153,0,6.7,85.4,Presence,29,,unknown
+491.243,0,6.7,85.4,Presence,29,,unknown
+491.333,0,6.7,85.4,Presence,29,,unknown
+491.439,0,6.7,85.4,Presence,29,,unknown
+491.564,0,6.7,85.4,Presence,29,,unknown
+491.607,0,6.7,85.4,Presence,29,,unknown
+491.696,0,6.7,85.4,Presence,29,,unknown
+491.787,0,6.7,85.4,Presence,29,,unknown
+491.878,0,6.7,85.4,Presence,29,,unknown
+491.969,0,6.7,85.4,Presence,29,,unknown
+492.058,0,6.7,85.4,Presence,29,,unknown
+492.147,0,6.7,85.4,Presence,29,,unknown
+492.238,0,6.7,85.4,Presence,29,,unknown
+492.328,0,6.7,85.4,Presence,29,,unknown
+492.419,0,6.7,85.4,Presence,29,,unknown
+492.507,0,6.7,85.4,Presence,29,,unknown
+492.598,0,6.7,85.4,Presence,29,0.0,upright
+492.689,0,6.7,85.4,Presence,29,0.0,upright
+492.785,0,6.7,85.4,Presence,29,0.0,upright
+492.884,0,6.7,85.4,Presence,29,0.0,upright
+493.009,0,8.4,85.4,Presence,29,0.0,upright
+493.065,0,8.4,85.4,Presence,29,0.0,upright
+493.150,0,8.4,85.4,Presence,29,0.0,upright
+493.237,0,8.4,85.4,Presence,29,0.0,upright
+493.327,0,8.4,85.4,Presence,29,0.0,upright
+493.412,0,8.4,85.4,Presence,29,,unknown
+493.512,0,8.4,85.4,Presence,29,-24.735113995156212,leaning left
+493.595,0,8.4,85.4,Presence,29,-24.735113995156212,leaning left
+493.693,0,8.4,85.4,Presence,29,-37.87532926864027,leaning left
+493.771,0,8.4,85.4,Presence,29,-38.10338243741617,leaning left
+493.878,0,8.4,85.4,Presence,29,-37.87532926864027,leaning left
+493.973,0,8.4,85.4,Presence,29,-24.735113995156212,leaning left
+494.065,0,8.4,85.4,Presence,29,0.0,upright
+494.149,0,8.4,85.4,Presence,29,-24.48984990400652,leaning left
+494.244,0,8.4,85.4,Presence,29,-24.414519097886824,leaning left
+494.314,0,8.4,85.4,Presence,29,,unknown
+494.438,0,20.1,85.4,Presence,29,,unknown
+494.500,0,20.1,85.4,Presence,29,0.0,upright
+494.593,0,20.1,85.4,Presence,29,0.0,upright
+494.674,0,20.1,85.4,Presence,29,29.805137705446967,leaning right
+494.765,0,20.1,85.4,Presence,29,29.805137705446967,leaning right
+494.856,0,20.1,85.4,Presence,29,29.805137705446967,leaning right
+494.944,0,20.1,85.4,Presence,29,23.084940217614445,leaning right
+495.049,0,20.1,85.4,Presence,29,48.813501595132855,leaning right
+495.126,0,20.1,85.4,Presence,29,59.346390427369734,leaning right
+495.199,0,20.1,85.4,Presence,29,71.67115220078497,leaning right
+495.303,0,20.1,85.4,Presence,29,,unknown
+495.395,0,20.1,85.4,Presence,29,59.346390427369734,leaning right
+495.492,0,20.1,85.4,Presence,29,28.029486112987733,leaning right
+495.576,0,20.1,85.4,Presence,29,0.0,upright
+495.675,0,20.1,85.4,Presence,29,0.0,upright
+495.752,0,20.1,85.4,Presence,29,0.0,upright
+495.880,0,15.1,85.4,Presence,36,0.0,upright
+495.933,0,15.1,85.4,Presence,36,0.0,upright
+496.036,0,15.1,85.4,Presence,36,0.0,upright
+496.118,0,15.1,85.4,Presence,36,0.0,upright
+496.209,0,15.1,85.4,Presence,36,0.0,upright
+496.298,0,15.1,85.4,Presence,36,,unknown
+496.390,0,15.1,85.4,Presence,36,0.0,upright
+496.484,0,15.1,85.4,Presence,36,0.0,upright
+496.570,0,15.1,85.4,Presence,36,0.0,upright
+496.672,0,15.1,85.4,Presence,36,0.0,upright
+496.755,0,15.1,85.4,Presence,36,0.0,upright
+496.838,0,15.1,85.4,Presence,36,0.0,upright
+496.925,0,15.1,85.4,Presence,36,0.0,upright
+497.020,0,15.1,85.4,Presence,36,0.0,upright
+497.111,0,15.1,85.4,Presence,36,0.0,upright
+497.197,0,15.1,85.4,Presence,36,,unknown
+497.322,0,18.4,85.4,Presence,36,,unknown
+497.374,0,18.4,85.4,Presence,36,0.0,upright
+497.471,0,18.4,85.4,Presence,36,0.0,upright
+497.544,0,18.4,85.4,Presence,36,0.0,upright
+497.632,0,18.4,85.4,Presence,36,0.0,upright
+497.734,0,18.4,85.4,Presence,36,0.0,upright
+497.808,0,18.4,85.4,Presence,36,0.0,upright
+497.899,0,18.4,85.4,Presence,36,0.0,upright
+497.987,0,18.4,85.4,Presence,36,0.0,upright
+498.092,0,18.4,85.4,Presence,36,0.0,upright
+498.182,0,18.4,85.4,Presence,36,,unknown
+498.257,0,18.4,85.4,Presence,36,0.0,upright
+498.348,0,18.4,85.4,Presence,36,0.0,upright
+498.437,0,18.4,85.4,Presence,36,0.0,upright
+498.529,0,18.4,85.4,Presence,36,0.0,upright
+498.634,0,18.4,85.4,Presence,36,0.0,upright
+498.758,0,13.4,85.4,Presence,36,0.0,upright
+498.803,0,13.4,85.4,Presence,36,0.0,upright
+498.894,0,13.4,85.4,Presence,36,,unknown
+498.981,0,13.4,85.4,Presence,36,0.0,upright
+499.071,0,13.4,85.4,Presence,36,0.0,upright
+499.176,0,13.4,85.4,Presence,36,,unknown
+499.252,0,13.4,85.4,Presence,36,0.0,upright
+499.342,0,13.4,85.4,Presence,36,0.0,upright
+499.433,0,13.4,85.4,Presence,36,0.0,upright
+499.524,0,13.4,85.4,Presence,36,0.0,upright
+499.614,0,13.4,85.4,Presence,36,,unknown
+499.705,0,13.4,85.4,Presence,36,0.0,upright
+499.793,0,13.4,85.4,Presence,36,,unknown
+499.883,0,13.4,85.4,Presence,36,,unknown
+499.971,0,13.4,85.4,Presence,36,,unknown
+500.064,0,13.4,85.4,Presence,36,,unknown
+500.199,0,13.4,85.4,Presence,36,,unknown
+500.244,0,13.4,85.4,Presence,36,,unknown
+500.334,0,13.4,85.4,Presence,36,,unknown
+500.424,0,13.4,85.4,Presence,36,,unknown
+500.512,0,13.4,85.4,Presence,36,,unknown
+500.603,0,13.4,85.4,Presence,36,,unknown
+500.693,0,13.4,85.4,Presence,36,,unknown
+500.783,0,13.4,85.4,Presence,36,,unknown
+500.873,0,13.4,85.4,Presence,36,,unknown
+500.965,0,13.4,85.4,Presence,36,,unknown
+501.053,0,13.4,85.4,Presence,36,,unknown
+501.143,0,13.4,85.4,Presence,36,,unknown
+501.232,0,13.4,85.4,Presence,36,,unknown
+501.321,0,13.4,85.4,Presence,36,,unknown
+501.413,0,13.4,85.4,Presence,36,,unknown
+501.501,0,13.4,85.4,Presence,36,,unknown
+501.638,0,13.4,85.4,Presence,36,,unknown
+501.683,0,13.4,85.4,Presence,36,,unknown
+501.773,0,13.4,85.4,Presence,36,,unknown
+501.862,0,13.4,85.4,Presence,36,,unknown
+501.954,0,13.4,85.4,Presence,36,,unknown
+502.043,0,13.4,85.4,Presence,36,,unknown
+502.132,0,13.4,85.4,Presence,36,,unknown
+502.224,0,13.4,85.4,Presence,36,,unknown
+502.314,0,13.4,85.4,Presence,36,,unknown
+502.404,0,13.4,85.4,Presence,36,,unknown
+502.494,0,13.4,85.4,Presence,36,,unknown
+502.583,0,13.4,85.4,Presence,36,,unknown
+502.672,0,13.4,85.4,Presence,36,,unknown
+502.762,0,13.4,85.4,Presence,36,,unknown
+502.855,0,13.4,85.4,Presence,36,0.0,upright
+502.941,0,13.4,85.4,Presence,36,,unknown
+503.077,0,13.4,85.4,Presence,36,,unknown
+503.122,0,13.4,85.4,Presence,36,,unknown
+503.213,0,13.4,85.4,Presence,36,,unknown
+503.301,0,13.4,85.4,Presence,36,,unknown
+503.392,0,13.4,85.4,Presence,36,,unknown
+503.481,0,13.4,85.4,Presence,36,,unknown
+503.571,0,13.4,85.4,Presence,36,,unknown
+503.663,0,13.4,85.4,Presence,36,,unknown
+503.754,0,13.4,85.4,Presence,36,,unknown
+503.844,0,13.4,85.4,Presence,36,,unknown
+503.934,0,13.4,85.4,Presence,36,,unknown
+504.023,0,13.4,85.4,Presence,36,,unknown
+504.111,0,13.4,85.4,Presence,36,,unknown
+504.204,0,13.4,85.4,Presence,36,,unknown
+504.293,0,13.4,85.4,Presence,36,,unknown
+504.381,0,13.4,85.4,Presence,36,,unknown
+504.518,0,11.7,85.4,Presence,36,,unknown
+504.562,0,11.7,85.4,Presence,36,,unknown
+504.653,0,11.7,85.4,Presence,36,,unknown
+504.742,0,11.7,85.4,Presence,36,,unknown
+504.834,0,11.7,85.4,Presence,36,0.0,upright
+504.934,0,11.7,85.4,Presence,36,,unknown
+505.009,0,11.7,85.4,Presence,36,,unknown
+505.098,0,11.7,85.4,Presence,36,,unknown
+505.188,0,11.7,85.4,Presence,36,,unknown
+505.278,0,11.7,85.4,Presence,36,,unknown
+505.368,0,11.7,85.4,Presence,36,,unknown
+505.458,0,11.7,85.4,Presence,36,,unknown
+505.548,0,11.7,85.4,Presence,36,,unknown
+505.636,0,11.7,85.4,Presence,36,,unknown
+505.728,0,11.7,85.4,Presence,36,,unknown
+505.834,0,11.7,85.4,Presence,36,0.0,upright
+505.960,0,11.7,85.4,Presence,36,0.0,upright
+506.002,0,11.7,85.4,Presence,36,,unknown
+506.093,0,11.7,85.4,Presence,36,,unknown
+506.181,0,11.7,85.4,Presence,36,,unknown
+506.273,0,11.7,85.4,Presence,36,,unknown
+506.362,0,11.7,85.4,Presence,36,,unknown
+506.454,0,11.7,85.4,Presence,36,,unknown
+506.543,0,11.7,85.4,Presence,36,,unknown
+506.633,0,11.7,85.4,Presence,36,,unknown
+506.724,0,11.7,85.4,Presence,36,,unknown
+506.823,0,11.7,85.4,Presence,36,,unknown
+506.899,0,11.7,85.4,Presence,36,,unknown
+506.989,0,11.7,85.4,Presence,36,,unknown
+507.078,0,11.7,85.4,Presence,36,,unknown
+507.166,0,11.7,85.4,Presence,36,,unknown
+507.258,0,11.7,85.4,Presence,36,,unknown
+507.393,0,16.7,85.4,Presence,36,,unknown
+507.437,0,16.7,85.4,Presence,36,,unknown
+507.526,0,16.7,85.4,Presence,36,,unknown
+507.618,0,16.7,85.4,Presence,36,,unknown
+507.706,0,16.7,85.4,Presence,36,,unknown
+507.813,0,16.7,85.4,Presence,36,,unknown
+507.887,0,16.7,85.4,Presence,36,,unknown
+507.978,0,16.7,85.4,Presence,36,,unknown
+508.065,0,16.7,85.4,Presence,36,,unknown
+508.158,0,16.7,85.4,Presence,36,,unknown
+508.247,0,16.7,85.4,Presence,36,,unknown
+508.338,0,16.7,85.4,Presence,36,,unknown
+508.428,0,16.7,85.4,Presence,36,,unknown
+508.518,0,16.7,85.4,Presence,36,,unknown
+508.608,0,16.7,85.4,Presence,36,,unknown
+508.712,0,16.7,85.4,Presence,36,,unknown
+508.833,0,16.7,85.4,Presence,36,,unknown
+508.877,0,16.7,85.4,Presence,36,,unknown
+508.966,0,16.7,85.4,Presence,36,,unknown
+509.058,0,16.7,85.4,Presence,36,,unknown
+509.148,0,16.7,85.4,Presence,36,,unknown
+509.237,0,16.7,85.4,Presence,36,,unknown
+509.328,0,16.7,85.4,Presence,36,,unknown
+509.418,0,16.7,85.4,Presence,36,,unknown
+509.507,0,16.7,85.4,Presence,36,,unknown
+509.599,0,16.7,85.4,Presence,36,,unknown
+509.704,0,16.7,85.4,Presence,36,0.0,upright
+509.777,0,16.7,85.4,Presence,36,,unknown
+509.867,0,16.7,85.4,Presence,36,,unknown
+509.956,0,16.7,85.4,Presence,36,,unknown
+510.046,0,16.7,85.4,Presence,36,,unknown
+510.137,0,16.7,85.4,Presence,36,0.0,upright
+510.274,0,16.7,85.4,Presence,36,29.94460079407932,leaning right
+510.317,0,16.7,85.4,Presence,36,29.94460079407932,leaning right
+510.411,0,16.7,85.4,Presence,36,29.94460079407932,leaning right
+510.497,0,16.7,85.4,Presence,36,,unknown
+510.589,0,16.7,85.4,Presence,36,,unknown
+510.694,0,16.7,85.4,Presence,36,,unknown
+510.768,0,16.7,85.4,Presence,36,29.94460079407932,leaning right
+510.859,0,16.7,85.4,Presence,36,29.94460079407932,leaning right
+510.948,0,16.7,85.4,Presence,36,,unknown
+511.038,0,16.7,85.4,Presence,36,,unknown
+511.128,0,16.7,85.4,Presence,36,,unknown
+511.219,0,16.7,85.4,Presence,36,,unknown
+511.306,0,16.7,85.4,Presence,36,,unknown
+511.398,0,16.7,85.4,Presence,36,,unknown
+511.489,0,16.7,85.4,Presence,36,,unknown
+511.594,0,16.7,85.4,Presence,36,,unknown
+511.714,0,16.7,85.4,Presence,36,,unknown
+511.757,0,16.7,85.4,Presence,36,,unknown
+511.848,0,16.7,85.4,Presence,36,,unknown
+511.939,0,16.7,85.4,Presence,36,,unknown
+512.029,0,16.7,85.4,Presence,36,,unknown
+512.118,0,16.7,85.4,Presence,36,,unknown
+512.207,0,16.7,85.4,Presence,36,,unknown
+512.297,0,16.7,85.4,Presence,36,,unknown
+512.386,0,16.7,85.4,Presence,36,,unknown
+512.480,0,16.7,85.4,Presence,36,,unknown
+512.586,0,16.7,85.4,Presence,36,29.94460079407932,leaning right
+512.657,0,16.7,85.4,Presence,36,,unknown
+512.746,0,16.7,85.4,Presence,36,,unknown
+512.839,0,16.7,85.4,Presence,36,,unknown
+512.928,0,16.7,85.4,Presence,36,,unknown
+513.018,0,16.7,85.4,Presence,36,,unknown
+513.154,0,8.4,85.4,Presence,36,,unknown
+513.198,0,8.4,85.4,Presence,36,,unknown
+513.288,0,8.4,85.4,Presence,36,,unknown
+513.376,0,8.4,85.4,Presence,36,,unknown
+513.468,0,8.4,85.4,Presence,36,,unknown
+513.573,0,8.4,85.4,Presence,36,,unknown
+513.648,0,8.4,85.4,Presence,36,,unknown
+513.738,0,8.4,85.4,Presence,36,,unknown
+513.829,0,8.4,85.4,Presence,36,,unknown
+513.917,0,8.4,85.4,Presence,36,,unknown
+514.009,0,8.4,85.4,Presence,36,,unknown
+514.098,0,8.4,85.4,Presence,36,,unknown
+514.186,0,8.4,85.4,Presence,36,,unknown
+514.278,0,8.4,85.4,Presence,36,,unknown
+514.368,0,8.4,85.4,Presence,36,,unknown
+514.473,0,8.4,85.4,Presence,36,,unknown
+514.594,0,15.1,85.4,Presence,36,,unknown
+514.636,0,15.1,85.4,Presence,36,,unknown
+514.728,0,15.1,85.4,Presence,36,0.0,upright
+514.818,0,15.1,85.4,Presence,36,,unknown
+514.925,0,15.1,85.4,Presence,36,0.0,upright
+515.014,0,15.1,85.4,Presence,36,0.0,upright
+515.104,0,15.1,85.4,Presence,36,0.0,upright
+515.201,0,15.1,85.4,Presence,36,0.0,upright
+515.292,0,15.1,85.4,Presence,36,0.0,upright
+515.367,0,15.1,85.4,Presence,36,0.0,upright
+515.480,0,15.1,85.4,Presence,36,,unknown
+515.562,0,15.1,85.4,Presence,36,0.0,upright
+515.652,0,15.1,85.4,Presence,36,0.0,upright
+515.745,0,15.1,85.4,Presence,36,0.0,upright
+515.826,0,15.1,85.4,Presence,36,0.0,upright
+515.913,0,15.1,85.4,Presence,36,0.0,upright
+516.038,0,8.4,85.4,Presence,36,22.180850316103133,leaning right
+516.083,0,8.4,85.4,Presence,36,,unknown
+516.175,0,8.4,85.4,Presence,36,22.180850316103133,leaning right
+516.275,0,8.4,85.4,Presence,36,0.0,upright
+516.365,0,8.4,85.4,Presence,36,22.74469629632911,leaning right
+516.454,0,8.4,85.4,Presence,36,,unknown
+516.546,0,8.4,85.4,Presence,36,40.98250935774763,leaning right
+516.634,0,8.4,85.4,Presence,36,42.89398270627807,leaning right
+516.709,0,8.4,85.4,Presence,36,40.98250935774763,leaning right
+516.800,0,8.4,85.4,Presence,36,40.98250935774763,leaning right
+516.889,0,8.4,85.4,Presence,36,40.98250935774763,leaning right
+516.982,0,8.4,85.4,Presence,36,35.25886693552671,leaning right
+517.071,0,8.4,85.4,Presence,36,0.0,upright
+517.159,0,8.4,85.4,Presence,36,,unknown
+517.248,0,8.4,85.4,Presence,36,,unknown
+517.352,0,8.4,85.4,Presence,36,,unknown
+517.476,0,11.7,85.4,Presence,32,,unknown
+517.522,0,11.7,85.4,Presence,32,,unknown
+517.613,0,11.7,85.4,Presence,32,,unknown
+517.703,0,11.7,85.4,Presence,32,,unknown
+517.793,0,11.7,85.4,Presence,32,,unknown
+517.884,0,11.7,85.4,Presence,32,,unknown
+517.974,0,11.7,85.4,Presence,32,0.0,upright
+518.063,0,11.7,85.4,Presence,32,0.0,upright
+518.166,0,11.7,85.4,Presence,32,0.0,upright
+518.238,0,11.7,85.4,Presence,32,,unknown
+518.344,0,11.7,85.4,Presence,32,,unknown
+518.436,0,11.7,85.4,Presence,32,0.0,upright
+518.524,0,11.7,85.4,Presence,32,0.0,upright
+518.621,0,11.7,85.4,Presence,32,0.0,upright
+518.709,0,11.7,85.4,Presence,32,0.0,upright
+518.796,0,11.7,85.4,Presence,32,0.0,upright
+518.923,0,10.0,85.4,Presence,33,0.0,upright
+518.972,0,10.0,85.4,Presence,33,0.0,upright
+519.049,0,10.0,85.4,Presence,33,0.0,upright
+519.139,0,10.0,85.4,Presence,33,0.0,upright
+519.245,0,10.0,85.4,Presence,33,0.0,upright
+519.333,0,10.0,85.4,Presence,33,,unknown
+519.424,0,10.0,85.4,Presence,33,0.0,upright
+519.516,0,10.0,85.4,Presence,33,0.0,upright
+519.611,0,10.0,85.4,Presence,33,0.0,upright
+519.684,0,10.0,85.4,Presence,33,,unknown
+519.786,0,10.0,85.4,Presence,33,0.0,upright
+519.860,0,10.0,85.4,Presence,33,0.0,upright
+519.965,0,10.0,85.4,Presence,33,0.0,upright
+520.056,0,10.0,85.4,Presence,33,0.0,upright
+520.151,0,10.0,85.4,Presence,33,0.0,upright
+520.238,0,10.0,85.4,Presence,33,,unknown
+520.359,0,10.0,85.4,Presence,33,,unknown
+520.415,0,10.0,85.4,Presence,33,0.0,upright
+520.511,0,10.0,85.4,Presence,33,0.0,upright
+520.585,0,10.0,85.4,Presence,33,0.0,upright
+520.697,0,10.0,85.4,Presence,33,0.0,upright
+520.778,0,10.0,85.4,Presence,33,0.0,upright
+520.867,0,10.0,85.4,Presence,33,0.0,upright
+520.956,0,10.0,85.4,Presence,33,0.0,upright
+521.045,0,10.0,85.4,Presence,33,0.0,upright
+521.118,0,10.0,85.4,Presence,33,0.0,upright
+521.225,0,10.0,85.4,Presence,33,0.0,upright
+521.299,0,10.0,85.4,Presence,33,0.0,upright
+521.391,0,10.0,85.4,Presence,33,0.0,upright
+521.496,0,10.0,85.4,Presence,33,0.0,upright
+521.599,0,10.0,85.4,Presence,33,0.0,upright
+521.675,0,10.0,85.4,Presence,33,0.0,upright
+521.801,0,6.7,85.4,Presence,36,0.0,upright
+521.855,0,6.7,85.4,Presence,36,43.512643050941,leaning right
+521.946,0,6.7,85.4,Presence,36,0.0,upright
+522.041,0,6.7,85.4,Presence,36,0.0,upright
+522.114,0,6.7,85.4,Presence,36,0.0,upright
+522.201,0,6.7,85.4,Presence,36,,unknown
+522.298,0,6.7,85.4,Presence,36,0.0,upright
+522.385,0,6.7,85.4,Presence,36,0.0,upright
+522.474,0,6.7,85.4,Presence,36,,unknown
+522.561,0,6.7,85.4,Presence,36,,unknown
+522.653,0,6.7,85.4,Presence,36,,unknown
+522.746,0,6.7,85.4,Presence,36,0.0,upright
+522.834,0,6.7,85.4,Presence,36,,unknown
+522.923,0,6.7,85.4,Presence,36,,unknown
+523.013,0,6.7,85.4,Presence,36,,unknown
+523.102,0,6.7,85.4,Presence,36,,unknown
+523.238,0,10.0,85.4,Presence,36,,unknown
+523.282,0,10.0,85.4,Presence,36,,unknown
+523.385,0,10.0,85.4,Presence,36,0.0,upright
+523.459,0,10.0,85.4,Presence,36,,unknown
+523.549,0,10.0,85.4,Presence,36,,unknown
+523.640,0,10.0,85.4,Presence,36,0.0,upright
+523.729,0,10.0,85.4,Presence,36,0.0,upright
+523.821,0,10.0,85.4,Presence,36,0.0,upright
+523.911,0,10.0,85.4,Presence,36,0.0,upright
+523.998,0,10.0,85.4,Presence,36,,unknown
+524.105,0,10.0,85.4,Presence,36,,unknown
+524.179,0,10.0,85.4,Presence,36,,unknown
+524.268,0,10.0,85.4,Presence,36,,unknown
+524.359,0,10.0,85.4,Presence,36,,unknown
+524.448,0,10.0,85.4,Presence,36,,unknown
+524.538,0,10.0,85.4,Presence,36,,unknown
+524.674,0,5.0,85.4,Presence,36,,unknown
+524.717,0,5.0,85.4,Presence,36,0.0,upright
+524.810,0,5.0,85.4,Presence,36,0.0,upright
+524.901,0,5.0,85.4,Presence,36,0.0,upright
+524.989,0,5.0,85.4,Presence,36,0.0,upright
+525.094,0,5.0,85.4,Presence,36,,unknown
+525.170,0,5.0,85.4,Presence,36,0.0,upright
+525.256,0,5.0,85.4,Presence,36,,unknown
+525.349,0,5.0,85.4,Presence,36,,unknown
+525.438,0,5.0,85.4,Presence,36,,unknown
+525.527,0,5.0,85.4,Presence,36,,unknown
+525.618,0,5.0,85.4,Presence,36,,unknown
+525.707,0,5.0,85.4,Presence,36,,unknown
+525.798,0,5.0,85.4,Presence,36,,unknown
+525.888,0,5.0,85.4,Presence,36,,unknown
+525.992,0,5.0,85.4,Presence,36,,unknown
+526.118,0,10.0,85.4,Presence,36,,unknown
+526.163,0,10.0,85.4,Presence,36,,unknown
+526.253,0,10.0,85.4,Presence,36,,unknown
+526.343,0,10.0,85.4,Presence,36,,unknown
+526.433,0,10.0,85.4,Presence,36,,unknown
+526.524,0,10.0,85.4,Presence,36,,unknown
+526.613,0,10.0,85.4,Presence,36,,unknown
+526.703,0,10.0,85.4,Presence,36,,unknown
+526.792,0,10.0,85.4,Presence,36,,unknown
+526.884,0,10.0,85.4,Presence,36,,unknown
+526.974,0,10.0,85.4,Presence,36,,unknown
+527.063,0,10.0,85.4,Presence,36,,unknown
+527.154,0,10.0,85.4,Presence,36,,unknown
+527.243,0,10.0,85.4,Presence,36,,unknown
+527.331,0,10.0,85.4,Presence,36,,unknown
+527.423,0,10.0,85.4,Presence,36,,unknown
+527.559,0,10.0,85.4,Presence,36,,unknown
+527.602,0,10.0,85.4,Presence,36,,unknown
+527.694,0,10.0,85.4,Presence,36,,unknown
+527.783,0,10.0,85.4,Presence,36,,unknown
+527.872,0,10.0,85.4,Presence,36,,unknown
+527.961,0,10.0,85.4,Presence,36,,unknown
+528.053,0,10.0,85.4,Presence,36,,unknown
+528.142,0,10.0,85.4,Presence,36,,unknown
+528.233,0,10.0,85.4,Presence,36,,unknown
+528.322,0,10.0,85.4,Presence,36,,unknown
+528.414,0,10.0,85.4,Presence,36,,unknown
+528.503,0,10.0,85.4,Presence,36,,unknown
+528.593,0,10.0,85.4,Presence,36,,unknown
+528.683,0,10.0,85.4,Presence,36,,unknown
+528.773,0,10.0,85.4,Presence,36,,unknown
+528.864,0,10.0,85.4,Presence,36,0.0,upright
+529.000,0,10.0,85.4,Presence,36,0.0,upright
+529.041,0,10.0,85.4,Presence,36,,unknown
+529.133,0,10.0,85.4,Presence,36,,unknown
+529.222,0,10.0,85.4,Presence,36,,unknown
+529.314,0,10.0,85.4,Presence,36,,unknown
+529.401,0,10.0,85.4,Presence,36,,unknown
+529.492,0,10.0,85.4,Presence,36,,unknown
+529.583,0,10.0,85.4,Presence,36,,unknown
+529.673,0,10.0,85.4,Presence,36,,unknown
+529.762,0,10.0,85.4,Presence,36,,unknown
+529.854,0,10.0,85.4,Presence,36,,unknown
+529.943,0,10.0,85.4,Presence,36,,unknown
+530.033,0,10.0,85.4,Presence,36,,unknown
+530.124,0,10.0,85.4,Presence,36,,unknown
+530.213,0,10.0,85.4,Presence,36,,unknown
+530.303,0,10.0,85.4,Presence,36,,unknown
+530.438,0,13.4,85.4,Presence,36,,unknown
+530.497,0,13.4,85.4,Presence,36,,unknown
+530.572,0,13.4,85.4,Presence,36,,unknown
+530.664,0,13.4,85.4,Presence,36,,unknown
+530.753,0,13.4,85.4,Presence,36,,unknown
+530.844,0,13.4,85.4,Presence,36,,unknown
+530.933,0,13.4,85.4,Presence,36,,unknown
+531.022,0,13.4,85.4,Presence,36,,unknown
+531.113,0,13.4,85.4,Presence,36,,unknown
+531.203,0,13.4,85.4,Presence,36,,unknown
+531.294,0,13.4,85.4,Presence,36,,unknown
+531.383,0,13.4,85.4,Presence,36,,unknown
+531.472,0,13.4,85.4,Presence,36,,unknown
+531.564,0,13.4,85.4,Presence,36,,unknown
+531.653,0,13.4,85.4,Presence,36,,unknown
+531.742,0,13.4,85.4,Presence,36,,unknown
+531.879,0,16.7,85.4,Presence,36,,unknown
+531.922,0,16.7,85.4,Presence,36,,unknown
+532.011,0,16.7,85.4,Presence,36,,unknown
+532.104,0,16.7,85.4,Presence,36,,unknown
+532.191,0,16.7,85.4,Presence,36,,unknown
+532.283,0,16.7,85.4,Presence,36,,unknown
+532.373,0,16.7,85.4,Presence,36,,unknown
+532.463,0,16.7,85.4,Presence,36,,unknown
+532.552,0,16.7,85.4,Presence,36,,unknown
+532.644,0,16.7,85.4,Presence,36,,unknown
+532.733,0,16.7,85.4,Presence,36,,unknown
+532.823,0,16.7,85.4,Presence,36,,unknown
+532.913,0,16.7,85.4,Presence,36,,unknown
+533.003,0,16.7,85.4,Presence,36,,unknown
+533.091,0,16.7,85.4,Presence,36,,unknown
+533.183,0,16.7,85.4,Presence,36,,unknown
+533.319,0,6.7,85.4,Presence,36,,unknown
+533.362,0,6.7,85.4,Presence,36,,unknown
+533.453,0,6.7,85.4,Presence,36,,unknown
+533.541,0,6.7,85.4,Presence,36,,unknown
+533.633,0,6.7,85.4,Presence,36,,unknown
+533.723,0,6.7,85.4,Presence,36,,unknown
+533.814,0,6.7,85.4,Presence,36,,unknown
+533.903,0,6.7,85.4,Presence,36,,unknown
+533.995,0,6.7,85.4,Presence,36,,unknown
+534.084,0,6.7,85.4,Presence,36,0.0,upright
+534.174,0,6.7,85.4,Presence,36,,unknown
+534.283,0,6.7,85.4,Presence,36,0.0,upright
+534.371,0,6.7,85.4,Presence,36,0.0,upright
+534.465,0,6.7,85.4,Presence,36,0.0,upright
+534.553,0,6.7,85.4,Presence,36,0.0,upright
+534.639,0,6.7,85.4,Presence,36,,unknown
+534.758,0,15.1,85.4,Presence,36,,unknown
+534.803,0,15.1,85.4,Presence,36,0.0,upright
+534.906,0,15.1,85.4,Presence,36,31.195272194587886,leaning right
+534.995,0,15.1,85.4,Presence,36,31.195272194587886,leaning right
+535.068,0,15.1,85.4,Presence,36,,unknown
+535.159,0,15.1,85.4,Presence,36,0.0,upright
+535.250,0,15.1,85.4,Presence,36,0.0,upright
+535.338,0,15.1,85.4,Presence,36,,unknown
+535.428,0,15.1,85.4,Presence,36,,unknown
+535.518,0,15.1,85.4,Presence,36,,unknown
+535.622,0,15.1,85.4,Presence,36,,unknown
+535.700,0,15.1,85.4,Presence,36,,unknown
+535.790,0,15.1,85.4,Presence,36,0.0,upright
+535.880,0,15.1,85.4,Presence,36,0.0,upright
+535.970,0,15.1,85.4,Presence,36,0.0,upright
+536.058,0,15.1,85.4,Presence,36,,unknown
+536.194,0,20.1,85.4,Presence,36,,unknown
+536.237,0,20.1,85.4,Presence,36,,unknown
+536.329,0,20.1,85.4,Presence,36,,unknown
+536.419,0,20.1,85.4,Presence,36,,unknown
+536.508,0,20.1,85.4,Presence,36,,unknown
+536.613,0,20.1,85.4,Presence,36,,unknown
+536.689,0,20.1,85.4,Presence,36,,unknown
+536.780,0,20.1,85.4,Presence,36,,unknown
+536.869,0,20.1,85.4,Presence,36,,unknown
+536.959,0,20.1,85.4,Presence,36,,unknown
+537.049,0,20.1,85.4,Presence,36,,unknown
+537.139,0,20.1,85.4,Presence,36,,unknown
+537.230,0,20.1,85.4,Presence,36,,unknown
+537.319,0,20.1,85.4,Presence,36,,unknown
+537.425,0,20.1,85.4,Presence,36,,unknown
+537.513,0,20.1,85.4,Presence,36,,unknown
+537.638,0,20.1,85.4,Presence,36,,unknown
+537.694,0,20.1,85.4,Presence,36,,unknown
+537.770,0,20.1,85.4,Presence,36,,unknown
+537.859,0,20.1,85.4,Presence,36,,unknown
+537.949,0,20.1,85.4,Presence,36,0.0,upright
+538.039,0,20.1,85.4,Presence,36,0.0,upright
+538.127,0,20.1,85.4,Presence,36,,unknown
+538.219,0,20.1,85.4,Presence,36,0.0,upright
+538.309,0,20.1,85.4,Presence,36,,unknown
+538.397,0,20.1,85.4,Presence,36,,unknown
+538.506,0,20.1,85.4,Presence,36,,unknown
+538.583,0,20.1,85.4,Presence,36,,unknown
+538.676,0,20.1,85.4,Presence,36,0.0,upright
+538.763,0,20.1,85.4,Presence,36,,unknown
+538.853,0,20.1,85.4,Presence,36,,unknown
+538.943,0,20.1,85.4,Presence,36,,unknown
+539.078,0,20.1,85.4,Presence,36,,unknown
+539.122,0,20.1,85.4,Presence,36,,unknown
+539.212,0,20.1,85.4,Presence,36,,unknown
+539.303,0,20.1,85.4,Presence,36,,unknown
+539.392,0,20.1,85.4,Presence,36,,unknown
+539.484,0,20.1,85.4,Presence,36,,unknown
+539.573,0,20.1,85.4,Presence,36,,unknown
+539.663,0,20.1,85.4,Presence,36,,unknown
+539.753,0,20.1,85.4,Presence,36,0.0,upright
+539.844,0,20.1,85.4,Presence,36,,unknown
+539.936,0,20.1,85.4,Presence,36,0.0,upright
+540.025,0,20.1,85.4,Presence,36,0.0,upright
+540.115,0,20.1,85.4,Presence,36,0.0,upright
+540.204,0,20.1,85.4,Presence,36,0.0,upright
+540.295,0,20.1,85.4,Presence,36,0.0,upright
+540.384,0,20.1,85.4,Presence,36,,unknown
+540.519,0,16.7,85.4,Presence,36,,unknown
+540.564,0,16.7,85.4,Presence,36,,unknown
+540.654,0,16.7,85.4,Presence,36,0.0,upright
+540.742,0,16.7,85.4,Presence,36,,unknown
+540.834,0,16.7,85.4,Presence,36,,unknown
+540.923,0,16.7,85.4,Presence,36,,unknown
+541.014,0,16.7,85.4,Presence,36,,unknown
+541.103,0,16.7,85.4,Presence,36,,unknown
+541.194,0,16.7,85.4,Presence,36,,unknown
+541.282,0,16.7,85.4,Presence,36,,unknown
+541.374,0,16.7,85.4,Presence,36,0.0,upright
+541.461,0,16.7,85.4,Presence,36,,unknown
+541.554,0,16.7,85.4,Presence,36,,unknown
+541.643,0,16.7,85.4,Presence,36,,unknown
+541.733,0,16.7,85.4,Presence,36,,unknown
+541.823,0,16.7,85.4,Presence,36,,unknown
+541.957,0,20.1,85.4,Presence,36,,unknown
+542.002,0,20.1,85.4,Presence,36,,unknown
+542.093,0,20.1,85.4,Presence,36,,unknown
+542.184,0,20.1,85.4,Presence,36,,unknown
+542.271,0,20.1,85.4,Presence,36,0.0,upright
+542.365,0,20.1,85.4,Presence,36,,unknown
+542.455,0,20.1,85.4,Presence,36,0.0,upright
+542.544,0,20.1,85.4,Presence,36,0.0,upright
+542.633,0,20.1,85.4,Presence,36,,unknown
+542.724,0,20.1,85.4,Presence,36,,unknown
+542.812,0,20.1,85.4,Presence,36,,unknown
+542.903,0,20.1,85.4,Presence,36,,unknown
+542.993,0,20.1,85.4,Presence,36,,unknown
+543.083,0,20.1,85.4,Presence,36,,unknown
+543.173,0,20.1,85.4,Presence,36,,unknown
+543.263,0,20.1,85.4,Presence,36,,unknown
+543.398,0,15.1,85.4,Presence,36,,unknown
+543.443,0,15.1,85.4,Presence,36,0.0,upright
+543.534,0,15.1,85.4,Presence,36,0.0,upright
+543.624,0,15.1,85.4,Presence,36,,unknown
+543.713,0,15.1,85.4,Presence,36,,unknown
+543.802,0,15.1,85.4,Presence,36,,unknown
+543.894,0,15.1,85.4,Presence,36,,unknown
+543.984,0,15.1,85.4,Presence,36,,unknown
+544.073,0,15.1,85.4,Presence,36,,unknown
+544.163,0,15.1,85.4,Presence,36,,unknown
+544.271,0,15.1,85.4,Presence,36,,unknown
+544.347,0,15.1,85.4,Presence,36,,unknown
+544.433,0,15.1,85.4,Presence,36,,unknown
+544.524,0,15.1,85.4,Presence,36,,unknown
+544.614,0,15.1,85.4,Presence,36,,unknown
+544.704,0,15.1,85.4,Presence,36,,unknown
+544.838,0,13.4,85.4,Presence,36,,unknown
+544.881,0,13.4,85.4,Presence,36,,unknown
+544.973,0,13.4,85.4,Presence,36,,unknown
+545.062,0,13.4,85.4,Presence,36,,unknown
+545.153,0,13.4,85.4,Presence,36,,unknown
+545.244,0,13.4,85.4,Presence,36,,unknown
+545.333,0,13.4,85.4,Presence,36,,unknown
+545.423,0,13.4,85.4,Presence,36,,unknown
+545.514,0,13.4,85.4,Presence,36,,unknown
+545.604,0,13.4,85.4,Presence,36,,unknown
+545.694,0,13.4,85.4,Presence,36,,unknown
+545.783,0,13.4,85.4,Presence,36,,unknown
+545.873,0,13.4,85.4,Presence,36,,unknown
+545.964,0,13.4,85.4,Presence,36,,unknown
+546.054,0,13.4,85.4,Presence,36,,unknown
+546.160,0,13.4,85.4,Presence,36,,unknown
+546.285,0,21.8,85.4,Presence,36,,unknown
+546.327,0,21.8,85.4,Presence,36,,unknown
+546.416,0,21.8,85.4,Presence,36,,unknown
+546.508,0,21.8,85.4,Presence,36,,unknown
+546.597,0,21.8,85.4,Presence,36,,unknown
+546.688,0,21.8,85.4,Presence,36,,unknown
+546.779,0,21.8,85.4,Presence,36,,unknown
+546.868,0,21.8,85.4,Presence,36,,unknown
+546.958,0,21.8,85.4,Presence,36,,unknown
+547.047,0,21.8,85.4,Presence,36,,unknown
+547.149,0,21.8,85.4,Presence,36,0.0,upright
+547.223,0,21.8,85.4,Presence,36,,unknown
+547.311,0,21.8,85.4,Presence,36,,unknown
+547.403,0,21.8,85.4,Presence,36,,unknown
+547.493,0,21.8,85.4,Presence,36,,unknown
+547.583,0,21.8,85.4,Presence,36,,unknown
+547.718,0,21.8,85.4,Presence,36,,unknown
+547.762,0,21.8,85.4,Presence,36,,unknown
+547.854,0,21.8,85.4,Presence,36,,unknown
+547.941,0,21.8,85.4,Presence,36,,unknown
+548.033,0,21.8,85.4,Presence,36,,unknown
+548.121,0,21.8,85.4,Presence,36,,unknown
+548.213,0,21.8,85.4,Presence,36,,unknown
+548.304,0,21.8,85.4,Presence,36,,unknown
+548.394,0,21.8,85.4,Presence,36,,unknown
+548.482,0,21.8,85.4,Presence,36,,unknown
+548.574,0,21.8,85.4,Presence,36,,unknown
+548.662,0,21.8,85.4,Presence,36,,unknown
+548.753,0,21.8,85.4,Presence,36,,unknown
+548.843,0,21.8,85.4,Presence,36,,unknown
+548.933,0,21.8,85.4,Presence,36,,unknown
+549.024,0,21.8,85.4,Presence,36,,unknown
+549.158,0,21.8,85.4,Presence,36,,unknown
+549.201,0,21.8,85.4,Presence,36,,unknown
+549.294,0,21.8,85.4,Presence,36,,unknown
+549.383,0,21.8,85.4,Presence,36,,unknown
+549.473,0,21.8,85.4,Presence,36,,unknown
+549.563,0,21.8,85.4,Presence,36,,unknown
+549.654,0,21.8,85.4,Presence,36,,unknown
+549.743,0,21.8,85.4,Presence,36,,unknown
+549.833,0,21.8,85.4,Presence,36,,unknown
+549.923,0,21.8,85.4,Presence,36,,unknown
+550.012,0,21.8,85.4,Presence,36,,unknown
+550.104,0,21.8,85.4,Presence,36,,unknown
+550.193,0,21.8,85.4,Presence,36,,unknown
+550.283,0,21.8,85.4,Presence,36,,unknown
+550.374,0,21.8,85.4,Presence,36,,unknown
+550.463,0,21.8,85.4,Presence,36,,unknown
+550.597,0,21.8,85.4,Presence,36,,unknown
+550.643,0,21.8,85.4,Presence,36,,unknown
+550.733,0,21.8,85.4,Presence,36,,unknown
+550.821,0,21.8,85.4,Presence,36,,unknown
+550.913,0,21.8,85.4,Presence,36,,unknown
+551.004,0,21.8,85.4,Presence,36,,unknown
+551.093,0,21.8,85.4,Presence,36,0.0,upright
+551.193,0,21.8,85.4,Presence,36,0.0,upright
+551.269,0,21.8,85.4,Presence,36,,unknown
+551.375,0,21.8,85.4,Presence,36,,unknown
+551.449,0,21.8,85.4,Presence,36,,unknown
+551.552,0,21.8,85.4,Presence,36,0.0,upright
+551.652,0,21.8,85.4,Presence,36,0.0,upright
+551.734,0,21.8,85.4,Presence,36,0.0,upright
+551.826,0,21.8,85.4,Presence,36,0.0,upright
+551.916,0,21.8,85.4,Presence,36,,unknown
+552.045,0,21.8,85.4,Presence,36,,unknown
+552.093,0,21.8,85.4,Presence,36,0.0,upright
+552.191,0,21.8,85.4,Presence,36,0.0,upright
+552.272,0,21.8,85.4,Presence,36,0.0,upright
+552.364,0,21.8,85.4,Presence,36,0.0,upright
+552.455,0,21.8,85.4,Presence,36,0.0,upright
+552.559,0,21.8,85.4,Presence,36,0.0,upright
+552.639,0,21.8,85.4,Presence,36,0.0,upright
+552.738,0,21.8,85.4,Presence,36,0.0,upright
+552.821,0,21.8,85.4,Presence,36,0.0,upright
+552.909,0,21.8,85.4,Presence,36,,unknown
+553.002,0,21.8,85.4,Presence,36,0.0,upright
+553.092,0,21.8,85.4,Presence,36,0.0,upright
+553.181,0,21.8,85.4,Presence,36,0.0,upright
+553.253,0,21.8,85.4,Presence,36,0.0,upright
+553.355,0,21.8,85.4,Presence,36,0.0,upright
+553.480,0,21.8,85.4,Presence,36,0.0,upright
+553.539,0,21.8,85.4,Presence,36,0.0,upright
+553.628,0,21.8,85.4,Presence,36,0.0,upright
+553.724,0,21.8,85.4,Presence,36,22.15146095680248,leaning right
+553.810,0,21.8,85.4,Presence,36,22.15146095680248,leaning right
+553.899,0,21.8,85.4,Presence,36,,unknown
+553.985,0,21.8,85.4,Presence,36,22.15146095680248,leaning right
+554.083,0,21.8,85.4,Presence,36,25.551657984045548,leaning right
+554.169,0,21.8,85.4,Presence,36,25.551657984045548,leaning right
+554.257,0,21.8,85.4,Presence,36,0.0,upright
+554.358,0,21.8,85.4,Presence,36,0.0,upright
+554.435,0,21.8,85.4,Presence,36,0.0,upright
+554.509,0,21.8,85.4,Presence,36,0.0,upright
+554.624,0,21.8,85.4,Presence,36,0.0,upright
+554.713,0,21.8,85.4,Presence,36,0.0,upright
+554.784,0,21.8,85.4,Presence,36,,unknown
+554.918,0,15.1,85.4,Presence,30,,unknown
+554.974,0,15.1,85.4,Presence,30,0.0,upright
+555.066,0,15.1,85.4,Presence,30,0.0,upright
+555.152,0,15.1,85.4,Presence,30,-25.736322878749263,leaning left
+555.246,0,15.1,85.4,Presence,30,-25.736322878749263,leaning left
+555.334,0,15.1,85.4,Presence,30,-25.736322878749263,leaning left
+555.426,0,15.1,85.4,Presence,30,-27.18007940457997,leaning left
+555.515,0,15.1,85.4,Presence,30,,unknown
+555.605,0,15.1,85.4,Presence,30,-27.18007940457997,leaning left
+555.678,0,15.1,85.4,Presence,30,0.0,upright
+555.782,0,15.1,85.4,Presence,30,,unknown
+555.875,0,15.1,85.4,Presence,30,0.0,upright
+555.965,0,15.1,85.4,Presence,30,0.0,upright
+556.040,0,15.1,85.4,Presence,30,0.0,upright
+556.130,0,15.1,85.4,Presence,30,0.0,upright
+556.234,0,15.1,85.4,Presence,30,,unknown
+556.360,0,21.8,85.4,Presence,30,,unknown
+556.415,0,21.8,85.4,Presence,30,0.0,upright
+556.487,0,21.8,85.4,Presence,30,,unknown
+556.579,0,21.8,85.4,Presence,30,,unknown
+556.669,0,21.8,85.4,Presence,30,0.0,upright
+556.773,0,21.8,85.4,Presence,30,,unknown
+556.849,0,21.8,85.4,Presence,30,0.0,upright
+556.955,0,21.8,85.4,Presence,30,,unknown
+557.028,0,21.8,85.4,Presence,30,0.0,upright
+557.126,0,21.8,85.4,Presence,30,,unknown
+557.210,0,21.8,85.4,Presence,30,0.0,upright
+557.300,0,21.8,85.4,Presence,30,0.0,upright
+557.389,0,21.8,85.4,Presence,30,,unknown
+557.480,0,21.8,85.4,Presence,30,0.0,upright
+557.570,0,21.8,85.4,Presence,30,0.0,upright
+557.674,0,21.8,85.4,Presence,30,,unknown
+557.793,0,15.1,85.4,Presence,38,,unknown
+557.854,0,15.1,85.4,Presence,38,0.0,upright
+557.945,0,15.1,85.4,Presence,38,0.0,upright
+558.020,0,15.1,85.4,Presence,38,0.0,upright
+558.110,0,15.1,85.4,Presence,38,0.0,upright
+558.199,0,15.1,85.4,Presence,38,0.0,upright
+558.287,0,15.1,85.4,Presence,38,0.0,upright
+558.379,0,15.1,85.4,Presence,38,,unknown
+558.470,0,15.1,85.4,Presence,38,0.0,upright
+558.560,0,15.1,85.4,Presence,38,0.0,upright
+558.663,0,15.1,85.4,Presence,38,,unknown
+558.738,0,15.1,85.4,Presence,38,,unknown
+558.828,0,15.1,85.4,Presence,38,,unknown
+558.918,0,15.1,85.4,Presence,38,,unknown
+559.008,0,15.1,85.4,Presence,38,0.0,upright
+559.098,0,15.1,85.4,Presence,38,,unknown
+559.234,0,11.7,85.4,Presence,38,,unknown
+559.277,0,11.7,85.4,Presence,38,,unknown
+559.367,0,11.7,85.4,Presence,38,,unknown
+559.457,0,11.7,85.4,Presence,38,,unknown
+559.548,0,11.7,85.4,Presence,38,,unknown
+559.655,0,11.7,85.4,Presence,38,0.0,upright
+559.729,0,11.7,85.4,Presence,38,,unknown
+559.816,0,11.7,85.4,Presence,38,,unknown
+559.910,0,11.7,85.4,Presence,38,,unknown
+559.999,0,11.7,85.4,Presence,38,,unknown
+560.089,0,11.7,85.4,Presence,38,,unknown
+560.179,0,11.7,85.4,Presence,38,,unknown
+560.269,0,11.7,85.4,Presence,38,,unknown
+560.358,0,11.7,85.4,Presence,38,,unknown
+560.448,0,11.7,85.4,Presence,38,,unknown
+560.559,0,11.7,85.4,Presence,38,,unknown
+560.683,0,10.0,85.4,Presence,33,,unknown
+560.737,0,10.0,85.4,Presence,33,,unknown
+560.817,0,10.0,85.4,Presence,33,,unknown
+560.908,0,10.0,85.4,Presence,33,,unknown
+560.998,0,10.0,85.4,Presence,33,,unknown
+561.088,0,10.0,85.4,Presence,33,,unknown
+561.178,0,10.0,85.4,Presence,33,,unknown
+561.268,0,10.0,85.4,Presence,33,,unknown
+561.357,0,10.0,85.4,Presence,33,,unknown
+561.447,0,10.0,85.4,Presence,33,,unknown
+561.545,0,10.0,85.4,Presence,33,,unknown
+561.618,0,10.0,85.4,Presence,33,,unknown
+561.708,0,10.0,85.4,Presence,33,,unknown
+561.799,0,10.0,85.4,Presence,33,0.0,upright
+561.888,0,10.0,85.4,Presence,33,,unknown
+561.977,0,10.0,85.4,Presence,33,,unknown
+562.114,0,16.7,85.4,Presence,33,,unknown
+562.158,0,16.7,85.4,Presence,33,,unknown
+562.247,0,16.7,85.4,Presence,33,,unknown
+562.340,0,16.7,85.4,Presence,33,,unknown
+562.428,0,16.7,85.4,Presence,33,,unknown
+562.533,0,16.7,85.4,Presence,33,,unknown
+562.608,0,16.7,85.4,Presence,33,,unknown
+562.699,0,16.7,85.4,Presence,33,,unknown
+562.788,0,16.7,85.4,Presence,33,,unknown
+562.879,0,16.7,85.4,Presence,33,,unknown
+562.968,0,16.7,85.4,Presence,33,,unknown
+563.058,0,16.7,85.4,Presence,33,,unknown
+563.147,0,16.7,85.4,Presence,33,,unknown
+563.239,0,16.7,85.4,Presence,33,,unknown
+563.328,0,16.7,85.4,Presence,33,,unknown
+563.432,0,16.7,85.4,Presence,33,,unknown
+563.554,0,16.7,85.4,Presence,33,,unknown
+563.601,0,16.7,85.4,Presence,33,,unknown
+563.689,0,16.7,85.4,Presence,33,,unknown
+563.780,0,16.7,85.4,Presence,33,,unknown
+563.868,0,16.7,85.4,Presence,33,,unknown
+563.959,0,16.7,85.4,Presence,33,,unknown
+564.049,0,16.7,85.4,Presence,33,,unknown
+564.138,0,16.7,85.4,Presence,33,,unknown
+564.229,0,16.7,85.4,Presence,33,,unknown
+564.318,0,16.7,85.4,Presence,33,,unknown
+564.408,0,16.7,85.4,Presence,33,,unknown
+564.497,0,16.7,85.4,Presence,33,,unknown
+564.587,0,16.7,85.4,Presence,33,,unknown
+564.678,0,16.7,85.4,Presence,33,,unknown
+564.769,0,16.7,85.4,Presence,33,,unknown
+564.858,0,16.7,85.4,Presence,33,,unknown
+564.994,0,6.7,85.4,Presence,33,,unknown
+565.038,0,6.7,85.4,Presence,33,,unknown
+565.130,0,6.7,85.4,Presence,33,,unknown
+565.218,0,6.7,85.4,Presence,33,,unknown
+565.308,0,6.7,85.4,Presence,33,,unknown
+565.414,0,6.7,85.4,Presence,33,,unknown
+565.489,0,6.7,85.4,Presence,33,,unknown
+565.578,0,6.7,85.4,Presence,33,,unknown
+565.668,0,6.7,85.4,Presence,33,,unknown
+565.759,0,6.7,85.4,Presence,33,,unknown
+565.847,0,6.7,85.4,Presence,33,,unknown
+565.938,0,6.7,85.4,Presence,33,,unknown
+566.026,0,6.7,85.4,Presence,33,,unknown
+566.119,0,6.7,85.4,Presence,33,,unknown
+566.208,0,6.7,85.4,Presence,33,,unknown
+566.313,0,6.7,85.4,Presence,33,,unknown
+566.438,0,6.7,85.4,Presence,33,,unknown
+566.482,0,6.7,85.4,Presence,33,,unknown
+566.571,0,6.7,85.4,Presence,33,,unknown
+566.663,0,6.7,85.4,Presence,33,,unknown
+566.754,0,6.7,85.4,Presence,33,,unknown
+566.843,0,6.7,85.4,Presence,33,,unknown
+566.934,0,6.7,85.4,Presence,33,,unknown
+567.024,0,6.7,85.4,Presence,33,,unknown
+567.113,0,6.7,85.4,Presence,33,,unknown
+567.202,0,6.7,85.4,Presence,33,,unknown
+567.293,0,6.7,85.4,Presence,33,,unknown
+567.381,0,6.7,85.4,Presence,33,,unknown
+567.474,0,6.7,85.4,Presence,33,,unknown
+567.563,0,6.7,85.4,Presence,33,,unknown
+567.652,0,6.7,85.4,Presence,33,,unknown
+567.743,0,6.7,85.4,Presence,33,,unknown
+567.878,0,8.4,85.4,Presence,33,,unknown
+567.922,0,8.4,85.4,Presence,33,,unknown
+568.014,0,8.4,85.4,Presence,33,,unknown
+568.101,0,8.4,85.4,Presence,33,,unknown
+568.193,0,8.4,85.4,Presence,33,,unknown
+568.283,0,8.4,85.4,Presence,33,,unknown
+568.373,0,8.4,85.4,Presence,33,,unknown
+568.461,0,8.4,85.4,Presence,33,,unknown
+568.553,0,8.4,85.4,Presence,33,,unknown
+568.642,0,8.4,85.4,Presence,33,,unknown
+568.734,0,8.4,85.4,Presence,33,,unknown
+568.823,0,8.4,85.4,Presence,33,,unknown
+568.913,0,8.4,85.4,Presence,33,,unknown
+569.003,0,8.4,85.4,Presence,33,,unknown
+569.094,0,8.4,85.4,Presence,33,,unknown
+569.184,0,8.4,85.4,Presence,33,,unknown
+569.319,0,8.4,85.4,Presence,33,,unknown
+569.363,0,8.4,85.4,Presence,33,,unknown
+569.453,0,8.4,85.4,Presence,33,,unknown
+569.545,0,8.4,85.4,Presence,33,,unknown
+569.634,0,8.4,85.4,Presence,33,,unknown
+569.724,0,8.4,85.4,Presence,33,,unknown
+569.814,0,8.4,85.4,Presence,33,,unknown
+569.904,0,8.4,85.4,Presence,33,,unknown
+569.993,0,8.4,85.4,Presence,33,,unknown
+570.083,0,8.4,85.4,Presence,33,,unknown
+570.181,0,8.4,85.4,Presence,33,,unknown
+570.259,0,8.4,85.4,Presence,33,,unknown
+570.348,0,8.4,85.4,Presence,33,,unknown
+570.439,0,8.4,85.4,Presence,33,,unknown
+570.528,0,8.4,85.4,Presence,33,,unknown
+570.619,0,8.4,85.4,Presence,33,,unknown
+570.754,0,6.7,85.4,Presence,33,,unknown
+570.797,0,6.7,85.4,Presence,33,,unknown
+570.888,0,6.7,85.4,Presence,33,,unknown
+570.979,0,6.7,85.4,Presence,33,,unknown
+571.068,0,6.7,85.4,Presence,33,,unknown
+571.174,0,6.7,85.4,Presence,33,,unknown
+571.247,0,6.7,85.4,Presence,33,,unknown
+571.338,0,6.7,85.4,Presence,33,,unknown
+571.430,0,6.7,85.4,Presence,33,0.0,upright
+571.518,0,6.7,85.4,Presence,33,,unknown
+571.610,0,6.7,85.4,Presence,33,0.0,upright
+571.700,0,6.7,85.4,Presence,33,0.0,upright
+571.789,0,6.7,85.4,Presence,33,0.0,upright
+571.879,0,6.7,85.4,Presence,33,0.0,upright
+571.970,0,6.7,85.4,Presence,33,0.0,upright
+572.072,0,6.7,85.4,Presence,33,,unknown
+572.194,0,6.7,85.4,Presence,33,,unknown
+572.237,0,6.7,85.4,Presence,33,,unknown
+572.330,0,6.7,85.4,Presence,33,,unknown
+572.417,0,6.7,85.4,Presence,33,,unknown
+572.510,0,6.7,85.4,Presence,33,0.0,upright
+572.599,0,6.7,85.4,Presence,33,0.0,upright
+572.687,0,6.7,85.4,Presence,33,0.0,upright
+572.778,0,6.7,85.4,Presence,33,0.0,upright
+572.869,0,6.7,85.4,Presence,33,0.0,upright
+572.958,0,6.7,85.4,Presence,33,,unknown
+573.063,0,6.7,85.4,Presence,33,,unknown
+573.138,0,6.7,85.4,Presence,33,,unknown
+573.229,0,6.7,85.4,Presence,33,,unknown
+573.320,0,6.7,85.4,Presence,33,0.0,upright
+573.409,0,6.7,85.4,Presence,33,,unknown
+573.498,0,6.7,85.4,Presence,33,,unknown
+573.634,0,6.7,85.4,Presence,33,,unknown
+573.677,0,6.7,85.4,Presence,33,,unknown
+573.769,0,6.7,85.4,Presence,33,,unknown
+573.858,0,6.7,85.4,Presence,33,,unknown
+573.948,0,6.7,85.4,Presence,33,,unknown
+574.054,0,6.7,85.4,Presence,33,,unknown
+574.128,0,6.7,85.4,Presence,33,,unknown
+574.218,0,6.7,85.4,Presence,33,,unknown
+574.306,0,6.7,85.4,Presence,33,,unknown
+574.398,0,6.7,85.4,Presence,33,,unknown
+574.489,0,6.7,85.4,Presence,33,,unknown
+574.579,0,6.7,85.4,Presence,33,,unknown
+574.668,0,6.7,85.4,Presence,33,,unknown
+574.758,0,6.7,85.4,Presence,33,,unknown
+574.846,0,6.7,85.4,Presence,33,,unknown
+574.936,0,6.7,85.4,Presence,33,,unknown
+575.073,0,6.7,85.4,Presence,33,,unknown
+575.117,0,6.7,85.4,Presence,33,,unknown
+575.208,0,6.7,85.4,Presence,33,,unknown
+575.300,0,6.7,85.4,Presence,33,0.0,upright
+575.388,0,6.7,85.4,Presence,33,0.0,upright
+575.478,0,6.7,85.4,Presence,33,,unknown
+575.568,0,6.7,85.4,Presence,33,,unknown
+575.659,0,6.7,85.4,Presence,33,,unknown
+575.748,0,6.7,85.4,Presence,33,,unknown
+575.838,0,6.7,85.4,Presence,33,,unknown
+575.928,0,6.7,85.4,Presence,33,,unknown
+576.019,0,6.7,85.4,Presence,33,0.0,upright
+576.108,0,6.7,85.4,Presence,33,,unknown
+576.198,0,6.7,85.4,Presence,33,,unknown
+576.288,0,6.7,85.4,Presence,33,,unknown
+576.378,0,6.7,85.4,Presence,33,,unknown
+576.514,0,11.7,85.4,Presence,33,,unknown
+576.562,0,11.7,85.4,Presence,33,,unknown
+576.649,0,11.7,85.4,Presence,33,,unknown
+576.737,0,11.7,85.4,Presence,33,,unknown
+576.828,0,11.7,85.4,Presence,33,,unknown
+576.932,0,11.7,85.4,Presence,33,,unknown
+577.008,0,11.7,85.4,Presence,33,,unknown
+577.098,0,11.7,85.4,Presence,33,,unknown
+577.189,0,11.7,85.4,Presence,33,,unknown
+577.278,0,11.7,85.4,Presence,33,,unknown
+577.368,0,11.7,85.4,Presence,33,,unknown
+577.458,0,11.7,85.4,Presence,33,,unknown
+577.548,0,11.7,85.4,Presence,33,,unknown
+577.639,0,11.7,85.4,Presence,33,,unknown
+577.729,0,11.7,85.4,Presence,33,,unknown
+577.835,0,11.7,85.4,Presence,33,,unknown
+577.957,0,8.4,85.4,Presence,33,,unknown
+578.002,0,8.4,85.4,Presence,33,,unknown
+578.093,0,8.4,85.4,Presence,33,,unknown
+578.184,0,8.4,85.4,Presence,33,,unknown
+578.273,0,8.4,85.4,Presence,33,,unknown
+578.364,0,8.4,85.4,Presence,33,,unknown
+578.453,0,8.4,85.4,Presence,33,,unknown
+578.543,0,8.4,85.4,Presence,33,,unknown
+578.633,0,8.4,85.4,Presence,33,,unknown
+578.724,0,8.4,85.4,Presence,33,,unknown
+578.827,0,8.4,85.4,Presence,33,,unknown
+578.899,0,8.4,85.4,Presence,33,,unknown
+578.987,0,8.4,85.4,Presence,33,,unknown
+579.079,0,8.4,85.4,Presence,33,,unknown
+579.170,0,8.4,85.4,Presence,33,,unknown
+579.258,0,8.4,85.4,Presence,33,,unknown
+579.394,0,6.7,85.4,Presence,33,,unknown
+579.437,0,6.7,85.4,Presence,33,,unknown
+579.527,0,6.7,85.4,Presence,33,,unknown
+579.619,0,6.7,85.4,Presence,33,,unknown
+579.708,0,6.7,85.4,Presence,33,,unknown
+579.814,0,6.7,85.4,Presence,33,,unknown
+579.888,0,6.7,85.4,Presence,33,,unknown
+579.979,0,6.7,85.4,Presence,33,,unknown
+580.067,0,6.7,85.4,Presence,33,,unknown
+580.158,0,6.7,85.4,Presence,33,,unknown
+580.248,0,6.7,85.4,Presence,33,,unknown
+580.337,0,6.7,85.4,Presence,33,,unknown
+580.429,0,6.7,85.4,Presence,33,,unknown
+580.517,0,6.7,85.4,Presence,33,,unknown
+580.608,0,6.7,85.4,Presence,33,,unknown
+580.698,0,6.7,85.4,Presence,33,,unknown
+580.834,0,20.1,85.4,Presence,33,,unknown
+580.877,0,20.1,85.4,Presence,33,,unknown
+580.969,0,20.1,85.4,Presence,33,,unknown
+581.058,0,20.1,85.4,Presence,33,,unknown
+581.148,0,20.1,85.4,Presence,33,,unknown
+581.239,0,20.1,85.4,Presence,33,,unknown
+581.328,0,20.1,85.4,Presence,33,,unknown
+581.418,0,20.1,85.4,Presence,33,,unknown
+581.506,0,20.1,85.4,Presence,33,,unknown
+581.596,0,20.1,85.4,Presence,33,,unknown
+581.704,0,20.1,85.4,Presence,33,,unknown
+581.780,0,20.1,85.4,Presence,33,,unknown
+581.868,0,20.1,85.4,Presence,33,,unknown
+581.958,0,20.1,85.4,Presence,33,,unknown
+582.047,0,20.1,85.4,Presence,33,,unknown
+582.139,0,20.1,85.4,Presence,33,,unknown
+582.274,0,15.1,85.4,Presence,33,,unknown
+582.317,0,15.1,85.4,Presence,33,,unknown
+582.408,0,15.1,85.4,Presence,33,,unknown
+582.498,0,15.1,85.4,Presence,33,,unknown
+582.588,0,15.1,85.4,Presence,33,,unknown
+582.679,0,15.1,85.4,Presence,33,,unknown
+582.769,0,15.1,85.4,Presence,33,,unknown
+582.857,0,15.1,85.4,Presence,33,,unknown
+582.949,0,15.1,85.4,Presence,33,,unknown
+583.039,0,15.1,85.4,Presence,33,,unknown
+583.128,0,15.1,85.4,Presence,33,,unknown
+583.218,0,15.1,85.4,Presence,33,,unknown
+583.308,0,15.1,85.4,Presence,33,,unknown
+583.398,0,15.1,85.4,Presence,33,,unknown
+583.488,0,15.1,85.4,Presence,33,,unknown
+583.594,0,15.1,85.4,Presence,33,,unknown
+583.719,0,15.1,85.4,Presence,33,,unknown
+583.765,0,15.1,85.4,Presence,33,,unknown
+583.854,0,15.1,85.4,Presence,33,,unknown
+583.944,0,15.1,85.4,Presence,33,,unknown
+584.033,0,15.1,85.4,Presence,33,,unknown
+584.124,0,15.1,85.4,Presence,33,,unknown
+584.213,0,15.1,85.4,Presence,33,,unknown
+584.304,0,15.1,85.4,Presence,33,,unknown
+584.393,0,15.1,85.4,Presence,33,,unknown
+584.483,0,15.1,85.4,Presence,33,,unknown
+584.574,0,15.1,85.4,Presence,33,,unknown
+584.662,0,15.1,85.4,Presence,33,,unknown
+584.754,0,15.1,85.4,Presence,33,,unknown
+584.845,0,15.1,85.4,Presence,33,0.0,upright
+584.939,0,15.1,85.4,Presence,33,0.0,upright
+585.030,0,15.1,85.4,Presence,33,0.0,upright
+585.150,0,6.7,85.4,Presence,33,0.0,upright
+585.214,0,6.7,85.4,Presence,33,0.0,upright
+585.304,0,6.7,85.4,Presence,33,0.0,upright
+585.396,0,6.7,85.4,Presence,33,0.0,upright
+585.469,0,6.7,85.4,Presence,33,,unknown
+585.574,0,6.7,85.4,Presence,33,,unknown
+585.672,0,6.7,85.4,Presence,33,21.362848242579787,leaning right
+585.756,0,6.7,85.4,Presence,33,21.362848242579787,leaning right
+585.859,0,6.7,85.4,Presence,33,24.195445830036903,leaning right
+585.943,0,6.7,85.4,Presence,33,39.27680341969436,leaning right
+586.027,0,6.7,85.4,Presence,33,24.195445830036903,leaning right
+586.110,0,6.7,85.4,Presence,33,24.195445830036903,leaning right
+586.207,0,6.7,85.4,Presence,33,39.27680341969436,leaning right
+586.302,0,6.7,85.4,Presence,33,39.27680341969436,leaning right
+586.392,0,6.7,85.4,Presence,33,40.132908923876386,leaning right
+586.463,0,6.7,85.4,Presence,33,,unknown
+586.599,0,8.4,85.4,Presence,33,,unknown
+586.654,0,8.4,85.4,Presence,33,38.72884910498375,leaning right
+586.753,0,8.4,85.4,Presence,33,22.181875451092935,leaning right
+586.843,0,8.4,85.4,Presence,33,22.181875451092935,leaning right
+586.924,0,8.4,85.4,Presence,33,0.0,upright
+587.016,0,8.4,85.4,Presence,33,0.0,upright
+587.105,0,8.4,85.4,Presence,33,0.0,upright
+587.196,0,8.4,85.4,Presence,33,0.0,upright
+587.277,0,8.4,85.4,Presence,33,0.0,upright
+587.370,0,8.4,85.4,Presence,33,0.0,upright
+587.459,0,8.4,85.4,Presence,33,,unknown
+587.563,0,8.4,85.4,Presence,33,0.0,upright
+587.651,0,8.4,85.4,Presence,33,0.0,upright
+587.743,0,8.4,85.4,Presence,33,0.0,upright
+587.824,0,8.4,85.4,Presence,33,22.46245433599222,leaning right
+587.916,0,8.4,85.4,Presence,33,22.46245433599222,leaning right
+588.046,0,6.7,85.4,Presence,33,22.29688489662564,leaning right
+588.094,0,6.7,85.4,Presence,33,29.976206515981005,leaning right
+588.183,0,6.7,85.4,Presence,33,29.976206515981005,leaning right
+588.258,0,6.7,85.4,Presence,33,,unknown
+588.351,0,6.7,85.4,Presence,33,37.4869775401573,leaning right
+588.453,0,6.7,85.4,Presence,33,,unknown
+588.545,0,6.7,85.4,Presence,33,33.43212240381432,leaning right
+588.618,0,6.7,85.4,Presence,33,0.0,upright
+588.724,0,6.7,85.4,Presence,33,0.0,upright
+588.813,0,6.7,85.4,Presence,33,0.0,upright
+588.913,0,6.7,85.4,Presence,33,0.0,upright
+588.996,0,6.7,85.4,Presence,33,0.0,upright
+589.086,0,6.7,85.4,Presence,33,0.0,upright
+589.175,0,6.7,85.4,Presence,33,0.0,upright
+589.266,0,6.7,85.4,Presence,33,0.0,upright
+589.352,0,6.7,85.4,Presence,33,,unknown
+589.473,0,10.0,85.4,Presence,33,,unknown
+589.532,0,10.0,85.4,Presence,33,0.0,upright
+589.640,0,10.0,85.4,Presence,33,0.0,upright
+589.716,0,10.0,85.4,Presence,33,0.0,upright
+589.814,0,10.0,85.4,Presence,33,0.0,upright
+589.902,0,10.0,85.4,Presence,33,0.0,upright
+589.985,0,10.0,85.4,Presence,33,0.0,upright
+590.076,0,10.0,85.4,Presence,33,0.0,upright
+590.169,0,10.0,85.4,Presence,33,0.0,upright
+590.261,0,10.0,85.4,Presence,33,0.0,upright
+590.334,0,10.0,85.4,Presence,33,,unknown
+590.431,0,10.0,85.4,Presence,33,0.0,upright
+590.527,0,10.0,85.4,Presence,33,0.0,upright
+590.616,0,10.0,85.4,Presence,33,-21.6540366981383,leaning left
+590.706,0,10.0,85.4,Presence,33,-23.957836476650698,leaning left
+590.802,0,10.0,85.4,Presence,33,-23.957836476650698,leaning left
+590.932,0,8.4,85.4,Presence,33,-23.957836476650698,leaning left
+590.971,0,8.4,85.4,Presence,33,-23.957836476650698,leaning left
+591.066,0,8.4,85.4,Presence,33,-23.957836476650698,leaning left
+591.161,0,8.4,85.4,Presence,33,-23.957836476650698,leaning left
+591.244,0,8.4,85.4,Presence,33,-25.72526042818697,leaning left
+591.335,0,8.4,85.4,Presence,33,,unknown
+591.409,0,8.4,85.4,Presence,33,0.0,upright
+591.510,0,8.4,85.4,Presence,33,,unknown
+591.599,0,8.4,85.4,Presence,33,0.0,upright
+591.689,0,8.4,85.4,Presence,33,,unknown
+591.785,0,8.4,85.4,Presence,33,0.0,upright
+591.860,0,8.4,85.4,Presence,33,0.0,upright
+591.948,0,8.4,85.4,Presence,33,0.0,upright
+592.058,0,8.4,85.4,Presence,33,-21.18359758726271,leaning left
+592.130,0,8.4,85.4,Presence,33,-30.513479633310766,leaning left
+592.239,0,8.4,85.4,Presence,33,,unknown
+592.365,0,6.7,85.4,Presence,42,,unknown
+592.406,0,6.7,85.4,Presence,42,,unknown
+592.496,0,6.7,85.4,Presence,42,-39.31767338346502,leaning left
+592.589,0,6.7,85.4,Presence,42,,unknown
+592.662,0,6.7,85.4,Presence,42,,unknown
+592.752,0,6.7,85.4,Presence,42,,unknown
+592.844,0,6.7,85.4,Presence,42,,unknown
+592.947,0,6.7,85.4,Presence,42,-21.18359758726271,leaning left
+593.040,0,6.7,85.4,Presence,42,,unknown
+593.130,0,6.7,85.4,Presence,42,,unknown
+593.219,0,6.7,85.4,Presence,42,,unknown
+593.309,0,6.7,85.4,Presence,42,,unknown
+593.399,0,6.7,85.4,Presence,42,,unknown
+593.486,0,6.7,85.4,Presence,42,,unknown
+593.581,0,6.7,85.4,Presence,42,,unknown
+593.669,0,6.7,85.4,Presence,42,,unknown
+593.789,0,15.1,85.4,Presence,42,,unknown
+593.847,0,15.1,85.4,Presence,42,,unknown
+593.939,0,15.1,85.4,Presence,42,0.0,upright
+594.029,0,15.1,85.4,Presence,42,0.0,upright
+594.103,0,15.1,85.4,Presence,42,,unknown
+594.218,0,15.1,85.4,Presence,42,,unknown
+594.292,0,15.1,85.4,Presence,42,,unknown
+594.384,0,15.1,85.4,Presence,42,-36.34297741226225,leaning left
+594.475,0,15.1,85.4,Presence,42,-21.843568818315966,leaning left
+594.564,0,15.1,85.4,Presence,42,,unknown
+594.654,0,15.1,85.4,Presence,42,,unknown
+594.744,0,15.1,85.4,Presence,42,,unknown
+594.834,0,15.1,85.4,Presence,42,,unknown
+594.923,0,15.1,85.4,Presence,42,,unknown
+595.012,0,15.1,85.4,Presence,42,-21.843568818315966,leaning left
+595.104,0,15.1,85.4,Presence,42,,unknown
+595.239,0,N/A,85.4,Holding Breath,42,,unknown
+595.283,0,N/A,85.4,Holding Breath,42,,unknown
+595.373,0,N/A,85.4,Holding Breath,42,,unknown
+595.463,0,N/A,85.4,Holding Breath,42,,unknown
+595.554,0,N/A,85.4,Holding Breath,42,,unknown
+595.643,0,N/A,85.4,Holding Breath,42,,unknown
+595.734,0,N/A,85.4,Holding Breath,42,,unknown
+595.823,0,N/A,85.4,Holding Breath,42,,unknown
+595.913,0,N/A,85.4,Holding Breath,42,,unknown
+596.004,0,N/A,85.4,Holding Breath,42,,unknown
+596.095,0,N/A,85.4,Holding Breath,42,,unknown
+596.183,0,N/A,85.4,Holding Breath,42,,unknown
+596.273,0,N/A,85.4,Holding Breath,42,,unknown
+596.363,0,N/A,85.4,Holding Breath,42,,unknown
+596.453,0,N/A,85.4,Holding Breath,42,,unknown
+596.543,0,N/A,85.4,Holding Breath,42,,unknown
+596.678,0,N/A,85.4,Holding Breath,42,,unknown
+596.722,0,N/A,85.4,Holding Breath,42,,unknown
+596.814,0,N/A,85.4,Holding Breath,42,,unknown
+596.903,0,N/A,85.4,Holding Breath,42,,unknown
+596.993,0,N/A,85.4,Holding Breath,42,,unknown
+597.081,0,N/A,85.4,Holding Breath,42,,unknown
+597.174,0,N/A,85.4,Holding Breath,42,,unknown
+597.264,0,N/A,85.4,Holding Breath,42,,unknown
+597.354,0,N/A,85.4,Holding Breath,42,,unknown
+597.444,0,N/A,85.4,Holding Breath,42,,unknown
+597.531,0,N/A,85.4,Holding Breath,42,,unknown
+597.623,0,N/A,85.4,Holding Breath,42,,unknown
+597.713,0,N/A,85.4,Holding Breath,42,,unknown
+597.804,0,N/A,85.4,Holding Breath,42,,unknown
+597.894,0,N/A,85.4,Holding Breath,42,,unknown
+597.984,0,N/A,85.4,Holding Breath,42,,unknown
+598.116,0,N/A,85.4,Holding Breath,42,,unknown
+598.164,0,N/A,85.4,Holding Breath,42,,unknown
+598.254,0,N/A,85.4,Holding Breath,42,,unknown
+598.344,0,N/A,85.4,Holding Breath,42,,unknown
+598.433,0,N/A,85.4,Holding Breath,42,,unknown
+598.524,0,N/A,85.4,Holding Breath,42,,unknown
+598.614,0,N/A,85.4,Holding Breath,42,,unknown
+598.704,0,N/A,85.4,Holding Breath,42,,unknown
+598.795,0,N/A,85.4,Holding Breath,42,,unknown
+598.884,0,N/A,85.4,Holding Breath,42,,unknown
+598.975,0,N/A,85.4,Holding Breath,42,-21.843568818315966,leaning left
+599.064,0,N/A,85.4,Holding Breath,42,,unknown
+599.152,0,N/A,85.4,Holding Breath,42,,unknown
+599.244,0,N/A,85.4,Holding Breath,42,,unknown
+599.334,0,N/A,85.4,Holding Breath,42,,unknown
+599.422,0,N/A,85.4,Holding Breath,42,,unknown
+599.559,0,N/A,85.4,Holding Breath,42,,unknown
+599.604,0,N/A,85.4,Holding Breath,42,,unknown
+599.694,0,N/A,85.4,Holding Breath,42,,unknown
+599.784,0,N/A,85.4,Holding Breath,42,,unknown
+599.873,0,N/A,85.4,Holding Breath,42,,unknown
+599.962,0,N/A,85.4,Holding Breath,42,,unknown

@@ -50,6 +50,10 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
         print(f"Required CSV files not found for {subfolder}.")
         return
 
+    if "chair" not in subfolder.lower():
+        print(f"Skipping {subfolder} as it doesn't contain 'chair'.")
+        return
+
     print(f"Processing {subfolder}")
     vitals = pd.read_csv(vitals_file_path)
     print(f"Columns in vitals file: {vitals.columns.tolist()}")
@@ -134,8 +138,11 @@ def process_all_groups(root_folder):
     for subfolder in os.listdir(visualizer_data_folder):
         subfolder_path = os.path.join(visualizer_data_folder, subfolder)
         if os.path.isdir(subfolder_path):
-            vitals_file_path, parts_combined = process_csv_files_in_directory(root_folder, subfolder)
-            process_csv_file(vitals_file_path, parts_combined, subfolder)
+            if "chair" in subfolder.lower():
+                vitals_file_path, parts_combined = process_csv_files_in_directory(root_folder, subfolder)
+                process_csv_file(vitals_file_path, parts_combined, subfolder)
+            else:
+                print(f"Skipping {subfolder} as it doesn't contain 'chair'.")
 
 if __name__ == "__main__":
     root_folder = '.'

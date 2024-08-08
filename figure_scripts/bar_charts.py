@@ -14,7 +14,7 @@ def create_bar_charts(csv_file, output_prefix):
         plt.ylabel(metric)
         plt.xticks(rotation=45, ha='right')
         plt.tight_layout()
-        plt.savefig(f'{output_prefix}_{metric.lower().replace(" ", "_")}.png')
+        plt.savefig(f'figures/bar_charts/{output_prefix}_{metric.lower().replace(" ", "_")}.png')
         plt.close()
 
 create_bar_charts('visualizer_data/aggregates/breath_results.csv', 'breath')

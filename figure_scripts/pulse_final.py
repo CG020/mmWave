@@ -7,7 +7,6 @@ from icecream import ic
 def process_csv_files_in_directory(root_folder, subfolder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data', subfolder)
     
-    print(f"Checking folder: {visualizer_data_folder}")
     if not os.path.exists(visualizer_data_folder):
         print(f"Folder '{visualizer_data_folder}' does not exist.")
         return None, None
@@ -17,13 +16,10 @@ def process_csv_files_in_directory(root_folder, subfolder):
 
     for file in os.listdir(visualizer_data_folder):
         file_path = os.path.join(visualizer_data_folder, file)
-        print(f"Found file: {file}")
         if file.endswith('vitals.csv'):
             vitals_file_path = file_path
-            print(f"Vitals file found: {file}")
         elif file.endswith('.csv') and 'part' in file:
             all_parts_combined.append(pd.read_csv(file_path))
-            print(f"Part file found: {file}")
 
     if vitals_file_path is None:
         print("No vitals file found!")
@@ -50,10 +46,10 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
         print(f"Required CSV files not found for {subfolder}.")
         return
 
-    print(f"Processing {subfolder}")
+    # print(f"Processing {subfolder}")
     vitals = pd.read_csv(vitals_file_path)
-    print(f"Columns in vitals file: {vitals.columns.tolist()}")
-    print(f"First few rows of vitals file:\n{vitals.head()}")
+    # print(f"Columns in vitals file: {vitals.columns.tolist()}")
+    # print(f"First few rows of vitals file:\n{vitals.head()}")
 
     vitals_data = vitals.copy()
     
@@ -104,8 +100,8 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
           vitals_data['Radar Heart Rate'].min(), "-", vitals_data['Radar Heart Rate'].max())
     print("Polar H10 Heart Rate Range:", 
           vitals_data['Heart'].min(), "-", vitals_data['Heart'].max())
-    print("\nFirst few rows of aligned data:")
-    print(vitals_data[['Marker', 'Pulse', 'Radar Heart Rate', 'Heart']].head())
+    # # print("\nFirst few rows of aligned data:")
+    # print(vitals_data[['Marker', 'Pulse', 'Radar Heart Rate', 'Heart']].head())
 
     avg_manual = vitals_data['Pulse'].mean()
     avg_radar = vitals_data['Radar Heart Rate'].mean()
@@ -121,6 +117,24 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     print(f"Correlation between Manual and Polar H10 Heart Rate: {correlation_manual_polar:.2f}")
     print(f"Correlation between Radar and Polar H10 Heart Rate: {correlation_radar_polar:.2f}")
 
+    results = {
+        'Subfolder': subfolder,
+        'Manual_Pulse_Min': vitals_data['Pulse'].min(),
+        'Manual_Pulse_Max': vitals_data['Pulse'].max(),
+        'Radar_Heart_Min': vitals_data['Radar Heart Rate'].min(),
+        'Radar_Heart_Max': vitals_data['Radar Heart Rate'].max(),
+        'Polar_Heart_Min': vitals_data['Heart'].min(),
+        'Polar_Heart_Max': vitals_data['Heart'].max(),
+        'Avg_Manual_Pulse': vitals_data['Pulse'].mean(),
+        'Avg_Radar_Heart': vitals_data['Radar Heart Rate'].mean(),
+        'Avg_Polar_Heart': vitals_data['Heart'].mean(),
+        'Correlation_Manual_Radar': vitals_data['Pulse'].corr(vitals_data['Radar Heart Rate']),
+        'Correlation_Manual_Polar': vitals_data['Pulse'].corr(vitals_data['Heart']),
+        'Correlation_Radar_Polar': vitals_data['Radar Heart Rate'].corr(vitals_data['Heart'])
+    }
+
+    return results
+
 def process_all_groups(root_folder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data')
     
@@ -131,11 +145,21 @@ def process_all_groups(root_folder):
         print(f"Folder '{visualizer_data_folder}' does not exist.")
         return
 
+    all_results = []
+
     for subfolder in os.listdir(visualizer_data_folder):
         subfolder_path = os.path.join(visualizer_data_folder, subfolder)
         if os.path.isdir(subfolder_path):
             vitals_file_path, parts_combined = process_csv_files_in_directory(root_folder, subfolder)
-            process_csv_file(vitals_file_path, parts_combined, subfolder)
+            results = process_csv_file(vitals_file_path, parts_combined, subfolder)
+            if results:
+                all_results.append(results)
+
+    results_df = pd.DataFrame(all_results)
+
+    output_csv = 'visualizer_data/aggregates/pulse_results.csv'
+    results_df.to_csv(output_csv, index=False)
+    print(f"Results saved to {output_csv}")
 
 if __name__ == "__main__":
     root_folder = '.'

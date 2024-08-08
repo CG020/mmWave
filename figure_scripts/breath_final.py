@@ -7,7 +7,7 @@ from icecream import ic
 def process_csv_files_in_directory(root_folder, subfolder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data', subfolder)
     
-    print(f"Checking folder: {visualizer_data_folder}")
+    # print(f"Checking folder: {visualizer_data_folder}")
     if not os.path.exists(visualizer_data_folder):
         print(f"Folder '{visualizer_data_folder}' does not exist.")
         return None, None
@@ -17,13 +17,13 @@ def process_csv_files_in_directory(root_folder, subfolder):
 
     for file in os.listdir(visualizer_data_folder):
         file_path = os.path.join(visualizer_data_folder, file)
-        print(f"Found file: {file}")
+        # print(f"Found file: {file}")
         if file.endswith('vitals.csv'):
             vitals_file_path = file_path
-            print(f"Vitals file found: {file}")
+            # print(f"Vitals file found: {file}")
         elif file.endswith('.csv') and 'part' in file:
             all_parts_combined.append(pd.read_csv(file_path))
-            print(f"Part file found: {file}")
+            # print(f"Part file found: {file}")
 
     if vitals_file_path is None:
         print("No vitals file found!")
@@ -41,7 +41,7 @@ def vitals_time_to_seconds(time_str):
         raise ValueError(f"Unexpected time format in vitals: {time_str}")
 
 def radar_time_to_seconds(time_str):
-    return float(time_str)  # Radar time is already in seconds.milliseconds
+    return float(time_str) 
 
 def process_csv_file(vitals_file_path, parts_combined, subfolder):
     if vitals_file_path is None or parts_combined is None:
@@ -50,8 +50,8 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
 
     print(f"Processing {subfolder}")
     vitals = pd.read_csv(vitals_file_path)
-    print(f"Columns in vitals file: {vitals.columns.tolist()}")
-    print(f"First few rows of vitals file:\n{vitals.head()}")
+    # print(f"Columns in vitals file: {vitals.columns.tolist()}")
+    # print(f"First few rows of vitals file:\n{vitals.head()}")
 
     breath_data = vitals.copy()
     
@@ -99,8 +99,8 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
           breath_data['Breath'].min(), "-", breath_data['Breath'].max())
     print("Radar Measured Breath Rate Range:", 
           breath_data['Radar Breath Rate'].min(), "-", breath_data['Radar Breath Rate'].max())
-    print("\nFirst few rows of aligned data:")
-    print(breath_data[['Marker', 'Breath', 'Radar Breath Rate']].head())
+    # print("\nFirst few rows of aligned data:")
+    # print(breath_data[['Marker', 'Breath', 'Radar Breath Rate']].head())
 
     avg_manual = breath_data['Breath'].mean()
     avg_radar = breath_data['Radar Breath Rate'].mean()
@@ -110,8 +110,27 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     correlation = breath_data['Breath'].corr(breath_data['Radar Breath Rate'])
     print(f"\nCorrelation between Manual and Radar Breath Rate: {correlation:.2f}")
 
+    results = {
+        'Subfolder': subfolder,
+        'Manual_Breath_Min': breath_data['Breath'].min(),
+        'Manual_Breath_Max': breath_data['Breath'].max(),
+        'Radar_Breath_Min': breath_data['Radar Breath Rate'].min(),
+        'Radar_Breath_Max': breath_data['Radar Breath Rate'].max(),
+        'Avg_Manual_Breath': breath_data['Breath'].mean(),
+        'Avg_Radar_Breath': breath_data['Radar Breath Rate'].mean(),
+        'Correlation': breath_data['Breath'].corr(breath_data['Radar Breath Rate'])
+    }
+
+    return results
+
 def process_all_groups(root_folder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data')
+
+    if not os.path.exists(visualizer_data_folder):
+        print(f"Folder '{visualizer_data_folder}' does not exist.")
+        return
+
+    all_results = []
     
     print(f"Processing groups in: {root_folder}")
     print(f"Visualizer data folder: {visualizer_data_folder}")
@@ -124,7 +143,15 @@ def process_all_groups(root_folder):
         subfolder_path = os.path.join(visualizer_data_folder, subfolder)
         if os.path.isdir(subfolder_path):
             vitals_file_path, parts_combined = process_csv_files_in_directory(root_folder, subfolder)
-            process_csv_file(vitals_file_path, parts_combined, subfolder)
+            results = process_csv_file(vitals_file_path, parts_combined, subfolder)
+            if results:
+                all_results.append(results)
+    
+    results_df = pd.DataFrame(all_results)
+
+    output_csv = 'visualizer_data/aggregates/breath_results.csv'
+    results_df.to_csv(output_csv, index=False)
+    print(f"Results saved to {output_csv}")
 
 if __name__ == "__main__":
     root_folder = '.'

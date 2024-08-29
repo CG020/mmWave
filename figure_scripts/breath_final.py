@@ -7,7 +7,6 @@ from icecream import ic
 def process_csv_files_in_directory(root_folder, subfolder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data', subfolder)
     
-    # print(f"Checking folder: {visualizer_data_folder}")
     if not os.path.exists(visualizer_data_folder):
         print(f"Folder '{visualizer_data_folder}' does not exist.")
         return None, None

@@ -50,7 +50,6 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     print(f"Processing {subfolder}")
     vitals = pd.read_csv(vitals_file_path)
 
-
     breath_data = vitals.copy()
     
     breath_data['Seconds'] = breath_data['Time for Breath'].apply(vitals_time_to_seconds).astype(float)
@@ -70,21 +69,15 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     plt.plot(breath_data['Marker'], breath_data['Breath'], 'o-', label='Manually Measured Breath Rate', color='blue')
     plt.plot(breath_data['Marker'], breath_data['Radar Breath Rate'], 'o-', label='Radar Breath Rate', color='red')
 
-    plt.xlabel('Distance (Feet)')
-    plt.ylabel('Breath Rate (BPM)')
-    plt.title(f'Manually Measured Breath Rate vs MMWave Radar Breath Rate - {subfolder}')
+    plt.xlabel('Distance (Feet)', fontsize=14, fontweight='bold')
+    plt.ylabel('Breath Rate (BPM)', fontsize=14, fontweight='bold')
+    plt.title(f'Manually Measured Breath Rate vs MMWave Radar Breath Rate', fontsize=16, fontweight='bold')
+    
+    plt.xticks(breath_data['Marker'].unique()[::2], fontsize=12, fontweight='bold')
+    plt.yticks(np.arange(0, 81, 5), fontsize=12, fontweight='bold')
+
     plt.legend()
     plt.grid(True)
-
-    plt.xticks(breath_data['Marker'].unique()[::2])
-
-    y_min = 0
-    y_max = 80
-    plt.ylim(y_min, y_max)
-
-    tick_interval = 5
-    y_ticks = np.arange(y_min, y_max + 1, tick_interval)
-    plt.yticks(y_ticks)
 
     plt.tight_layout()
     output_file_name = f"figures/breath/{subfolder}_breath_comparison.png"
@@ -118,6 +111,7 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     }
 
     return results
+
 
 def process_all_groups(root_folder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data')

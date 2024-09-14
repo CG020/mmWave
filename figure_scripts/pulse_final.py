@@ -46,10 +46,7 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
         print(f"Required CSV files not found for {subfolder}.")
         return
 
-    # print(f"Processing {subfolder}")
     vitals = pd.read_csv(vitals_file_path)
-    # print(f"Columns in vitals file: {vitals.columns.tolist()}")
-    # print(f"First few rows of vitals file:\n{vitals.head()}")
 
     vitals_data = vitals.copy()
     
@@ -71,15 +68,17 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     plt.plot(vitals_data['Marker'], vitals_data['Radar Heart Rate'], 'o-', label='Radar Heart Rate', color='red')
     plt.plot(vitals_data['Marker'], vitals_data['Heart'], 'o-', label='Polar H10 Heart Rate', color='green')
 
-    plt.xlabel('Distance (Feet)')
-    plt.ylabel('Heart Rate (BPM)')
-    plt.title(f'Heart Rate Comparison - {subfolder}')
+    plt.xlabel('Distance (Feet)', fontsize=14, fontweight='bold')
+    plt.ylabel('Heart Rate (BPM)', fontsize=14, fontweight='bold')
+    plt.title(f'Heart Rate Comparison', fontsize=16, fontweight='bold')
+    
+    plt.xticks(vitals_data['Marker'].unique()[::2], fontsize=12, fontweight='bold')
+    plt.yticks(np.arange(0, 180, 10), fontsize=12, fontweight='bold')
+
     plt.legend()
     plt.grid(True)
 
-    plt.xticks(vitals_data['Marker'].unique()[::2])
-
-    y_min = 30 
+    y_min = 30
     y_max = 180
     plt.ylim(y_min, y_max)
 
@@ -100,8 +99,6 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
           vitals_data['Radar Heart Rate'].min(), "-", vitals_data['Radar Heart Rate'].max())
     print("Polar H10 Heart Rate Range:", 
           vitals_data['Heart'].min(), "-", vitals_data['Heart'].max())
-    # # print("\nFirst few rows of aligned data:")
-    # print(vitals_data[['Marker', 'Pulse', 'Radar Heart Rate', 'Heart']].head())
 
     avg_manual = vitals_data['Pulse'].mean()
     avg_radar = vitals_data['Radar Heart Rate'].mean()
@@ -134,6 +131,7 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     }
 
     return results
+
 
 def process_all_groups(root_folder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data')

@@ -59,8 +59,6 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder, overall_result
 
     print(f"Processing {subfolder}")
     vitals = pd.read_csv(vitals_file_path)
-    print(f"Columns in vitals file: {vitals.columns.tolist()}")
-    print(f"First few rows of vitals file:\n{vitals.head()}")
 
     vitals_data = vitals.copy()
     
@@ -79,7 +77,6 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder, overall_result
 
     vitals_data['Radar Lean Angle'] = vitals_data.apply(lambda row: find_radar_lean_in_range(row['Start Seconds'], row['End Seconds']), axis=1)
 
-    # Mirror the direction: if radar detects left, compare with physical right, and vice versa
     def determine_color(row):
         if row['Radar Lean Angle'] > 5 and row['lean_direction'] == 'left':
             return 'green'
@@ -92,22 +89,24 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder, overall_result
 
     vitals_data['Color'] = vitals_data.apply(determine_color, axis=1)
 
-    # Add to overall results
     overall_results.append(vitals_data)
 
     plt.figure(figsize=(12, 6))
     
     plt.scatter(vitals_data['Marker'], vitals_data['Radar Lean Angle'], color=vitals_data['Color'], label='Radar Lean Angle')
-
     plt.plot(vitals_data['Marker'], vitals_data['Radar Lean Angle'], color='blue', alpha=0.5)
 
-    plt.xlabel('Distance (Marker)')
-    plt.ylabel('Lean Angle (Degrees)')
-    plt.title('Radar Lean Angle')
+    # Apply bold font and increase font size
+    plt.xlabel('Distance (Marker)', fontsize=14, fontweight='bold')
+    plt.ylabel('Lean Angle (Degrees)', fontsize=14, fontweight='bold')
+    plt.title('Radar Lean Angle', fontsize=16, fontweight='bold')
+    
+    # Customize xticks and yticks
+    plt.xticks(vitals_data['Marker'].unique(), fontsize=12, fontweight='bold')
+    plt.yticks(fontsize=12, fontweight='bold')
+
     plt.legend()
     plt.grid(True)
-
-    plt.xticks(vitals_data['Marker'].unique())
 
     y_min = vitals_data['Radar Lean Angle'].min()
     y_max = vitals_data['Radar Lean Angle'].max()
@@ -127,6 +126,7 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder, overall_result
     os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
     plt.savefig(output_file_name, bbox_inches='tight')
     plt.close()
+
 
 def process_all_groups(root_folder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data')
@@ -168,14 +168,15 @@ def process_all_groups(root_folder):
     print(f"Overall Recall: {recall:.2f}")
     print(f"Overall F1 Score: {f1:.2f}")
 
-    # Plot confusion matrix
     plt.figure(figsize=(8, 6))
     plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
-    plt.title('Lean Angle Matrix', weight='bold', fontsize=14)
+    
+    plt.title('Lean Angle Matrix', weight='bold', fontsize=16)
     plt.colorbar()
     tick_marks = np.arange(len(['left', 'right', 'upright']))
-    plt.xticks(tick_marks, ['left', 'right', 'upright'])
-    plt.yticks(tick_marks, ['left', 'right', 'upright'])
+    
+    plt.xticks(tick_marks, ['left', 'right', 'upright'], fontsize=12, fontweight='bold')
+    plt.yticks(tick_marks, ['left', 'right', 'upright'], fontsize=12, fontweight='bold')
 
     fmt = 'd'
     thresh = cm.max() / 2.
@@ -185,12 +186,15 @@ def process_all_groups(root_folder):
                  color="white" if cm[i, j] > thresh else "black")
 
     plt.tight_layout()
-    plt.ylabel('True Category', weight='bold', fontsize=12)
-    plt.xlabel('Detected Category', weight='bold', fontsize=12)
+    
+    # Apply bold font to labels
+    plt.ylabel('True Category', weight='bold', fontsize=14)
+    plt.xlabel('Detected Category', weight='bold', fontsize=14)
 
     output_file_name = "figures/lean/overall_lean_matrix.png"
     plt.savefig(output_file_name, bbox_inches='tight')
     plt.close()
+
 
 if __name__ == "__main__":
     root_folder = '.'

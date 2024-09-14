@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
 from icecream import ic
 
 def process_csv_files_in_directory(root_folder, subfolder):
@@ -33,6 +34,8 @@ def process_csv_files_in_directory(root_folder, subfolder):
     return vitals_file_path, pd.concat(all_parts_combined, ignore_index=True) if all_parts_combined else None
 
 def vitals_time_to_seconds(time_str):
+    if pd.isna(time_str):
+        return np.nan
     parts = time_str.split(':')
     if len(parts) == 2:
         m, s = map(int, parts)
@@ -45,7 +48,7 @@ def vitals_time_to_seconds(time_str):
 def radar_time_to_seconds(time_str):
     return float(time_str) 
 
-def process_csv_file(vitals_file_path, parts_combined, subfolder):
+def process_csv_file(vitals_file_path, parts_combined, subfolder, overall_results):
     if vitals_file_path is None or parts_combined is None:
         print(f"Required CSV files not found for {subfolder}.")
         return
@@ -61,28 +64,46 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
 
     vitals_data = vitals.copy()
     
-    vitals_data['Seconds'] = vitals_data['Time for Pulse'].apply(vitals_time_to_seconds).astype(float)
+    vitals_data['Start Seconds'] = vitals_data['Start'].apply(vitals_time_to_seconds).astype(float)
+    vitals_data['End Seconds'] = vitals_data['End'].apply(vitals_time_to_seconds).astype(float)
     parts_combined['Seconds'] = parts_combined['Timestamp'].apply(radar_time_to_seconds)
 
     parts_combined['Leaning Angle'] = pd.to_numeric(parts_combined['Leaning Angle'], errors='coerce')
 
-    def find_closest_radar_lean(target_time):
-        closest_rows = parts_combined[parts_combined['Leaning Angle'].notna()].iloc[
-            (parts_combined[parts_combined['Leaning Angle'].notna()]['Seconds'] - target_time).abs().argsort()[:1]
-        ]
-        return closest_rows['Leaning Angle'].values[0] if not closest_rows.empty else np.nan
+    def find_radar_lean_in_range(start_time, end_time):
+        relevant_rows = parts_combined[(parts_combined['Seconds'] >= start_time) & (parts_combined['Seconds'] <= end_time)]
+        if not relevant_rows.empty:
+            return relevant_rows['Leaning Angle'].mean()
+        else:
+            return np.nan
 
-    vitals_data['Radar Lean Angle'] = vitals_data['Seconds'].apply(find_closest_radar_lean)
+    vitals_data['Radar Lean Angle'] = vitals_data.apply(lambda row: find_radar_lean_in_range(row['Start Seconds'], row['End Seconds']), axis=1)
+
+    # Mirror the direction: if radar detects left, compare with physical right, and vice versa
+    def determine_color(row):
+        if row['Radar Lean Angle'] > 5 and row['lean_direction'] == 'left':
+            return 'green'
+        elif row['Radar Lean Angle'] < -5 and row['lean_direction'] == 'right':
+            return 'green'
+        elif abs(row['Radar Lean Angle']) <= 5 and row['lean_direction'] == 'upright':
+            return 'green'
+        else:
+            return 'red'
+
+    vitals_data['Color'] = vitals_data.apply(determine_color, axis=1)
+
+    # Add to overall results
+    overall_results.append(vitals_data)
 
     plt.figure(figsize=(12, 6))
     
-    plt.scatter(vitals_data['Marker'], vitals_data['Radar Lean Angle'], color='blue', label='Radar Lean Angle')
+    plt.scatter(vitals_data['Marker'], vitals_data['Radar Lean Angle'], color=vitals_data['Color'], label='Radar Lean Angle')
 
     plt.plot(vitals_data['Marker'], vitals_data['Radar Lean Angle'], color='blue', alpha=0.5)
 
     plt.xlabel('Distance (Marker)')
     plt.ylabel('Lean Angle (Degrees)')
-    plt.title(f'Radar Lean Angle Over Distance - {subfolder}')
+    plt.title('Radar Lean Angle')
     plt.legend()
     plt.grid(True)
 
@@ -104,26 +125,8 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     plt.tight_layout()
     output_file_name = f"figures/lean/{subfolder}_radar_lean_angle.png"
     os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
-    plt.savefig(output_file_name)
+    plt.savefig(output_file_name, bbox_inches='tight')
     plt.close()
-
-    print(f"\nResults for {subfolder}:")
-    print("Radar Lean Angle Range:", 
-          vitals_data['Radar Lean Angle'].min(), "-", vitals_data['Radar Lean Angle'].max())
-    print("\nFirst few rows of aligned data:")
-    print(vitals_data[['Marker', 'Radar Lean Angle']].head())
-
-    avg_lean = vitals_data['Radar Lean Angle'].mean()
-    print(f"\nAverage Radar Lean Angle: {avg_lean:.2f} degrees")
-
-    total_readings = len(vitals_data)
-    left_lean = (vitals_data['Radar Lean Angle'] < -5).sum() / total_readings * 100
-    right_lean = (vitals_data['Radar Lean Angle'] > 5).sum() / total_readings * 100
-    upright = ((vitals_data['Radar Lean Angle'] >= -5) & (vitals_data['Radar Lean Angle'] <= 5)).sum() / total_readings * 100
-
-    print(f"\nPercentage of time leaning left (radar): {left_lean:.2f}%")
-    print(f"Percentage of time leaning right (radar): {right_lean:.2f}%")
-    print(f"Percentage of time upright (radar): {upright:.2f}%")
 
 def process_all_groups(root_folder):
     visualizer_data_folder = os.path.join(root_folder, 'visualizer_data')
@@ -135,14 +138,59 @@ def process_all_groups(root_folder):
         print(f"Folder '{visualizer_data_folder}' does not exist.")
         return
 
+    overall_results = []
+
     for subfolder in os.listdir(visualizer_data_folder):
         subfolder_path = os.path.join(visualizer_data_folder, subfolder)
         if os.path.isdir(subfolder_path):
             if "chair" in subfolder.lower():
                 vitals_file_path, parts_combined = process_csv_files_in_directory(root_folder, subfolder)
-                process_csv_file(vitals_file_path, parts_combined, subfolder)
+                process_csv_file(vitals_file_path, parts_combined, subfolder, overall_results)
             else:
                 print(f"Skipping {subfolder} as it doesn't contain 'chair'.")
+
+    all_data = pd.concat(overall_results, ignore_index=True)
+
+    all_data['Detected Category'] = all_data['Radar Lean Angle'].apply(
+        lambda x: 'left' if x < -5 else 'right' if x > 5 else 'upright'
+    )
+    all_data['Expected Category'] = all_data['lean_direction'].replace({'left': 'right', 'right': 'left', 'upright': 'upright'})
+
+    cm = confusion_matrix(all_data['Expected Category'], all_data['Detected Category'], labels=['left', 'right', 'upright'])
+
+    accuracy = accuracy_score(all_data['Expected Category'], all_data['Detected Category'])
+    precision = precision_score(all_data['Expected Category'], all_data['Detected Category'], average='weighted')
+    recall = recall_score(all_data['Expected Category'], all_data['Detected Category'], average='weighted')
+    f1 = f1_score(all_data['Expected Category'], all_data['Detected Category'], average='weighted')
+
+    print(f"\nOverall Accuracy: {accuracy:.2f}")
+    print(f"Overall Precision: {precision:.2f}")
+    print(f"Overall Recall: {recall:.2f}")
+    print(f"Overall F1 Score: {f1:.2f}")
+
+    # Plot confusion matrix
+    plt.figure(figsize=(8, 6))
+    plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
+    plt.title('Lean Angle Matrix', weight='bold', fontsize=14)
+    plt.colorbar()
+    tick_marks = np.arange(len(['left', 'right', 'upright']))
+    plt.xticks(tick_marks, ['left', 'right', 'upright'])
+    plt.yticks(tick_marks, ['left', 'right', 'upright'])
+
+    fmt = 'd'
+    thresh = cm.max() / 2.
+    for i, j in np.ndindex(cm.shape):
+        plt.text(j, i, format(cm[i, j], fmt),
+                 ha="center", va="center",
+                 color="white" if cm[i, j] > thresh else "black")
+
+    plt.tight_layout()
+    plt.ylabel('True Category', weight='bold', fontsize=12)
+    plt.xlabel('Detected Category', weight='bold', fontsize=12)
+
+    output_file_name = "figures/lean/overall_lean_matrix.png"
+    plt.savefig(output_file_name, bbox_inches='tight')
+    plt.close()
 
 if __name__ == "__main__":
     root_folder = '.'

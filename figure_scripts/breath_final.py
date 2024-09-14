@@ -49,8 +49,7 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
 
     print(f"Processing {subfolder}")
     vitals = pd.read_csv(vitals_file_path)
-    # print(f"Columns in vitals file: {vitals.columns.tolist()}")
-    # print(f"First few rows of vitals file:\n{vitals.head()}")
+
 
     breath_data = vitals.copy()
     
@@ -98,8 +97,6 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
           breath_data['Breath'].min(), "-", breath_data['Breath'].max())
     print("Radar Measured Breath Rate Range:", 
           breath_data['Radar Breath Rate'].min(), "-", breath_data['Radar Breath Rate'].max())
-    # print("\nFirst few rows of aligned data:")
-    # print(breath_data[['Marker', 'Breath', 'Radar Breath Rate']].head())
 
     avg_manual = breath_data['Breath'].mean()
     avg_radar = breath_data['Radar Breath Rate'].mean()

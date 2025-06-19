@@ -95,8 +95,10 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     print(f"\nResults for {subfolder}:")
     print("Manually Taken Heart Rate Range:", 
           vitals_data['Pulse'].min(), "-", vitals_data['Pulse'].max())
+    
     print("Radar Heart Rate Range:", 
           vitals_data['Radar Heart Rate'].min(), "-", vitals_data['Radar Heart Rate'].max())
+    
     print("Polar H10 Heart Rate Range:", 
           vitals_data['Heart'].min(), "-", vitals_data['Heart'].max())
 

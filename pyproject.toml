@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mmwave"
+version = "0.1.0"
+description = ""
+authors = ["twothousandnine <114206574+twothousandnine@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+pandas = "^2.3.0"
+numpy = "^2.3.0"
+matplotlib = "^3.10.3"
+icecream = "^2.1.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

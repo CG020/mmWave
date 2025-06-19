@@ -61,18 +61,20 @@ class Plot_specs:
         fig, axes = plt.subplots(1, 2, figsize=(12, 6))
 
         self._plot_subplot(axes[0], self._floor_a, self._floor_b, 'Floor')
-        axes[0].set_title('Floor')
-        axes[0].set_xlabel(self._x_label)
-        axes[0].set_ylabel(self._y_label)
+        axes[0].set_title('Floor', fontweight='bold', fontsize=14)
+        axes[0].set_xlabel(self._x_label, fontweight='bold', fontsize=12)
+        axes[0].set_ylabel(self._y_label, fontweight='bold', fontsize=12)
         
         self._plot_subplot(axes[1], self._tripod_a, self._tripod_b, 'Tripod')
-        axes[1].set_title('Tripod')
-        axes[1].set_xlabel(self._x_label)
-        axes[1].set_ylabel(self._y_label)
+        axes[1].set_title('Tripod', fontweight='bold', fontsize=14)
+        axes[1].set_xlabel(self._x_label, fontweight='bold', fontsize=12)
+        axes[1].set_ylabel(self._y_label, fontweight='bold', fontsize=12)
         
-        fig.suptitle(f'{self._physio_str}: {self._y_label}'.upper())
+        fig.suptitle(f'{self._physio_str}: {self._y_label}'.title(), fontweight='bold', fontsize=16)
+        plt.tight_layout(rect=[0, 0, 1, 0.95])
         plt.show()
         return
+
 
 
     def _plot_subplot(self, ax: plt.Axes, a: pd.Series, b: pd.Series, title: str):
@@ -91,7 +93,7 @@ class Plot_specs:
         ax.axhline(y=lower_limit, color='orange', linestyle='-', label='5th Percentile')
 
         print(
-            f'Pair: {title}\n'
+            f'\nPair: {self._y_label} | Radar Position: {title}\n'
             f'Lower limit: {lower_limit:.2f}'
             f'Upper limit: {upper_limit:.2f}'
         )

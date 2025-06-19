@@ -72,7 +72,10 @@ class Plot_specs:
         
         fig.suptitle(f'{self._physio_str}: {self._y_label}'.title(), fontweight='bold', fontsize=16)
         plt.tight_layout(rect=[0, 0, 1, 0.95])
+        outpath = os.path.join(FIGURE_DIR, f'{self._physio_str}_{self._b_str}.png')
         plt.show()
+        plt.savefig(outpath, dpi=300)
+        plt.close()
         return
 
 
@@ -83,7 +86,7 @@ class Plot_specs:
         sorted_differences = np.sort(differences)
         
         lower_percentile_index = int(0.05 * len(sorted_differences))
-        upper_percentile_index = int(0.05 * len(sorted_differences))
+        upper_percentile_index = int(0.95 * len(sorted_differences))
         
         lower_limit = sorted_differences[lower_percentile_index]
         upper_limit = sorted_differences[upper_percentile_index]

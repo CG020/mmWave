@@ -1,0 +1,43 @@
+
+#### Figure Settings ####
+
+figure.autolayout : True
+
+
+#### Font Settings ####
+font.size : 12
+font.family : Arial
+font.weight : bold
+
+
+#### Axes Settings ####
+axes.prop_cycle : cycler('color', ["377EB8", "4dAF4A", "FF7F00", "E41A1C", "F781BF", "FFFF33", "A65628", "984EA3", "A6CEE3", "FF33CC"])
+# axes.prop_cycle : cycler('color', ["#2CB1A2", "#4578FD", "#8070C8", "#F4616E"]) alternative colors work in progress
+axes.spines.top : False
+axes.spines.right : False
+# axes.axisbelow : True  # makes sure grid and ticks are drawn below the data
+
+axes.titleweight : bold
+axes.labelweight : bold
+axes.titlesize : 14
+axes.labelsize : 10
+
+
+#### Tick Settings ####
+xtick.labelsize : 10
+ytick.labelsize : 10
+
+
+#### Line and Marker Settings ####
+# lines.linewidth : 0.5
+# scatter.marker : o
+
+
+#### Legend Settings ####
+legend.fontsize : 8
+legend.title_fontsize : 10
+
+
+#### Savefig Settings ####
+savefig.dpi : 300
+savefig.bbox : tight  # tight layout

@@ -47,10 +47,10 @@ def process_csv_file2(vitals_filepath: str, sensor_data: pd.DataFrame) -> pd.Dat
     vitals_df = pd.read_csv(vitals_filepath)
     vitals_df = vitals_df.copy()
 
-    vitals_df['Seconds'] = vitals_df['Time for breath'].apply(vitals_time_to_seconds).astype(float)
+    vitals_df['Seconds'] = vitals_df['Time for Breath'].apply(vitals_time_to_seconds).astype(float)
     sensor_data = sensor_data.copy()
     sensor_data['Seconds'] = sensor_data['Timestamp'].apply(radar_time_to_seconds)
-    sensor_data['Breath Rate'] = pd.to_numeric(sensor_data.get('Breath Ratae'), errors='coerce')
+    sensor_data['Breath Rate'] = pd.to_numeric(sensor_data.get('Breath Rate'), errors='coerce')
     valid_sensor_data = sensor_data[sensor_data['Breath Rate'].notna()]
 
     def get_nearest_breath_rate(time_sec):

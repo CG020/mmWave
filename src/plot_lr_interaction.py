@@ -1,5 +1,4 @@
 import pandas as pd
-import statsmodels.api as sm
 from typing import List, Dict, Tuple
 import matplotlib.pyplot as plt
 import os
@@ -10,8 +9,7 @@ import scipy.stats as stats
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OneHotEncoder
 from icecream import ic
-import matplotlib as mpl
-import src.lib.plot_styles as ps
+import statsmodels.api as sm
 
 
 def determine_physio_mode(*data_col: Tuple[str]) -> str:
@@ -83,48 +81,79 @@ def aggregate_data(a_modality: str, b_modality: str) -> pd.DataFrame:
 def plot_subplot(ax: plt.Axes, df: pd.DataFrame) -> None:
     x = df['distance'].values.reshape(-1, 1)
     y = df['diff'].values
+    radar = df['radar position'].astype(str).values
 
-    X = sm.add_constant(x)
+    encoder = OneHotEncoder(drop='first')
+    radar_encoded = encoder.fit_transform(radar.reshape(-1, 1)).toarray()
+
+
+
+    interaction_terms = x.reshape(-1, 1) * radar_encoded
+    X = np.hstack([x.reshape(-1, 1), radar_encoded, interaction_terms])
+    X = sm.add_constant(X)  # add intercept
+
     model = sm.OLS(y, X).fit()
-    print(model.summary())
 
-    ax.scatter(x, y, alpha=0.5, color='gray', s=2)
+    print(model.summary())  # print full stats to console
 
-    x_range = np.linspace(x.min(), x.max(), 100)
-    X_plot = sm.add_constant(x_range.reshape(-1, 1))
-    y_pred = model.predict(X_plot)
-    ax.plot(x_range, y_pred, color='blue', linewidth=2)
+    categories = encoder.categories_[0]
+    colors = plt.cm.tab10.colors
 
-    slope = model.params[1]
-    pval = model.pvalues[1]
-    star = '*' if pval < 0.05 else ''
-    r_squared = model.rsquared
+    for i, category in enumerate(categories):
+        mask = (radar == category)
+        x_vals = x[mask]
+        y_vals = y[mask]
+        ax.scatter(x_vals, y_vals, label=f'{category}', alpha=0.5, color=colors[i % len(colors)], s=2)
 
-    ax.text(x_range[-1] - 4, y_pred[-1] + 0.05 * (y.max() - y.min()),
-            f'{slope:.2f}{star}, R²={r_squared:.2f}', color='blue', fontsize=10)
+        x_range = np.linspace(x_vals.min(), x_vals.max(), 100)
+        radar_dummy = np.zeros((100, len(categories) - 1))
+        if i > 0:
+            radar_dummy[:, i - 1] = 1
+        interaction = x_range.reshape(-1, 1) * radar_dummy
+        X_plot = np.hstack([np.ones((100, 1)), x_range.reshape(-1, 1), radar_dummy, interaction])
+        y_pred = model.predict(X_plot)
+        ax.plot(x_range, y_pred, color=colors[i % len(colors)], linewidth=2)
+
+        # Calculate slope and significance for each category
+        # Intercept is model.params[0]
+        # Slope for baseline (first category) is model.params[1]
+        # For other categories slope = params[1] + params[2 + (i-1)] (interaction terms start after intercept + x + dummies)
+        slope_index = 1  # distance slope
+        interaction_start = 1 + (len(categories) - 1)  # intercept + distance + radar dummies
+
+        if i == 0:
+            intercept = model.const.coef
+            slope = model.x1.coef
+            
+        else:
+            intercept = model.const.coef + model.x2.coef
+            slope = model.x1.coef + model.x3.coef
+
+
+        # TODO haven't solved this yet
+
+        # Put slope text slightly above the predicted line at max x
+        ax.text(x_range[-1], y_pred[-1] + 0.05 * (y.max() - y.min()),
+                f'{slope:.2f}{star}', color=colors[i % len(colors)], fontsize=10)
+
+    ax.legend()
 
 
 
 def set_text(ax: plt.Axes, subtitle: str) -> None:
-    tick_label_dict = {
-        'fontsize': 10,
-        'fontweight': 'bold',
-    }
-    
     ax.set_xlabel('Distance (ft)', fontweight='bold', fontsize=10)
     ax.set_ylabel('Difference (Radar - Ground Truth)', fontweight='bold', fontsize=10)
     ax.set_title(subtitle, fontweight='bold', fontsize=14)
+    ax.legend()
     return
 
 
 def plot_all():
-    ps.color_style()
-
     hr_x_manual_df = aggregate_data('Radar Heart Rate', 'Pulse')
     hr_x_polar_df = aggregate_data('Radar Heart Rate', 'Heart')
     br_x_manual_df = aggregate_data('Radar Breath Rate', 'Breath')
 
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    fig, axes = plt.subplots(1, 3, figsize=(18, 7))
     ax1, ax2, ax3 = axes
 
     plot_subplot(ax1, hr_x_manual_df)
@@ -136,13 +165,12 @@ def plot_all():
     set_text(ax3, 'Breath Rate: Radar X Manual')
 
     plt.suptitle(
-        'Difference in Radar Measurements Against Distance',
+        'Regression: Radar Differences by Distance',
         fontweight = 'bold',
         fontsize=20
     )
 
-    outpath = os.path.join(FIGURE_DIR, 'linear_regression_all.png')
-    plt.savefig(outpath, dpi=300)
+
     plt.show()
     plt.close()
 

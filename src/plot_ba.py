@@ -6,6 +6,7 @@ from src.lib.globals import *
 import src.lib.directory as dir
 import scipy.stats as stats
 import numpy as np
+import src.lib.plot_styles as ps
 
 
 class Plot_specs:
@@ -58,7 +59,8 @@ class Plot_specs:
     
 
     def plot(self):
-        fig, axes = plt.subplots(1, 2, figsize=(12, 6))
+        ps.color_style()
+        fig, axes = plt.subplots(1, 2, figsize=(10, 5))
 
         self._plot_subplot(axes[0], self._floor_a, self._floor_b, 'Floor')
         axes[0].set_title('Floor', fontweight='bold', fontsize=14)

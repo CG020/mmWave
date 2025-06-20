@@ -7,17 +7,19 @@ import numpy as np
 from icecream import ic
 
 
+
 def vitals_time_to_seconds(time_str):
     parts = time_str.split(':')
-    return int(parts[0]) * 60 + float(parts[1]) if len(parts) == 2 else float(time_str)
+    if len(parts) == 2:
+        m, s = map(int, parts)
+        return m * 60 + s
+    elif len(parts) == 1:
+        return int(parts[0])
+    else:
+        raise ValueError(f"Unexpected time format: {time_str}")
 
-
-def radar_time_to_seconds(timestamp):
-    try:
-        h, m, s = timestamp.split(':')
-        return int(h) * 3600 + int(m) * 60 + float(s)
-    except:
-        return np.nan
+def radar_time_to_seconds(time_str):
+    return float(time_str) 
 
 
 def process_csv_files_in_directory(root_folder, subfolder):
@@ -63,7 +65,7 @@ def generate_combined_data(vitals, parts_combined):
         return closest_rows['Heart Rate'].values[0] if not closest_rows.empty else np.nan
 
     vitals_data['Radar Heart Rate'] = vitals_data['Seconds'].apply(find_closest_radar_heart_rate)
-
+    ic(vitals_data['Radar Heart Rate'])
     return vitals_data
 
 

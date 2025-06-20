@@ -73,8 +73,8 @@ class Plot_specs:
         fig.suptitle(f'{self._physio_str}: {self._y_label}'.title(), fontweight='bold', fontsize=16)
         plt.tight_layout(rect=[0, 0, 1, 0.95])
         outpath = os.path.join(FIGURE_DIR, f'{self._physio_str}_{self._b_str}.png')
-        plt.show()
         plt.savefig(outpath, dpi=300)
+        plt.show()
         plt.close()
         return
 
@@ -115,6 +115,7 @@ def plot_all():
         ('Radar Heart Rate', 'Heart'),
         ('Radar Breath Rate', 'Breath')
     ]
+ 
     radar_x_manual = Plot_specs('heartrate', 'Radar Heart Rate', 'Pulse')
     radar_x_manual.plot()
 

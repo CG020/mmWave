@@ -93,7 +93,7 @@ def plot_subplot(ax: plt.Axes, df: pd.DataFrame) -> None:
     x_range = np.linspace(x.min(), x.max(), 100)
     X_plot = sm.add_constant(x_range.reshape(-1, 1))
     y_pred = model.predict(X_plot)
-    ax.plot(x_range, y_pred, color='blue', linewidth=2)
+    ax.plot(x_range, y_pred, color='#29A4E1', linewidth=2)
 
     slope = model.params[1]
     pval = model.pvalues[1]
@@ -101,7 +101,9 @@ def plot_subplot(ax: plt.Axes, df: pd.DataFrame) -> None:
     r_squared = model.rsquared
 
     ax.text(x_range[-1] - 4, y_pred[-1] + 0.05 * (y.max() - y.min()),
-            f'{slope:.2f}{star}, R²={r_squared:.2f}', color='blue', fontsize=10)
+        f'{slope:.2f}{star}, R²={r_squared:.2f}', color='#29A4E1', fontsize=12,
+        bbox=dict(facecolor='white', alpha=0.8, edgecolor='none'))
+
 
 
 
@@ -111,8 +113,8 @@ def set_text(ax: plt.Axes, subtitle: str) -> None:
         'fontweight': 'bold',
     }
     
-    ax.set_xlabel('Distance (ft)', fontweight='bold', fontsize=10)
-    ax.set_ylabel('Difference (Radar - Ground Truth)', fontweight='bold', fontsize=10)
+    ax.set_xlabel('Distance (ft)', fontweight='bold', fontsize=14)
+    ax.set_ylabel('Diff (Radar - Ground Truth)', fontweight='bold', fontsize=14)
     ax.set_title(subtitle, fontweight='bold', fontsize=14)
     return
 
@@ -131,15 +133,15 @@ def plot_all():
     plot_subplot(ax2, hr_x_polar_df)
     plot_subplot(ax3, br_x_manual_df)
 
-    set_text(ax1, 'Heart Rate: Radar X Manual')
-    set_text(ax2, 'Heart Rate: Radar X Polar H10')
-    set_text(ax3, 'Breath Rate: Radar X Manual')
+    set_text(ax1, 'Heart Rate: Radar x Manual')
+    set_text(ax2, 'Heart Rate: Radar x Polar H10')
+    set_text(ax3, 'Respiratory Rate: Radar x Manual')
 
-    plt.suptitle(
-        'Difference in Radar Measurements Against Distance',
-        fontweight = 'bold',
-        fontsize=20
-    )
+    # plt.suptitle(
+    #     'Difference in Radar Measurements Against Distance',
+    #     fontweight = 'bold',
+    #     fontsize=20
+    # )
 
     outpath = os.path.join(FIGURE_DIR, 'linear_regression_all.png')
     plt.savefig(outpath, dpi=300)

@@ -19,11 +19,11 @@ class Plot_specs:
     }
     PHYSIO_MAPPINGS = {
         'heartrate' : 'Heart Rate',
-        'breath' : 'Breath' # TODO find better descriptor
+        'breath' : 'Respiratory Rate'
     }
     X_LABEL_MAPPINGS = {
         'heartrate' : 'Heart Rate (BPM)',
-        'breath' : "Breath Rate (BPM)"
+        'breath' : "Respiratory Rate (Breaths/Min)"
     }
 
     def __init__(self, physio: str, data_a_mode: str, data_b_mode: str):
@@ -61,18 +61,29 @@ class Plot_specs:
     def plot(self):
         ps.color_style()
         fig, axes = plt.subplots(1, 2, figsize=(10, 5))
-
-        self._plot_subplot(axes[0], self._floor_a, self._floor_b, 'Floor')
-        axes[0].set_title('Floor', fontweight='bold', fontsize=14)
+        
+        self._plot_subplot(axes[0], self._tripod_a, self._tripod_b, 'Tripod')
+        axes[0].set_title('Tripod', fontweight='bold', fontsize=14)
         axes[0].set_xlabel(self._x_label, fontweight='bold', fontsize=12)
         axes[0].set_ylabel(self._y_label, fontweight='bold', fontsize=12)
-        
-        self._plot_subplot(axes[1], self._tripod_a, self._tripod_b, 'Tripod')
-        axes[1].set_title('Tripod', fontweight='bold', fontsize=14)
+
+        self._plot_subplot(axes[1], self._floor_a, self._floor_b, 'Floor')
+        axes[1].set_title('Floor', fontweight='bold', fontsize=14)
         axes[1].set_xlabel(self._x_label, fontweight='bold', fontsize=12)
         axes[1].set_ylabel(self._y_label, fontweight='bold', fontsize=12)
+
+        def add_letter(ax, letter: str) -> None:
+            letter_size = 16
+            ax.text(-0.15, 1.1, letter,
+                    transform=ax.transAxes, size=letter_size,
+                    weight='bold', fontfamily='Arial')
+            return
+
+
+        add_letter(axes[0], 'A')
+        add_letter(axes[1], 'B')
         
-        fig.suptitle(f'{self._physio_str}: {self._y_label}'.title(), fontweight='bold', fontsize=16)
+        # fig.suptitle(f'{self._physio_str}: {self._y_label}'.title(), fontweight='bold', fontsize=16)
         plt.tight_layout(rect=[0, 0, 1, 0.95])
         outpath = os.path.join(FIGURE_DIR, f'{self._physio_str}_{self._b_str}.png')
         plt.savefig(outpath, dpi=300)
@@ -93,7 +104,7 @@ class Plot_specs:
         lower_limit = sorted_differences[lower_percentile_index]
         upper_limit = sorted_differences[upper_percentile_index]
 
-        ax.scatter(means, differences, color='#1d6CAB', alpha=0.05, s=15)
+        ax.scatter(means, differences, color='#1d6CAB', alpha=0.14, s=10)
         ax.axhline(y=upper_limit, color='green', linestyle='-', label='95th Percentile')
         ax.axhline(y=lower_limit, color='orange', linestyle='-', label='5th Percentile')
 

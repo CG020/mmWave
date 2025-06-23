@@ -52,7 +52,6 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     
     vitals_data['Seconds'] = vitals_data['Time for Pulse'].apply(vitals_time_to_seconds).astype(float)
     parts_combined['Seconds'] = parts_combined['Timestamp'].apply(radar_time_to_seconds)
-
     parts_combined['Heart Rate'] = pd.to_numeric(parts_combined['Heart Rate'], errors='coerce')
 
     def find_closest_radar_heart_rate(target_time):
@@ -86,10 +85,12 @@ def process_csv_file(vitals_file_path, parts_combined, subfolder):
     y_ticks = np.arange(y_min, y_max + 1, tick_interval)
     plt.yticks(y_ticks)
 
+    ic(vitals_file_path, vitals_data['Radar Heart Rate'])
     plt.tight_layout()
-    output_file_name = f"figures/pulse/{subfolder}_heart_comparison.png"
-    os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
-    plt.savefig(output_file_name)
+    plt.show()
+    # output_file_name = f"figures/pulse/{subfolder}_heart_comparison.png"
+    # os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
+    # plt.savefig(output_file_name)
     plt.close()
 
     print(f"\nResults for {subfolder}:")

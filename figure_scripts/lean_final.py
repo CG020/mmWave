@@ -152,11 +152,11 @@ def process_all_groups(root_folder):
     all_data = pd.concat(overall_results, ignore_index=True)
 
     all_data['Detected Category'] = all_data['Radar Lean Angle'].apply(
-        lambda x: 'left' if x < -5 else 'right' if x > 5 else 'upright'
-    )
-    all_data['Expected Category'] = all_data['lean_direction'].replace({'left': 'right', 'right': 'left', 'upright': 'upright'})
+        lambda x: 'left' if x < -5 else 'right'
+        )
+    all_data['Expected Category'] = all_data['lean_direction'].replace({'left': 'right', 'right': 'left'})
 
-    cm = confusion_matrix(all_data['Expected Category'], all_data['Detected Category'], labels=['left', 'right', 'upright'])
+    cm = confusion_matrix(all_data['Expected Category'], all_data['Detected Category'], labels=['left', 'right'])
 
     accuracy = accuracy_score(all_data['Expected Category'], all_data['Detected Category'])
     precision = precision_score(all_data['Expected Category'], all_data['Detected Category'], average='weighted')
@@ -173,10 +173,10 @@ def process_all_groups(root_folder):
     
     plt.title('Lean Angle Matrix', weight='bold', fontsize=16)
     plt.colorbar()
-    tick_marks = np.arange(len(['left', 'right', 'upright']))
+    tick_marks = np.arange(len(['left', 'right']))
     
-    plt.xticks(tick_marks, ['left', 'right', 'upright'], fontsize=12, fontweight='bold')
-    plt.yticks(tick_marks, ['left', 'right', 'upright'], fontsize=12, fontweight='bold')
+    plt.xticks(tick_marks, ['left', 'right'], fontsize=12, fontweight='bold')
+    plt.yticks(tick_marks, ['left', 'right'], fontsize=12, fontweight='bold')
 
     fmt = 'd'
     thresh = cm.max() / 2.

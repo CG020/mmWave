@@ -73,6 +73,48 @@ def get_dfs(directory: str) -> List[str]:
     return all_files
 
 
+def dir_search(*terms: str, root_dir: str = f'.{os.sep}') -> List[str]:
+    _check_dir_exists(root_dir)
+    terms = [word.lower() for string in terms for word in string.split()]
+
+    def matches_terms(dir) -> bool:
+        return (
+            all(term in dir.lower() for term in terms) and
+            not dir.startswith('.')
+        )
+    
+    all_subdirs = []
+    for root, _, files in os.walk(root_dir):
+        rel_subdir = os.path.relpath(root, root_dir)
+        all_subdirs.append(rel_subdir)
+
+    filtered_subdirs = filter(matches_terms, all_subdirs)
+    return list(filtered_subdirs)
+
+
+def file_search_subdirs(*terms: str, directory: str = f".{os.sep}") -> List[str]:
+    _check_dir_exists(directory)
+    terms = [word.lower() for string in terms for word in string.split()]
+    applicable_files = []
+
+    def matches_terms(filename) -> bool:
+        return (
+            all(term in filename.lower() for term in terms) and 
+            not filename.startswith('.')
+        )
+    
+    for root, _, files in os.walk(directory):
+        for file in files:
+            subdir = os.path.relpath(root, directory)
+            rel_filepath = os.path.join(subdir, file)
+            if matches_terms(rel_filepath):
+                cur_complete_filepath = os.path.join(directory, rel_filepath)
+                applicable_files.append(cur_complete_filepath)
+
+    return applicable_files
+
+
+
 def search(*terms: str, directory=f".{os.sep}") -> List[str]:
     _check_dir_exists(directory)
     files = get_files(directory)

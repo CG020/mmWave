@@ -82,7 +82,15 @@ class Plot_specs:
 
         add_letter(axes[0], 'A')
         add_letter(axes[1], 'B')
-        
+
+        axes[0].text(0.85, 0.9, f'n={len(self._tripod_a)}',
+                transform=axes[0].transAxes, size=12, color='grey',
+                weight='bold', fontfamily='Arial')
+        axes[1].text(0.85, 0.9, f'n={len(self._floor_a)}',
+                transform=axes[1].transAxes, size=12, color='grey',
+                weight='bold', fontfamily='Arial')
+
+
         # fig.suptitle(f'{self._physio_str}: {self._y_label}'.title(), fontweight='bold', fontsize=16)
         plt.tight_layout(rect=[0, 0, 1, 0.95])
         outpath = os.path.join(FIGURE_DIR, f'{self._physio_str}_{self._b_str}.png')

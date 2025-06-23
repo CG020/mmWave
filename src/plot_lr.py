@@ -107,12 +107,16 @@ def plot_subplot(ax: plt.Axes, df: pd.DataFrame) -> None:
 
 
 
-def set_text(ax: plt.Axes, subtitle: str) -> None:
+def set_text(ax: plt.Axes, subtitle: str, sample_size: str) -> None:
     tick_label_dict = {
         'fontsize': 10,
         'fontweight': 'bold',
     }
-    
+
+    ax.text(0.85, 0.9, f'n={sample_size}',
+                transform=ax.transAxes, size=12, color='grey',
+                weight='bold', fontfamily='Arial')
+
     ax.set_xlabel('Distance (ft)', fontweight='bold', fontsize=14)
     ax.set_ylabel('Diff (Radar - Ground Truth)', fontweight='bold', fontsize=14)
     ax.set_title(subtitle, fontweight='bold', fontsize=14)
@@ -133,9 +137,9 @@ def plot_all():
     plot_subplot(ax2, hr_x_polar_df)
     plot_subplot(ax3, br_x_manual_df)
 
-    set_text(ax1, 'Heart Rate: Radar x Manual')
-    set_text(ax2, 'Heart Rate: Radar x Polar H10')
-    set_text(ax3, 'Respiratory Rate: Radar x Manual')
+    set_text(ax1, 'Heart Rate: Radar x Manual', len(hr_x_manual_df['diff']))
+    set_text(ax2, 'Heart Rate: Radar x Polar H10', len(hr_x_polar_df['diff']))
+    set_text(ax3, 'Respiratory Rate: Radar x Manual', len(br_x_manual_df['diff']))
 
     # plt.suptitle(
     #     'Difference in Radar Measurements Against Distance',

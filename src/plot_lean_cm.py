@@ -9,7 +9,6 @@ import src.lib.plot_styles as ps
 from typing import Tuple, List, Dict
 
 
-
 def vitals_time_to_seconds(time_str):
     if pd.isna(time_str):
         return np.nan
